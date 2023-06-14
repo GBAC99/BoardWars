@@ -62,7 +62,5 @@ public class PlayerControler : QadMovable
         }
 
     }
-
-
-
+     
 }

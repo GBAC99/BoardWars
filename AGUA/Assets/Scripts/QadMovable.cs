@@ -397,39 +397,7 @@ public class QadMovable : MonoBehaviour
         return 0;
     }
 
-    public void FindCustomSelectableQads()
-    {
-        ComputeAdjacencyLists();
-        GetCurrentQad();
-
-        Queue<Qad> process = new Queue<Qad>();
-
-        process.Enqueue(currentQad);
-        currentQad.visited = true;
-
-        while (process.Count > 0)
-        {
-            Qad q = process.Dequeue();
-
-            selectableQads.Add(q);
-            q.selectable = true;
-
-            if (q.distance < move)
-            {
-                foreach (Qad qad in q.adjacencyList)
-                {
-                    if (!qad.visited)
-                    {
-                        qad.qParent = q;
-                        qad.visited = true;
-                        qad.distance = 1 + q.distance;
-                        process.Enqueue(qad);
-                    }
-                }
-            }
-        }
-    }
-
+     
 
     public void MoveToQad(Qad qad)
     {
@@ -478,38 +446,7 @@ public class QadMovable : MonoBehaviour
             moving = false;
         }
     }
-    public void CustomMove() //Moves objects to desired qad
-    {
-        if (path.Count > 0)
-        {
-            Qad q = path.Peek();
-            Vector3 targetPos = q.transform.position;
-
-            targetPos.y += halfHeight + q.GetComponent<Collider>().bounds.extents.y + 0.05f;
-
-            if (Vector3.Distance(transform.position, targetPos) >= 0.05f)
-            {
-                CalculateHeading(targetPos);
-                SetHorizontalVelocity();
-
-                transform.forward = heading;
-                transform.position += velocity * Time.deltaTime;
-
-            }
-            else
-            {
-                transform.position = targetPos;
-                path.Pop();
-            }
-
-        }
-        else
-        {
-            RemoveSelectableTiles();
-            FindCustomSelectableQads();
-            moving = false;
-        }
-    }
+     
 
     protected void RemoveSelectableTiles()
     {

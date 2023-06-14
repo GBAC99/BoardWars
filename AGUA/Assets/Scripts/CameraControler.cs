@@ -22,9 +22,9 @@ public class CameraControler : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+       /* if (Input.GetKeyDown(KeyCode.E))
         {
-            //Girar camara hacia la derecha
+            //Rotate camera to the right
             if (offset.x > 0 && offset.z > 0) //++
             {
                 offset.x = offset.x * -1;
@@ -44,7 +44,7 @@ public class CameraControler : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            //Girar camara hacia la izquierda 
+            //Rotate camera to the left
             if (offset.x > 0 && offset.z > 0) //++
             {
                 offset.z = offset.z * -1;
@@ -61,7 +61,7 @@ public class CameraControler : MonoBehaviour
             {
                 offset.x = offset.x * -1;
             }
-        }
+        }*/
     }
 
     private void FixedUpdate()
@@ -86,9 +86,7 @@ public class CameraControler : MonoBehaviour
         Camera.main.fieldOfView = fov;
 
         transform.LookAt(target);
-
-
-
+         
 
     }
 }

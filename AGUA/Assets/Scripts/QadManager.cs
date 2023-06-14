@@ -39,14 +39,17 @@ public class QadManager : MonoBehaviour
 
     }
 
-    //CREAR MAPA
+    //Create Map 
     /*
+     * 6x6 example
+     * 
      *          5 11 17 23 29 35  -  Up Row
      *   i      4 10 16 22 28 34    
      *   n c    3 9  15 21 27 33    e c
      *   i o    2 8  14 20 26 32    n o  
      *   t l    1 7  13 19 25 31    d l
      *          0 6  12 18 24 30  -  Down Row
+     *          
     */
     void CreateMap()
     {
@@ -95,8 +98,6 @@ public class QadManager : MonoBehaviour
             {
                 nCol = nCol + 1;
             }
-
-
         }
     }
 
@@ -110,8 +111,7 @@ public class QadManager : MonoBehaviour
         {
             QadSpawnPos.Translate(0, 0, 1);
         }
-    }
-    //CREAR MAPA
+    } 
 
     public Qad SearchQadList(GameObject QadCheck)
     {
@@ -125,8 +125,7 @@ public class QadManager : MonoBehaviour
                 Debug.Log(QadFind);
             }
         }
-        return QadFind;
-
+        return QadFind; 
     }
 
 }
