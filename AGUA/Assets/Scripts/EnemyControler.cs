@@ -12,6 +12,7 @@ public class EnemyControler : QadMovable
         Init();
         thisEnemy = gameObject.GetComponent<EnemyControler>();
         FindSelectableQads();
+        FindAttackingQads();
     }
 
     // Update is called once per frame

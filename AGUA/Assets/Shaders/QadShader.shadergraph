@@ -2326,7 +2326,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "aebf917909c84ff19b1da14056ab14f2",
     "m_Id": 0,
-    "m_DisplayName": "OpacityContrl",
+    "m_DisplayName": "SpeedMultiplier",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

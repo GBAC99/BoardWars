@@ -149,9 +149,9 @@ public class QadManager : MonoBehaviour
     void SpawnEnemies()
     {
 
-        enemyPieces[2].GetComponent<EnemyControler>().Spawn(new Vector3 (QadList[5].transform.position.x,
-            gameObject.transform.position.y +QadList[5].GetComponent<Collider>().bounds.extents.y+offset,
-            QadList[5].transform.position.z));
+        enemyPieces[2].GetComponent<EnemyControler>().Spawn(new Vector3 (QadList[1].transform.position.x,
+            gameObject.transform.position.y +QadList[1].GetComponent<Collider>().bounds.extents.y+offset,
+            QadList[1].transform.position.z));
 
         //enemyPieces[2].GetComponent<EnemyControler>().MoveEnemy();
 
