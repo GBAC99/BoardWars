@@ -2030,7 +2030,7 @@ MonoBehaviour:
   move: 2
   moving: 0
   currentQad: {fileID: 0}
-  characterType: 1
+  characterType: 2
   thisPlayer: {fileID: 1577434954914076856}
   qadLayer:
     serializedVersion: 2

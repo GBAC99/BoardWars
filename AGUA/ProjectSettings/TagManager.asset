@@ -8,6 +8,8 @@ TagManager:
   - QadManager
   - WALL
   - CMap
+  - PlayerPiece
+  - EnemyPiece
   layers:
   - Default
   - TransparentFX

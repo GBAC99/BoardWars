@@ -8,6 +8,8 @@ public class Qad : MonoBehaviour
     public bool current = false;
     public bool target = false;
     public bool selectable = false;
+    public bool damage = false;
+    public bool diagonalToCurrent = false;
 
     //Stores every adjacent Qad for each Qad
     public List<Qad> adjacencyList = new List<Qad>();
@@ -40,7 +42,8 @@ public class Qad : MonoBehaviour
         if (current) GetComponent<Renderer>().material.color = Color.magenta;
         else if (target) GetComponent<Renderer>().material.color = Color.green;
         else if (selectable) GetComponent<Renderer>().material.color = Color.red;
-        else GetComponent<Renderer>().material.color = Color.white;
+        else if (damage) GetComponent<Renderer>().material.color = Color.cyan;
+        else GetComponent<Renderer>().material.color = Color.white; 
     }
 
     public void Reset()
@@ -49,6 +52,8 @@ public class Qad : MonoBehaviour
         current = false;
         target = false;
         selectable = false;
+        damage = false;
+        diagonalToCurrent = false;
 
         visited = false;
         qParent = null;
@@ -68,27 +73,7 @@ public class Qad : MonoBehaviour
         CheckQads(Vector3.right, jumpHeight);
         CheckQads(-Vector3.right, jumpHeight);
     }
-
-    public void FindDesiredNeighbors(string direction, float jumpHeight)
-    {//Find the desired Qads to create a custom path 
-        Reset();
-
-        switch (direction)
-        {
-            case "Front":
-                CheckQads(Vector3.forward, jumpHeight);
-                break;
-            case "Back":
-                CheckQads(-Vector3.forward, jumpHeight);
-                break;
-            case "Right":
-                CheckQads(Vector3.right, jumpHeight);
-                break;
-            case "Left":
-                CheckQads(-Vector3.right, jumpHeight);
-                break;
-        }
-    }
+ 
 
     public void CheckQads(Vector3 direction, float jumpHeight)
     {

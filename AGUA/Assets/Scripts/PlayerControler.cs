@@ -12,8 +12,7 @@ public class PlayerControler : QadMovable
     void Start()
     {
         Init();
-        thisPlayer = gameObject.GetComponent<PlayerControler>();
-
+        thisPlayer = gameObject.GetComponent<PlayerControler>(); 
         FindSelectableQads();
     }
 
@@ -37,15 +36,14 @@ public class PlayerControler : QadMovable
         //
     }
 
-    void CheckQadPos()
+    void CheckQadPos() 
     {
         if (Input.GetMouseButtonDown(0))
         {
 
             Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit raycastHit;
-
-
+             
             if (Physics.Raycast(mouseRay, out raycastHit, 300, qadLayer.value))
             {
                 if (raycastHit.collider.tag == "Qad")

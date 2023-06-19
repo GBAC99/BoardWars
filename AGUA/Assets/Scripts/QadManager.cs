@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class QadManager : MonoBehaviour
 {
+    //Main controler class for the game
 
     public CameraControler mainCam;
 
+    public GameObject[] enemyPieces; //should recieve the information from the tool!
+
+    public GameObject[] playerPieces;
     public PlayerControler Player;
     Vector3 PlayerInitPos;
+
+    float offset = 0.05f; 
 
     public GameObject Qad;
     public int x;
@@ -28,16 +34,17 @@ public class QadManager : MonoBehaviour
     void Start()
     {
         CreateMap();
-        PlayerInitPos = new Vector3(QadList[15].gameObject.transform.position.x
-            , gameObject.transform.position.y + QadList[0].GetComponent<Collider>().bounds.extents.y + 0.05f
-            , QadList[15].gameObject.transform.position.z);
-
-        Player.GetComponent<PlayerControler>().StartPlayer(PlayerInitPos);
-        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControler>();
+        SpawnEnemies(); 
 
         mainCam = Instantiate(mainCam);
 
+        playerPieces = GameObject.FindGameObjectsWithTag("PlayerPiece");
     }
+
+    /*private void Update()
+    {
+        CheckHover();
+    }*/
 
     //Create Map 
     /*
@@ -111,7 +118,7 @@ public class QadManager : MonoBehaviour
         {
             QadSpawnPos.Translate(0, 0, 1);
         }
-    } 
+    }
 
     public Qad SearchQadList(GameObject QadCheck)
     {
@@ -125,7 +132,53 @@ public class QadManager : MonoBehaviour
                 Debug.Log(QadFind);
             }
         }
-        return QadFind; 
+        return QadFind;
+    }
+
+    public GameObject[] GetQadList()
+    {
+        GameObject[] _qadList;
+
+        _qadList = QadList;
+
+        return _qadList;
+    }
+
+    //Control Game
+
+    void SpawnEnemies()
+    {
+
+        enemyPieces[2].GetComponent<EnemyControler>().Spawn(new Vector3 (QadList[5].transform.position.x,
+            gameObject.transform.position.y +QadList[5].GetComponent<Collider>().bounds.extents.y+offset,
+            QadList[5].transform.position.z));
+
+        //enemyPieces[2].GetComponent<EnemyControler>().MoveEnemy();
+
+        /*enemyPieces[2].GetComponent<EnemyControler>().Spawn(new Vector3(QadList[17].transform.position.x,
+            gameObject.transform.position.y + QadList[17].GetComponent<Collider>().bounds.extents.y + offset,
+            QadList[17].transform.position.z));
+
+        enemyPieces[1].GetComponent<EnemyControler>().Spawn(new Vector3(QadList[35].transform.position.x,
+            gameObject.transform.position.y + QadList[35].GetComponent<Collider>().bounds.extents.y + offset,
+            QadList[35].transform.position.z));
+
+        /* PlayerInitPos = new Vector3(QadList[15].gameObject.transform.position.x
+            , gameObject.transform.position.y + QadList[0].GetComponent<Collider>().bounds.extents.y + 0.05f
+            , QadList[15].gameObject.transform.position.z);
+
+        Player.GetComponent<PlayerControler>().StartPlayer(PlayerInitPos); */
+    }
+
+    void CheckHover()
+    {
+        foreach (GameObject piece in playerPieces)
+        {
+            if (piece.GetComponent<HoverControl>().hover)
+            {
+                Debug.Log("HOVER !");
+            }
+        }
     }
 
 }

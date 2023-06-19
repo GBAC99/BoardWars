@@ -75,7 +75,7 @@ public class CameraControler : MonoBehaviour
 
         if (Input.GetMouseButton(1))
         {
-            offset.y += mouseY * sensitivity * Time.deltaTime;
+            offset.y += mouseY * sensitivity * Time.deltaTime*-1;
         }
 
         offset.y = Mathf.Clamp(offset.y, 6f, 15f);
