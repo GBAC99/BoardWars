@@ -5,14 +5,14 @@ using UnityEngine;
 public class EnemyControler : QadMovable
 {
     EnemyControler thisEnemy;
-
+ 
     // Start is called before the first frame update
     void Start()
     {
         Init();
         thisEnemy = gameObject.GetComponent<EnemyControler>();
-        FindSelectableQads();
-        FindAttackingQads();
+        //FindSelectableQads();
+        //FindAttackingQads();
     }
 
     // Update is called once per frame
@@ -21,10 +21,10 @@ public class EnemyControler : QadMovable
         if (moving) Move();
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
             MoveEnemy();
-        }
+        }*/
 
     }
 
@@ -56,7 +56,7 @@ public class EnemyControler : QadMovable
                 {
                     if (selectableQads.Count < 4)
                     {
-                        targetPosition = 2;
+                        targetPosition = 1;
                     }
                     else
                     {
@@ -74,14 +74,15 @@ public class EnemyControler : QadMovable
                 }
                 else if (currentQad.row)
                 {
-                    targetPosition = 2;
+                    targetPosition = 1;
                 }
                 else
                 {
-                    if (selectableQads.Count < 4)
+                    if (selectableQads.Count < 4 && selectableQads.Count > 0)
                     {
-                        targetPosition = 2;
+                        targetPosition = 1;
                     }
+                    
                     else
                     {
                         targetPosition = Random.Range(2, 4);
@@ -107,6 +108,7 @@ public class EnemyControler : QadMovable
 
         }
 
+        Debug.Log(targetPosition);
         MoveToQad(selectableQads[targetPosition]);
 
 

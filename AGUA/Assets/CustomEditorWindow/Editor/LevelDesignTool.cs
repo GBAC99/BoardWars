@@ -5,6 +5,14 @@ using UnityEditor;
 
 public class LevelDesignTool : EditorWindow
 {
+    //LEvEL DESIGN TOOL
+    /*
+     * Debe mostrar que pieza se va a colocar, se tiene que poder seleccionar.
+     * Debe mostrar una grid de checkboxes que dira la posicion de inicio.
+     * Debe de poder seleccionar el nivel que quiere hacer y crear niveles nuevos.
+     * Los niveles nuevos y las posiciones de las piezas deben de ser pasados al Qad Manager para storearlas.
+     * Debe mostrar un preview del nivel que se esta editando, supongo que otra grid de checkboxes.
+     */
 
     GameObject[] enemyPieces;
 

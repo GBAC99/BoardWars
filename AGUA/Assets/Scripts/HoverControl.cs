@@ -7,6 +7,9 @@ public class HoverControl : MonoBehaviour
 
     private Renderer rend;
 
+    [ColorUsage(true, true)]
+    public Color hoverColor;
+
     public bool hover;
 
     // Start is called before the first frame update
@@ -17,7 +20,7 @@ public class HoverControl : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        rend.material.color = Color.red;
+        rend.material.color = hoverColor;
         hover = true;
     }
 

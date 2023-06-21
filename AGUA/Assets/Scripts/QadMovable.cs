@@ -57,6 +57,7 @@ public class QadMovable : MonoBehaviour
     {
         currentQad = GetTargetQad(gameObject);
         currentQad.current = true;
+        currentQad.walkable = false;
     }
 
     public Qad GetTargetQad(GameObject target)//Gets the quad under the piece
@@ -397,7 +398,7 @@ public class QadMovable : MonoBehaviour
                                         qad.visited = true; //it is processed
                                         qad.distance = 1 + q.distance;
                                         process.Enqueue(qad);
-                                    } 
+                                    }
                                 }
 
                                 if (q.adjacencyList.Count == 1 && !qad.current)
@@ -409,12 +410,397 @@ public class QadMovable : MonoBehaviour
                                 }
 
                                 break;
+
+                            case CharacterT.PLAYER_ARROW:
+
+                                if (q.adjacencyList.Count == 4)
+                                {
+                                    if ((q.adjacencyList[0] == qad || q.adjacencyList[1] == qad))
+                                    {
+                                        qad.qParent = q;
+                                        qad.visited = true; //it is processed
+                                        qad.distance = 1 + q.distance;
+                                        process.Enqueue(qad);
+                                    }
+                                }
+
+                                if (q.adjacencyList.Count == 3)
+                                {
+                                    //Conditions if the character starts the movement in the inital or final column of the grid.
+                                    if (currentQad.col)
+                                    {
+                                        if ((q.adjacencyList[0] == qad || q.adjacencyList[1] == qad))//Check qads index
+                                        {
+                                            qad.qParent = q;
+                                            qad.visited = true; //it is processed
+                                            qad.distance = 1 + q.distance;
+                                            process.Enqueue(qad);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((q.adjacencyList[0] == qad))
+                                        {
+                                            qad.qParent = q;
+                                            qad.visited = true; //it is processed
+                                            qad.distance = 1 + q.distance;
+                                            process.Enqueue(qad);
+                                        }
+                                    }
+                                }
+
+                                if (q.adjacencyList.Count == 2)
+                                {
+                                    if (currentQad.corner && q.adjacencyList[0] == qad)
+                                    {
+                                        qad.qParent = q;
+                                        qad.visited = true; //it is processed
+                                        qad.distance = 1 + q.distance;
+                                        process.Enqueue(qad);
+                                    }
+                                    if (currentQad.col && q.adjacencyList[0] == qad)
+                                    {
+                                        qad.qParent = q;
+                                        qad.visited = true; //it is processed
+                                        qad.distance = 1 + q.distance;
+                                        process.Enqueue(qad);
+                                    }
+                                }
+
+                                break;
+                            case CharacterT.PLAYER_HAMMMER:
+
+                                if (q.adjacencyList.Count == 4)
+                                {
+                                    qad.qParent = q;
+                                    qad.visited = true; //it is processed
+                                    qad.distance = 1 + q.distance;
+                                    process.Enqueue(qad);
+
+                                }
+
+                                if (q.adjacencyList.Count == 3)
+                                {
+                                    if (currentQad.col || currentQad.row)
+                                    {
+                                        if (currentQad.row)
+                                        {
+                                            if (q.adjacencyList[1] == qad || q.adjacencyList[2] == qad)
+                                            {
+                                                qad.qParent = q;
+                                                qad.visited = true; //it is processed
+                                                qad.distance = 1 + q.distance;
+                                                process.Enqueue(qad);
+                                            }
+                                        }
+                                        else if (currentQad.col)
+                                        {
+                                            if (q.adjacencyList[1] == qad || q.adjacencyList[0] == qad)
+                                            {
+                                                qad.qParent = q;
+                                                qad.visited = true; //it is processed
+                                                qad.distance = 1 + q.distance;
+                                                process.Enqueue(qad);
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (q.adjacencyList[1] == qad || q.adjacencyList[2] == qad)
+                                            {
+                                                qad.qParent = q;
+                                                qad.visited = true; //it is processed
+                                                qad.distance = 1 + q.distance;
+                                                process.Enqueue(qad);
+                                            }
+                                        }
+
+
+                                    }
+                                    else
+                                    {
+                                        if ((q.adjacencyList[1] == qad))
+                                        {
+                                            qad.qParent = q;
+                                            qad.visited = true; //it is processed
+                                            qad.distance = 1 + q.distance;
+                                            process.Enqueue(qad);
+                                        }
+                                        if (((q.adjacencyList[2] == qad)) && (GetCurrentQadIndex() - GetQadIndex(q.gameObject) == 1))
+                                        {
+                                            qad.qParent = q;
+                                            qad.visited = true; //it is processed
+                                            qad.distance = 1 + q.distance;
+                                            process.Enqueue(qad);
+                                        }
+                                    }
+
+
+
+                                }
+
+                                if (q.adjacencyList.Count == 2)
+                                {
+                                    if (currentQad.corner)
+                                    {
+                                        if (q.current)
+                                        {
+                                            qad.qParent = q;
+                                            qad.visited = true; //it is processed
+                                            qad.distance = 1 + q.distance;
+                                            process.Enqueue(qad);
+                                        }
+                                        else
+                                        {
+                                            if (q.col && (q.adjacencyList[1] == qad))
+                                            {
+                                                qad.qParent = q;
+                                                qad.visited = true; //it is processed
+                                                qad.distance = 1 + q.distance;
+                                                process.Enqueue(qad);
+                                            }
+                                            else if (q.row && (q.adjacencyList[0] == qad))
+                                            {
+                                                Debug.Log("Row");
+                                                qad.qParent = q;
+                                                qad.visited = true; //it is processed
+                                                qad.distance = 1 + q.distance;
+                                                process.Enqueue(qad);
+                                            }
+                                        }
+                                    }
+
+                                    if (currentQad.row && q.adjacencyList[0] == qad)
+                                    {
+                                        qad.qParent = q;
+                                        qad.visited = true; //it is processed
+                                        qad.distance = 1 + q.distance;
+                                        process.Enqueue(qad);
+                                    }
+
+                                    if (currentQad.col && q.adjacencyList[1] == qad)
+                                    {
+                                        qad.qParent = q;
+                                        qad.visited = true; //it is processed
+                                        qad.distance = 1 + q.distance;
+                                        process.Enqueue(qad);
+                                    }
+
+                                    if ((!currentQad.col && !currentQad.row && !currentQad.corner))
+                                    {
+                                        qad.qParent = q;
+                                        qad.visited = true; //it is processed
+                                        qad.distance = 1 + q.distance;
+                                        process.Enqueue(qad);
+                                    }
+                                }
+
+                                if (q.adjacencyList.Count == 1 && !qad.current)
+                                {
+                                    qad.qParent = q;
+                                    qad.visited = true; //it is processed
+                                    qad.distance = 1 + q.distance;
+                                    process.Enqueue(qad);
+                                }
+                                break;
+                            case CharacterT.PLAYER_SCHYTE:
+
+                                if (q.adjacencyList.Count == 4)
+                                {
+                                    qad.qParent = q;
+                                    qad.visited = true; //it is processed
+                                    qad.distance = 1 + q.distance;
+                                    process.Enqueue(qad);
+
+                                }
+
+                                if (q.adjacencyList.Count == 3)
+                                {
+                                    if (currentQad.col || currentQad.row)
+                                    {
+                                        if (currentQad.row)
+                                        {
+                                            if (q.adjacencyList[1] == qad || q.adjacencyList[2] == qad)
+                                            {
+                                                qad.qParent = q;
+                                                qad.visited = true; //it is processed
+                                                qad.distance = 1 + q.distance;
+                                                process.Enqueue(qad);
+                                            }
+                                        }
+                                        else if (currentQad.col)
+                                        {
+                                            if (q.adjacencyList[1] == qad || q.adjacencyList[0] == qad)
+                                            {
+                                                qad.qParent = q;
+                                                qad.visited = true; //it is processed
+                                                qad.distance = 1 + q.distance;
+                                                process.Enqueue(qad);
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (q.adjacencyList[1] == qad || q.adjacencyList[2] == qad)
+                                            {
+                                                qad.qParent = q;
+                                                qad.visited = true; //it is processed
+                                                qad.distance = 1 + q.distance;
+                                                process.Enqueue(qad);
+                                            }
+                                        }
+
+
+                                    }
+                                    else
+                                    {
+                                        if ((q.adjacencyList[1] == qad))
+                                        {
+                                            qad.qParent = q;
+                                            qad.visited = true; //it is processed
+                                            qad.distance = 1 + q.distance;
+                                            process.Enqueue(qad);
+                                        }
+                                        if (((q.adjacencyList[2] == qad)) && (GetCurrentQadIndex() - GetQadIndex(q.gameObject) == 1))
+                                        {
+                                            qad.qParent = q;
+                                            qad.visited = true; //it is processed
+                                            qad.distance = 1 + q.distance;
+                                            process.Enqueue(qad);
+                                        }
+                                    }
+
+
+
+                                }
+
+                                if (q.adjacencyList.Count == 2)
+                                {
+                                    if (currentQad.corner)
+                                    {
+                                        if (q.current)
+                                        {
+                                            qad.qParent = q;
+                                            qad.visited = true; //it is processed
+                                            qad.distance = 1 + q.distance;
+                                            process.Enqueue(qad);
+                                        }
+                                        else
+                                        {
+                                            if (q.col && (q.adjacencyList[1] == qad))
+                                            {
+                                                qad.qParent = q;
+                                                qad.visited = true; //it is processed
+                                                qad.distance = 1 + q.distance;
+                                                process.Enqueue(qad);
+                                            }
+                                            else if (q.row && (q.adjacencyList[0] == qad))
+                                            {
+                                                Debug.Log("Row");
+                                                qad.qParent = q;
+                                                qad.visited = true; //it is processed
+                                                qad.distance = 1 + q.distance;
+                                                process.Enqueue(qad);
+                                            }
+                                        }
+                                    }
+
+                                    if (currentQad.row && q.adjacencyList[0] == qad)
+                                    {
+                                        qad.qParent = q;
+                                        qad.visited = true; //it is processed
+                                        qad.distance = 1 + q.distance;
+                                        process.Enqueue(qad);
+                                    }
+
+                                    if (currentQad.col && q.adjacencyList[1] == qad)
+                                    {
+                                        qad.qParent = q;
+                                        qad.visited = true; //it is processed
+                                        qad.distance = 1 + q.distance;
+                                        process.Enqueue(qad);
+                                    }
+
+                                    if ((!currentQad.col && !currentQad.row && !currentQad.corner))
+                                    {
+                                        qad.qParent = q;
+                                        qad.visited = true; //it is processed
+                                        qad.distance = 1 + q.distance;
+                                        process.Enqueue(qad);
+                                    }
+                                }
+
+                                if (q.adjacencyList.Count == 1 && !qad.current)
+                                {
+                                    qad.qParent = q;
+                                    qad.visited = true; //it is processed
+                                    qad.distance = 1 + q.distance;
+                                    process.Enqueue(qad);
+                                }
+                                break;
+                            case CharacterT.PLAYER_SHIP:
+
+                                if (q.adjacencyList.Count == 4)
+                                {
+                                    if (q.adjacencyList[1] == qad)
+                                    {
+                                        qad.qParent = q;
+                                        qad.visited = true; //it is processed
+                                        qad.distance = 1 + q.distance;
+                                        process.Enqueue(qad);
+                                    }
+                                }
+
+                                if (q.adjacencyList.Count == 3)
+                                {
+                                    //Conditions if the character starts the movement in the inital or final column of the grid.
+                                    if (currentQad.col)
+                                    {
+                                        if (q.adjacencyList[0] == qad)//Check qads index
+                                        {
+                                            qad.qParent = q;
+                                            qad.visited = true; //it is processed
+                                            qad.distance = 1 + q.distance;
+                                            process.Enqueue(qad);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if ((q.adjacencyList[0] == qad))
+                                        {
+                                            qad.qParent = q;
+                                            qad.visited = true; //it is processed
+                                            qad.distance = 1 + q.distance;
+                                            process.Enqueue(qad);
+                                        }
+                                    }
+                                }
+
+                                if (q.adjacencyList.Count == 2)
+                                {
+                                    if (currentQad.corner && q.adjacencyList[0] == qad)
+                                    {
+                                        qad.qParent = q;
+                                        qad.visited = true; //it is processed
+                                        qad.distance = 1 + q.distance;
+                                        process.Enqueue(qad);
+                                    }
+                                    if (currentQad.col && q.adjacencyList[0] == qad)
+                                    {
+                                        qad.qParent = q;
+                                        qad.visited = true; //it is processed
+                                        qad.distance = 1 + q.distance;
+                                        process.Enqueue(qad);
+                                    }
+                                }
+                                break;
                         }
                     }
                 }
 
             }
         }
+
+        Debug.Log("Qads checked!");
+
     }
 
     public void MoveToQad(Qad qad) //Sets the target Qad
@@ -458,9 +844,8 @@ public class QadMovable : MonoBehaviour
         }
         else
         {
-            ResetTiles();
-            FindSelectableQads();
-            FindAttackingQads();
+            ResetTiles(); 
+            
             moving = false;
         }
     }
@@ -502,20 +887,10 @@ public class QadMovable : MonoBehaviour
 
     //Attacking IA
 
-    /*
-     * Primero deberia checkear el tipo de current qad
-     * Luego mirar las casillas de su alrededor
-     * Luego determinar que casillas va a atacar
-     * Luego ejercer el daño
-     * 
-     * Deberia de hacer algo parecido al FindSelectableQads, puesto que debe meterlos en una lista para procesarlos luego
-     * Ocurrira despues del movimiento
-     * 
-     * 
+    /* 
      * Works really similar to FindSelectableQads with some other special conditions.
-     * To a later easier use of the attacking qads, 
-     * it is needed to create a new kind of Qad, the Diagonal To Current Qad.
-     * 
+     * To a later easier use of the attacking qads, it is needed to create a new kind of Qad:
+     * the Diagonal To Current Qad.
      * */
 
     public void FindAttackingQads()
@@ -578,7 +953,7 @@ public class QadMovable : MonoBehaviour
                     {
                         switch (characterType)
                         {
-                            case CharacterT.ENEMY_HORIZONTAL:  
+                            case CharacterT.ENEMY_HORIZONTAL:
 
                                 qad.qParent = q;
                                 qad.visited = true; //it is processed
@@ -586,7 +961,7 @@ public class QadMovable : MonoBehaviour
                                 process.Enqueue(qad);
 
                                 break;
-                            case CharacterT.ENEMY_VERTICAL: 
+                            case CharacterT.ENEMY_VERTICAL:
 
                                 qad.qParent = q;
                                 qad.visited = true; //it is processed
@@ -607,7 +982,7 @@ public class QadMovable : MonoBehaviour
                                     qad.diagonalToCurrent = true;
 
                                 break;
-                            case CharacterT.ENEMY_HORSE:  
+                            case CharacterT.ENEMY_HORSE:
 
                                 // V == 0 | H == 1
                                 // Random selection of the attacking Qads.
@@ -755,7 +1130,7 @@ public class QadMovable : MonoBehaviour
                                         }
                                     }
                                 }
-                               
+
 
                                 break;
                             case CharacterT.PLAYER_ARROW: // SEGUNDA Y TERCERA CASILLA EN DIAGONAL -- PLAYER INPUT
@@ -773,5 +1148,10 @@ public class QadMovable : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void AttackQads()
+    {
+        //Attack to the desired qads
     }
 }

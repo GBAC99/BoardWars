@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1859158351481391603}
   m_Layer: 0
   m_Name: Enemy_V
-  m_TagString: Untagged
+  m_TagString: EnemyPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,8 +68,8 @@ GameObject:
   - component: {fileID: 7788522647972533727}
   - component: {fileID: 7788522647972533726}
   m_Layer: 0
-  m_Name: Enemy_Horizontal
-  m_TagString: EnemyPiece
+  m_Name: Enemy_Vertical
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

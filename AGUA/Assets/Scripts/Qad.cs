@@ -29,11 +29,14 @@ public class Qad : MonoBehaviour
     public bool row = false;
     public bool col = false;
 
+    //hovering
+    QadHoverScript hover;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        hover = GetComponent<QadHoverScript>();
     }
 
     // Update is called once per frame
@@ -43,7 +46,12 @@ public class Qad : MonoBehaviour
         else if (target) GetComponent<Renderer>().material.color = Color.green;
         else if (selectable) GetComponent<Renderer>().material.color = Color.red;
         else if (damage) GetComponent<Renderer>().material.color = Color.cyan;
-        else GetComponent<Renderer>().material.color = Color.white; 
+        else GetComponent<Renderer>().material.color = Color.white;
+    }
+
+    public bool GetHover()
+    {
+        return hover.IsHover();
     }
 
     public void Reset()
@@ -62,8 +70,7 @@ public class Qad : MonoBehaviour
         adjacencyList.Clear();
     }
 
-    //Pathfinding
-
+    //Pathfinding 
     public void FindNeighbors(float jumpHeight)
     {
         Reset();
@@ -73,7 +80,7 @@ public class Qad : MonoBehaviour
         CheckQads(Vector3.right, jumpHeight);
         CheckQads(-Vector3.right, jumpHeight);
     }
- 
+
 
     public void CheckQads(Vector3 direction, float jumpHeight)
     {
@@ -91,9 +98,7 @@ public class Qad : MonoBehaviour
                 {
                     adjacencyList.Add(qad);
                 }
-
             }
         }
-
     }
 }

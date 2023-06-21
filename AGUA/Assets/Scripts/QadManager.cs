@@ -9,12 +9,17 @@ public class QadManager : MonoBehaviour
     public CameraControler mainCam;
 
     public GameObject[] enemyPieces; //should recieve the information from the tool!
+    public GameObject[] activeEnemyPieces;
+    public int positionTriangle;
+    public int positionDiamond;
+    public int positionCube;
 
-    public GameObject[] playerPieces;
+    List<GameObject> playerPieces = new List<GameObject>();
+    public GameObject[] activePlayerPieces;
     public PlayerControler Player;
-    Vector3 PlayerInitPos;
+    int playerPieceQadPositionInit;
 
-    float offset = 0.05f; 
+    float offset = 0.05f;
 
     public GameObject Qad;
     public int x;
@@ -26,6 +31,7 @@ public class QadManager : MonoBehaviour
     public Transform QadSpawnPos;
 
     public LayerMask layerQad;
+    public LayerMask layerPlayerPiece;
 
     [HideInInspector]
     public Vector3 mousePosition;
@@ -33,31 +39,35 @@ public class QadManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //playerPieces = GameObject.FindGameObjectsWithTag("PlayerPiece");
         CreateMap();
-        SpawnEnemies(); 
+        //SpawnPlayerPiece(); 
 
         mainCam = Instantiate(mainCam);
 
-        playerPieces = GameObject.FindGameObjectsWithTag("PlayerPiece");
     }
 
-    /*private void Update()
+    private void Update()
     {
-        CheckHover();
-    }*/
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ControlEnemies();
+        }
+    }
 
     //Create Map 
     /*
      * 6x6 example
      * 
-     *          5 11 17 23 29 35  -  Up Row
-     *   i      4 10 16 22 28 34    
-     *   n c    3 9  15 21 27 33    e c
-     *   i o    2 8  14 20 26 32    n o  
-     *   t l    1 7  13 19 25 31    d l
-     *          0 6  12 18 24 30  -  Down Row
+     *          5 11 17 23 29 35  -      Up Row
+     *   l      4 10 16 22 28 34    r
+     *   e c    3 9  15 21 27 33    i c
+     *   f o    2 8  14 20 26 32    g o  
+     *   t l    1 7  13 19 25 31    h l
+     *          0 6  12 18 24 30  - t    Down Row
      *          
     */
+
     void CreateMap()
     {
         for (int i = 0; i < x; i++)
@@ -120,19 +130,17 @@ public class QadManager : MonoBehaviour
         }
     }
 
-    public Qad SearchQadList(GameObject QadCheck)
+    public int SearchQadList(Qad qadToCheck)//Maybe delete this
     {
-        Qad QadFind = null;
-
         for (int i = 0; i < QadList.Length; i++)
         {
-            if (QadCheck.gameObject == QadList[i].gameObject)
+            if (qadToCheck.gameObject == QadList[i].gameObject)
             {
-                QadFind = QadList[i].gameObject.GetComponent<Qad>();
-                Debug.Log(QadFind);
+                Debug.Log("Qad's index is: " + i);
+                return i;
             }
         }
-        return QadFind;
+        return 0;
     }
 
     public GameObject[] GetQadList()
@@ -146,28 +154,72 @@ public class QadManager : MonoBehaviour
 
     //Control Game
 
-    void SpawnEnemies()
+    public void AddPlayerPieceSelected(GameObject playerPiece)
     {
+        playerPieces.Add(playerPiece);
+    }
 
-        enemyPieces[2].GetComponent<EnemyControler>().Spawn(new Vector3 (QadList[1].transform.position.x,
-            gameObject.transform.position.y +QadList[1].GetComponent<Collider>().bounds.extents.y+offset,
-            QadList[1].transform.position.z));
+    public void AddToActivePlayerPieces(GameObject activePlayerPiece)
+    {
+        // activePlayerPieces.Add(activePlayerPiece);
+    }
 
-        //enemyPieces[2].GetComponent<EnemyControler>().MoveEnemy();
 
-        /*enemyPieces[2].GetComponent<EnemyControler>().Spawn(new Vector3(QadList[17].transform.position.x,
-            gameObject.transform.position.y + QadList[17].GetComponent<Collider>().bounds.extents.y + offset,
-            QadList[17].transform.position.z));
 
-        enemyPieces[1].GetComponent<EnemyControler>().Spawn(new Vector3(QadList[35].transform.position.x,
-            gameObject.transform.position.y + QadList[35].GetComponent<Collider>().bounds.extents.y + offset,
-            QadList[35].transform.position.z));
+    public int GetActivePlayerPiecesCount()
+    {
+        activePlayerPieces = GameObject.FindGameObjectsWithTag("PlayerPiece");
+        return activePlayerPieces.Length;
 
-        /* PlayerInitPos = new Vector3(QadList[15].gameObject.transform.position.x
-            , gameObject.transform.position.y + QadList[0].GetComponent<Collider>().bounds.extents.y + 0.05f
-            , QadList[15].gameObject.transform.position.z);
+    }
 
-        Player.GetComponent<PlayerControler>().StartPlayer(PlayerInitPos); */
+    public void GetPlayerPiecePosition(Qad qSel)
+    {
+        for (int i = 0; i < QadList.Length; i++)
+        {
+            if (QadList[i].GetComponent<Qad>() == qSel) playerPieceQadPositionInit = i;
+        }
+
+    }
+
+    public void SpawnPlayerPiece(Qad qadPos, GameObject piece)
+    {
+        positionCube = SearchQadList(qadPos);
+
+        piece.GetComponent<PlayerPieceControler>().Spawn(new Vector3(QadList[positionCube].transform.position.x,
+                  gameObject.transform.position.y + QadList[positionCube].GetComponent<Collider>().bounds.extents.y + offset,
+                  QadList[positionCube].transform.position.z));
+    }
+
+    public void SpawnEnemies()
+    {
+        enemyPieces[0].GetComponent<EnemyControler>().Spawn(new Vector3(QadList[positionTriangle].transform.position.x,
+           gameObject.transform.position.y + QadList[positionTriangle].GetComponent<Collider>().bounds.extents.y + offset,
+           QadList[positionTriangle].transform.position.z));
+
+        enemyPieces[1].GetComponent<EnemyControler>().Spawn(new Vector3(QadList[positionDiamond].transform.position.x,
+            gameObject.transform.position.y + QadList[positionDiamond].GetComponent<Collider>().bounds.extents.y + offset,
+            QadList[positionDiamond].transform.position.z));
+
+        enemyPieces[2].GetComponent<EnemyControler>().Spawn(new Vector3(QadList[positionCube].transform.position.x,
+            gameObject.transform.position.y + QadList[positionCube].GetComponent<Collider>().bounds.extents.y + offset,
+            QadList[positionCube].transform.position.z));
+
+        activeEnemyPieces = GameObject.FindGameObjectsWithTag("EnemyPiece");
+    }
+
+
+    public bool ControlEnemies()
+    {
+        foreach (GameObject eP in activeEnemyPieces)
+        {
+            Debug.Log(eP.name);
+            eP.GetComponent<EnemyControler>().FindSelectableQads();
+            eP.GetComponent<EnemyControler>().MoveEnemy();
+        }
+
+        return true;
+
     }
 
     void CheckHover()

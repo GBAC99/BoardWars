@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6067523099406695630}
   m_Layer: 0
   m_Name: Enemy_Horse
-  m_TagString: EnemyPiece
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 681303878771702624}
   m_Layer: 0
   m_Name: Enemy_H
-  m_TagString: Untagged
+  m_TagString: EnemyPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
