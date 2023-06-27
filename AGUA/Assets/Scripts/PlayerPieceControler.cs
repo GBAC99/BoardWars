@@ -5,25 +5,43 @@ using UnityEngine;
 public class PlayerPieceControler : QadMovable
 {
     public PlayerPieceControler thisPPlayer;
+    float currentHealthPoints;
 
     // Start is called before the first frame update
     void Start()
     {
         Init();
+        currentHealthPoints = healthPoints;
         thisPPlayer = gameObject.GetComponent<PlayerPieceControler>();
-        //FindSelectableQads();
-        //FindAttackingQads();
+        //FindSelectableQads(); 
+        //FindAttackingQads(); 
     }
 
     // Update is called once per frame
     void Update()
     {
         if (moving) Move();
+
+        if (currentHealthPoints <= 0 )
+        {
+            gameObject.SetActive(false);
+        }
+
     }
 
-    public GameObject Spawn(Vector3 spawnPos)
+    public void Spawn(Vector3 spawnPos)
     {
-        return Instantiate(gameObject, spawnPos, Quaternion.identity, null);
+        Instantiate(gameObject, spawnPos, Quaternion.identity, null);
+    }
+
+    public void SetAttackQad(Qad q)
+    {
+        qadManager.AddtoPlayerAttackQads(q, damage);
+    }
+
+    public void TakeDamage()
+    {
+        currentHealthPoints -= currentQad.qadDamage;
     }
 
 }

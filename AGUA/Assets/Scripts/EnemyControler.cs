@@ -5,14 +5,13 @@ using UnityEngine;
 public class EnemyControler : QadMovable
 {
     EnemyControler thisEnemy;
- 
+    float currentHealthPoints;
     // Start is called before the first frame update
     void Start()
     {
         Init();
-        thisEnemy = gameObject.GetComponent<EnemyControler>();
-        //FindSelectableQads();
-        //FindAttackingQads();
+        currentHealthPoints = healthPoints;
+        thisEnemy = gameObject.GetComponent<EnemyControler>(); 
     }
 
     // Update is called once per frame
@@ -20,12 +19,10 @@ public class EnemyControler : QadMovable
     {
         if (moving) Move();
 
-
-        /*if (Input.GetKeyDown(KeyCode.Space))
+        if (currentHealthPoints <= 0)
         {
-            MoveEnemy();
-        }*/
-
+            gameObject.SetActive(false);
+        }
     }
 
     public void Spawn(Vector3 spawnPos)
@@ -34,8 +31,7 @@ public class EnemyControler : QadMovable
     }
 
     public void MoveEnemy()
-    {
-        //Definir valor dependiendo de si es horse, vertical o horizontal
+    { 
 
         int targetPosition = 0;
 
@@ -107,11 +103,15 @@ public class EnemyControler : QadMovable
                 break;
 
         }
+         
+        MoveToQad(selectableQads[targetPosition]); 
 
-        Debug.Log(targetPosition);
-        MoveToQad(selectableQads[targetPosition]);
 
+    }
 
+    public void TakeDamage()
+    {
+        currentHealthPoints -= currentQad.qadDamage;
     }
 
 }

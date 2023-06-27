@@ -8,17 +8,35 @@ public class GLS_PlayerPieceCheckQads : GameLoopStates
     {
         Debug.Log("Checking Qads");
         Debug.Log(gC.currentPlayerPiece);
-        gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().FindSelectableQads();
-        change = true;
+
+        if (gC.currentPlayerPiece > 2)
+        {
+            change = true;
+        }
+        else
+        {
+            gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].tag = "CurrentPlayerPiece";
+            gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().FindSelectableQads();
+
+            change = true;
+
+        }
     }
 
     public override void CheckTransition(GameLoopControler gC)
     {
-        if (change) gC.ChangeState(new GLS_PlayerSelectMoves(gC));
+        if (change)
+        {
+            if (gC.currentPlayerPiece <= 2)
+            {
+                gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].tag = "PlayerPiece";
+            }
+            gC.ChangeState(new GLS_PlayerSelectMoves(gC));
+        }
     }
 
     public override void Update(GameLoopControler gC)
-    { 
+    {
 
     }
 }

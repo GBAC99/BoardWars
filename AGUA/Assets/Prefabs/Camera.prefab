@@ -27,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656768779727404572}
-  m_LocalRotation: {x: 0.09822969, y: -0.2580531, z: 0.026383732, w: 0.96076185}
-  m_LocalPosition: {x: 30.6, y: 16.4, z: -28.4}
+  m_LocalRotation: {x: -0.1913597, y: 0.7995084, z: -0.46432883, w: -0.3294943}
+  m_LocalPosition: {x: 5.96553, y: 16.799982, z: 8.263929}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,7 +59,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 55
+  field of view: 18
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74cbbb4e109623f499007a5a53dfd222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisCamera: {fileID: 0}
+  thisCamera: {fileID: 1656768779727404567}
   target: {fileID: 0}
   smoothSpeed: 0.05
-  offset: {x: 6, y: 9, z: 6}
+  offset: {x: 6, y: 15, z: 6}

@@ -10,7 +10,7 @@ public class GLS_SpawnPlayerPiece : GameLoopStates
 
     public GLS_SpawnPlayerPiece(GameLoopControler gC)
     {
-        Debug.Log("SpawnPlayerPiecenextState = change");
+        Debug.Log("SpawnPlayerPiece");
         gC.SpawnSelectedPlayer();
         activePlayerPieces = gC.QAD_MANAGER.GetActivePlayerPiecesCount();
 

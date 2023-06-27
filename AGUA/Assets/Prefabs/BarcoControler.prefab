@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7256327730790105639}
   - component: {fileID: 7750092656595329131}
+  - component: {fileID: 1844627798252242404}
   m_Layer: 7
   m_Name: BarcoControler
   m_TagString: PlayerPiece
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4251865296003987713}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 6624127536059055880}
   m_Father: {fileID: 0}
@@ -44,18 +45,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1239496726f0bab469190fa93e56214c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 0
-  damage: 0
+  healthPoints: 85
+  currentHealthPoints: 0
+  alive: 0
+  damage: 20
   jumpHeight: 1
-  moveSpeed: 2
+  moveSpeed: 5
   move: 2
-  attackRange: 2
+  attackRange: 1
   moving: 0
   selectableQads: []
   attackingQads: []
   currentQad: {fileID: 0}
   characterType: 6
   thisPPlayer: {fileID: 0}
+--- !u!65 &1844627798252242404
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4251865296003987713}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &6624127536059055924
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,7 +83,6 @@ GameObject:
   - component: {fileID: 6624127536059055880}
   - component: {fileID: 6624127536059055881}
   - component: {fileID: 6624127536059055882}
-  - component: {fileID: 4530560282043963091}
   - component: {fileID: 2700732659571483894}
   m_Layer: 0
   m_Name: Barco
@@ -139,19 +154,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4530560282043963091
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6624127536059055924}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &2700732659571483894
 MonoBehaviour:
   m_ObjectHideFlags: 0

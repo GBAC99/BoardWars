@@ -7,6 +7,7 @@ public class GLS_PlayerSelectPiece : GameLoopStates
     public GLS_PlayerSelectPiece(GameLoopControler gC)
     {
         gC.selectedPlayerPiece = null;
+
         Debug.Log("PPSelection");
     }
 

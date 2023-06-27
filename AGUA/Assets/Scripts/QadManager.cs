@@ -14,11 +14,20 @@ public class QadManager : MonoBehaviour
     public int positionDiamond;
     public int positionCube;
 
+    [SerializeField]
+    List<Qad> enemyAttackedQads = new List<Qad>();
+
     List<GameObject> playerPieces = new List<GameObject>();
     public GameObject[] activePlayerPieces;
     public PlayerControler Player;
     int playerPieceQadPositionInit;
 
+    [SerializeField]
+    List<Qad> playerAttackedQads = new List<Qad>();
+
+    public GameObject[] testingPlayerPieces;
+
+    //Map creation variables
     float offset = 0.05f;
 
     public GameObject Qad;
@@ -26,6 +35,7 @@ public class QadManager : MonoBehaviour
     public int y;
 
     public GameObject[] QadList;
+    public static GameObject[] _QadList;
     float halfHeight = 0;
 
     public Transform QadSpawnPos;
@@ -41,8 +51,9 @@ public class QadManager : MonoBehaviour
     {
         //playerPieces = GameObject.FindGameObjectsWithTag("PlayerPiece");
         CreateMap();
-        //SpawnPlayerPiece(); 
 
+        //SpawnPlayerPieceTESTING();
+        //SpawnEnemies();
         mainCam = Instantiate(mainCam);
 
     }
@@ -82,6 +93,7 @@ public class QadManager : MonoBehaviour
 
         QadList = GameObject.FindGameObjectsWithTag("Qad");
 
+        _QadList = QadList;
 
         int nCol = 0;
         for (int i = 0; i < QadList.Length; i++)
@@ -136,7 +148,6 @@ public class QadManager : MonoBehaviour
         {
             if (qadToCheck.gameObject == QadList[i].gameObject)
             {
-                Debug.Log("Qad's index is: " + i);
                 return i;
             }
         }
@@ -158,13 +169,6 @@ public class QadManager : MonoBehaviour
     {
         playerPieces.Add(playerPiece);
     }
-
-    public void AddToActivePlayerPieces(GameObject activePlayerPiece)
-    {
-        // activePlayerPieces.Add(activePlayerPiece);
-    }
-
-
 
     public int GetActivePlayerPiecesCount()
     {
@@ -189,6 +193,16 @@ public class QadManager : MonoBehaviour
         piece.GetComponent<PlayerPieceControler>().Spawn(new Vector3(QadList[positionCube].transform.position.x,
                   gameObject.transform.position.y + QadList[positionCube].GetComponent<Collider>().bounds.extents.y + offset,
                   QadList[positionCube].transform.position.z));
+
+    }
+
+    public void SpawnPlayerPieceTESTING()
+    {
+
+        testingPlayerPieces[0].GetComponent<PlayerPieceControler>().Spawn(new Vector3(QadList[8].transform.position.x,
+                  gameObject.transform.position.y + QadList[0].GetComponent<Collider>().bounds.extents.y + offset,
+                  QadList[8].transform.position.z));
+
     }
 
     public void SpawnEnemies()
@@ -213,13 +227,76 @@ public class QadManager : MonoBehaviour
     {
         foreach (GameObject eP in activeEnemyPieces)
         {
-            Debug.Log(eP.name);
             eP.GetComponent<EnemyControler>().FindSelectableQads();
             eP.GetComponent<EnemyControler>().MoveEnemy();
         }
-
         return true;
 
+    }
+
+    public void GetAttackingEnemyQads()
+    {
+        foreach (GameObject eP in activeEnemyPieces)
+        {
+            eP.GetComponent<EnemyControler>().FindAttackingQads();
+        }
+    }
+
+    public void GetAttackingPlayerQads()
+    {
+        foreach (GameObject eP in activePlayerPieces)
+        {
+            eP.GetComponent<PlayerControler>().FindAttackingQads();
+        }
+    }
+
+    public void AddtoEnemyAttackQads(Qad q, float _damage)
+    {
+        enemyAttackedQads.Add(q);
+        q.SetDamageInQad(_damage);
+    }
+
+    public void AddtoPlayerAttackQads(Qad q, float _damage)
+    {
+        playerAttackedQads.Add(q);
+        q.SetDamageInQad(_damage);
+    }
+
+    public void ActivateEnemyAttackQads()
+    {
+        foreach (Qad qA in enemyAttackedQads)
+        {
+            qA.attacked = true;
+        }
+    }
+
+    public void ActivatePlayerAttackQads(PlayerPieceControler pC)
+    {
+        foreach (Qad qA in pC.attackingQads)
+        {
+            qA.attacked = true;
+        }
+    }
+
+    public void ClearEnemyAttackQads()
+    {
+        enemyAttackedQads.Clear();
+    }
+
+    public void ClearPlayerAttackQads()
+    {
+        playerAttackedQads.Clear();
+    }
+
+    public void ClearLists()
+    {
+        activePlayerPieces = new GameObject[0];
+        activeEnemyPieces = new GameObject[0];
+    }
+
+    public GameObject GetQadbyIndex(int index)
+    {
+        return QadList[index];
     }
 
     void CheckHover()
@@ -231,6 +308,19 @@ public class QadManager : MonoBehaviour
                 Debug.Log("HOVER !");
             }
         }
+    }
+
+    public static int GetQadIndex(Qad q)
+    {
+
+        for (int i = 0; i < _QadList.Length; i++)
+        {
+            if (q.gameObject == _QadList[i].gameObject)
+            {
+                return i;
+            }
+        }
+        return 0;
     }
 
 }

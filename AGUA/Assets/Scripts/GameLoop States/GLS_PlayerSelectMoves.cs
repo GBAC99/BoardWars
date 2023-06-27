@@ -5,26 +5,68 @@ using UnityEngine;
 public class GLS_PlayerSelectMoves : GameLoopStates
 {
 
-    bool loopAgain, nextState;
+    bool loopAgain, nextState, startTimer;
     public GLS_PlayerSelectMoves(GameLoopControler gC)
     {
 
         loopAgain = false;
         nextState = false;
+        startTimer = false;
+
+        timeToChange = 2f;
+
         Debug.Log("select qad for pieces move");
     }
 
     public override void CheckTransition(GameLoopControler gC)
     {
 
-        if (nextState) gC.ChangeState(new GLS_EnemiesAttack(gC));
-        if (loopAgain) gC.ChangeState(new GLS_PlayerPieceCheckQads(gC));
+        if (nextState)
+        {
+
+            if (timeToChange >= 0)
+            {
+                timeToChange -= Time.deltaTime;
+            }
+            else
+            {
+                gC.ChangeState(new GLS_EnemiesSelectAttackingQads(gC));
+            }
+            
+        }
+        if (loopAgain)
+        {
+            if (timeToChange >= 0)
+            {
+                timeToChange -= Time.deltaTime;
+            }
+            else
+            {
+                gC.ChangeState(new GLS_PlayerPieceCheckQads(gC));
+            }
+          
+        }
 
     }
 
     public override void Update(GameLoopControler gC)
     {
-        CheckQadPos(gC, gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece]);
+        if (gC.currentPlayerPiece <= 2)
+        {
+            CheckQadPos(gC, gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece]); 
+        }
+        else
+        {
+            if (timeToChange >= 0)
+            {
+                timeToChange -= Time.deltaTime;
+            }
+            else
+            {
+                nextState = true;
+            }
+        }
+
     }
 
     void CheckQadPos(GameLoopControler gC, GameObject ppC)
@@ -42,23 +84,18 @@ public class GLS_PlayerSelectMoves : GameLoopStates
                     if (q.selectable)
                     {
                         ppC.GetComponent<PlayerPieceControler>().MoveToQad(q);
-                        if (gC.currentPlayerPiece >= 3)
+                        if (gC.currentPlayerPiece < 3)
                         {
-                            nextState = true;
-                        }
-                        else
-                        {
+                           // gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().ResetLists();
                             gC.currentPlayerPiece += 1;
-                            loopAgain = true; ;
+                            loopAgain = true;
                         }
 
                     }
 
                 }
-
             }
         }
-
     }
 
 }

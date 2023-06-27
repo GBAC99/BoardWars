@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameLoopControler : MonoBehaviour
 {
     //Controls game states and UI needs.
+    private GameLoopControler instance;
 
 
     public QadManager QAD_MANAGER;
@@ -16,12 +17,15 @@ public class GameLoopControler : MonoBehaviour
     [HideInInspector]
     public int currentPlayerPiece = 0;
 
+    public int currentEnemyPiece = 0;
+
 
     //Variables for checking states and transitioning.
 
     private GameLoopStates currentState;
 
-    private GameLoopControler instance;
+    public bool levelWin;
+
 
     /*Maquina de estados 
      * 
@@ -58,6 +62,8 @@ public class GameLoopControler : MonoBehaviour
     void Update()
     {
         currentState.Update(this);
+ 
+
     }
 
     private void LateUpdate()
@@ -69,11 +75,16 @@ public class GameLoopControler : MonoBehaviour
     {
         currentState = gls;
     }
-
-
+     
     public void SpawnSelectedPlayer()
     { 
         QAD_MANAGER.SpawnPlayerPiece(selectecQadPos, selectedPlayerPiece);
     }
+
+    public void LoadNextLevel()
+    {
+        Debug.Log("Next Level Load!");
+    }
+    
 
 }

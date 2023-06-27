@@ -100,13 +100,17 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
-  damage: 0
+  attacked: 0
   diagonalToCurrent: 0
+  qadDamage: 0
   adjacencyList: []
   visited: 0
   qParent: {fileID: 0}
   distance: 0
   corner: 0
+  layerQad:
+    serializedVersion: 2
+    m_Bits: 8
   row: 0
   col: 0
 --- !u!114 &5186474513243748367

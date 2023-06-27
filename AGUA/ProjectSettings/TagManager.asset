@@ -11,6 +11,7 @@ TagManager:
   - PlayerPiece
   - EnemyPiece
   - PlayerSign
+  - CurrentPlayerPiece
   layers:
   - Default
   - TransparentFX
