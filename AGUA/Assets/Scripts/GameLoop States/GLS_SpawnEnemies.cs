@@ -13,6 +13,12 @@ public class GLS_SpawnEnemies : GameLoopStates
         Debug.Log("Spawn Enemies!");
         timeToChange = 1f;
         gC.QAD_MANAGER.SpawnEnemies();
+
+        for (int i = 0; i < gC.QAD_MANAGER.signPlayerPieces.Length; ++i)
+        {
+            gC.QAD_MANAGER.signPlayerPieces[i].GetComponent<PlayerPieceSign>().selectable = true;
+        }
+
     }
 
     public override void CheckTransition(GameLoopControler gC)

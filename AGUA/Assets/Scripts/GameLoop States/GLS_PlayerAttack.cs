@@ -20,14 +20,22 @@ public class GLS_PlayerAttack : GameLoopStates
     public override void CheckTransition(GameLoopControler gC)
     {
         if (change)
-        { 
-            for (int i = 0; i < gC.QAD_MANAGER.activeEnemyPieces.Length; i++)
+        {
+            if (timeToChange >= 0)
             {
-                gC.QAD_MANAGER.activeEnemyPieces[i].GetComponent<PlayerPieceControler>().ResetLists();
+                timeToChange -= Time.deltaTime;
             }
+            else
+            {
+                for (int i = 0; i < gC.QAD_MANAGER.activeEnemyPieces.Length; i++)
+                {
+                    gC.QAD_MANAGER.activeEnemyPieces[i].GetComponent<EnemyControler>().ResetLists();
+                }
 
-            gC.ChangeState(new GLS_PlayerCheckAttackingQads(gC));
+                gC.ChangeState(new GLS_CheckWin(gC));
+            }
         }
+            
     }
 
     public override void Update(GameLoopControler gC)

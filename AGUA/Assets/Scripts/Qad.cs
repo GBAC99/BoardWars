@@ -13,7 +13,7 @@ public class Qad : MonoBehaviour
     public bool selectable = false;
     public bool attacked = false;
     public bool diagonalToCurrent = false;
-
+    public bool playerAttack = false;
 
 
     public float qadDamage = 0;
@@ -58,6 +58,7 @@ public class Qad : MonoBehaviour
         else if (target) GetComponent<Renderer>().material.color = Color.green;
         else if (selectable) GetComponent<Renderer>().material.color = Color.cyan;
         else if (attacked) GetComponent<Renderer>().material.color = Color.red;
+        else if (playerAttack) GetComponent<Renderer>().material.color = Color.yellow;
         else GetComponent<Renderer>().material.color = Color.white;
     }
 

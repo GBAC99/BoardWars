@@ -19,6 +19,7 @@ public class QadManager : MonoBehaviour
 
     List<GameObject> playerPieces = new List<GameObject>();
     public GameObject[] activePlayerPieces;
+    public GameObject[] signPlayerPieces;
     public PlayerControler Player;
     int playerPieceQadPositionInit;
 
@@ -163,6 +164,11 @@ public class QadManager : MonoBehaviour
         return _qadList;
     }
 
+    public GameObject GetQadbyIndex(int index)
+    {
+        return QadList[index];
+    }
+
     //Control Game
 
     public void AddPlayerPieceSelected(GameObject playerPiece)
@@ -227,8 +233,11 @@ public class QadManager : MonoBehaviour
     {
         foreach (GameObject eP in activeEnemyPieces)
         {
-            eP.GetComponent<EnemyControler>().FindSelectableQads();
-            eP.GetComponent<EnemyControler>().MoveEnemy();
+            if (eP.GetComponent<EnemyControler>().alive)
+            {
+                eP.GetComponent<EnemyControler>().FindSelectableQads();
+                eP.GetComponent<EnemyControler>().MoveEnemy();
+            }
         }
         return true;
 
@@ -292,12 +301,9 @@ public class QadManager : MonoBehaviour
     {
         activePlayerPieces = new GameObject[0];
         activeEnemyPieces = new GameObject[0];
-    }
+    } 
 
-    public GameObject GetQadbyIndex(int index)
-    {
-        return QadList[index];
-    }
+  
 
     void CheckHover()
     {

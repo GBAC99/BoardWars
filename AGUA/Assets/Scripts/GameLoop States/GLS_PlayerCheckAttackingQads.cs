@@ -9,16 +9,13 @@ public class GLS_PlayerCheckAttackingQads : GameLoopStates
         Debug.Log("Player selects attack");
         Debug.Log("The current piece attacking is: " + gC.currentPlayerPiece);
 
-        if (gC.currentPlayerPiece > 2)
+        if (gC.currentPlayerPiece > 2 || !gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().alive)
         {
             change = true;
         }
         else
         {
-            gC.QAD_MANAGER.ActivatePlayerAttackQads
-                (gC.QAD_MANAGER.activePlayerPieces[gC.currentEnemyPiece].
-                GetComponent<PlayerPieceControler>());
-
+            gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().FindAttackingQads();
             change = true;
         }
     }

@@ -22,7 +22,10 @@ public class EnemyControler : QadMovable
         if (currentHealthPoints <= 0)
         {
             gameObject.SetActive(false);
+            alive = false;
         }
+
+
     }
 
     public void Spawn(Vector3 spawnPos)

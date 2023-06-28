@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerPieceControler : QadMovable
 {
     public PlayerPieceControler thisPPlayer;
-    float currentHealthPoints;
+    public float currentHealthPoints;
 
     // Start is called before the first frame update
     void Start()
@@ -13,8 +13,7 @@ public class PlayerPieceControler : QadMovable
         Init();
         currentHealthPoints = healthPoints;
         thisPPlayer = gameObject.GetComponent<PlayerPieceControler>();
-        //FindSelectableQads(); 
-        //FindAttackingQads(); 
+        alive = true;
     }
 
     // Update is called once per frame
@@ -25,6 +24,7 @@ public class PlayerPieceControler : QadMovable
         if (currentHealthPoints <= 0 )
         {
             gameObject.SetActive(false);
+            alive = false;
         }
 
     }

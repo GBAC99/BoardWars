@@ -21,12 +21,19 @@ public class GLS_SpawnPlayerPiece : GameLoopStates
         else if (activePlayerPieces == 3)
         {
             nextState = true;
-        } 
+        }
     }
 
     public override void CheckTransition(GameLoopControler gC)
     {
-        if (nextState) gC.ChangeState(new GLS_EnemiesMove(gC));
+        if (nextState)
+        {
+            if (gC.firstRound)
+            {
+                SetSelectableSigns(gC);
+            }
+            gC.ChangeState(new GLS_EnemiesMove(gC));
+        }
         if (loopAgain) gC.ChangeState(new GLS_PlayerSelectPiece(gC));
     }
 
@@ -34,4 +41,27 @@ public class GLS_SpawnPlayerPiece : GameLoopStates
     {
 
     }
+
+    void SetSelectableSigns(GameLoopControler gC)
+    {
+        for (int i = 0; i < gC.QAD_MANAGER.signPlayerPieces.Length; i++)
+        {
+            gC.QAD_MANAGER.signPlayerPieces[i].GetComponentInChildren<PlayerPieceSign>().selectable = false;
+            for (int j = 0; j < gC.QAD_MANAGER.activePlayerPieces.Length; j++)
+            {
+                if (gC.QAD_MANAGER.signPlayerPieces[i].GetComponent<PlayerPieceSign>().piece.GetComponent<PlayerPieceControler>().characterType
+                    == gC.QAD_MANAGER.activePlayerPieces[j].GetComponent<PlayerPieceControler>().characterType)
+                {
+
+                    Debug.Log("Still being selectable");
+                    gC.QAD_MANAGER.signPlayerPieces[i].GetComponentInChildren<PlayerPieceSign>().selectable = true;
+                    //Debug.Log("Im selectable: " + gC.QAD_MANAGER.signPlayerPieces[i].GetComponentInChildren<HoverControl>().selectable);
+
+
+                }
+            }
+
+        }
+    }
+
 }

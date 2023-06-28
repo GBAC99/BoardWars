@@ -26,24 +26,7 @@ public class GameLoopControler : MonoBehaviour
 
     public bool levelWin;
 
-
-    /*Maquina de estados 
-     * 
-     * La tecnica que estoy usando pasa estados como clases a cambiar
-     * Los estados tienen tres metodos (por ahora): un Constructor un Update y un CheckTransition
-     * Dentro del constructor se inicializan variables necesarias para el estado
-     * Tambien suceden las acciones de inicio de estado, como spawnear enemigos
-     * Dentro del Update sucede lo que deba suceder durante el estado
-     * Por ejemplo: corre un timer para cambiar auto, comprobar si queda algo por hacer...
-     * En el CheckTransition simplemente se cambia al estado deseado, bien puede ser uno siguiente en la cadena o uno anterior
-     * 
-     * Estados (esta apuntado en un papel) : Init state, Spawn Enemies, Select Player Pieces, Place Player Pieces,+
-     * +, Select Player Attack (si el character necesita input del player), Move Enemiy Pieces, Move Player Pieces,+
-     * +, Enemies Attack, Kill Player Pieces (si muere alguna),Player Attack, Kill Enemy Pieces(si muere alguna), +
-     * +, Acabar Nivel (si no quedan enemigos), Continuar nivel - LOOP - (si quedan enemigos).
-     * Puede que queden por hacer o sobren
-     * Los KILL puede que no hagan falta
-     */
+    public bool firstRound;
  
 
     // Start is called before the first frame update
@@ -56,14 +39,14 @@ public class GameLoopControler : MonoBehaviour
 
         ChangeState(new GLS_InitLevel(this));
 
+        firstRound = true;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        currentState.Update(this);
- 
-
+        currentState.Update(this); 
     }
 
     private void LateUpdate()

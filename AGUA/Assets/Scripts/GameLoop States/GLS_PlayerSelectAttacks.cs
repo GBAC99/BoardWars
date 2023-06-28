@@ -9,11 +9,11 @@ public class GLS_PlayerSelectAttacks : GameLoopStates
     public GLS_PlayerSelectAttacks(GameLoopControler gC)
     {
         loopAgain = false;
-        nextState = false;  
+        nextState = false;
 
         timeToChange = 2f;
 
-        Debug.Log("select qad for pieces attack");
+        Debug.Log("select qad for piece's attack");
     }
 
     public override void CheckTransition(GameLoopControler gC)
@@ -31,7 +31,7 @@ public class GLS_PlayerSelectAttacks : GameLoopStates
             }
 
         }
-        if (loopAgain)
+        else if (loopAgain)
         {
             if (timeToChange >= 0)
             {
@@ -43,13 +43,21 @@ public class GLS_PlayerSelectAttacks : GameLoopStates
             }
 
         }
+
     }
 
     public override void Update(GameLoopControler gC)
     {
         if (gC.currentPlayerPiece <= 2)
         {
+            if (!gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().alive)
+            {
+                gC.currentPlayerPiece += 1;
+                loopAgain = true;
+            }
+
             CheckQadPos(gC, gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece]);
+            
         }
         else
         {

@@ -19,11 +19,16 @@ public class GLS_CheckWin : GameLoopStates
     public override void CheckTransition(GameLoopControler gC)
     {
         if (CheckWin(gC)) gC.LoadNextLevel();
-        else gC.ChangeState(new GLS_PlayerSelectPiece(gC));
+
+        else
+        {
+            gC.firstRound = false;
+            gC.ChangeState(new GLS_PlayerSelectPiece(gC));
+        }
     }
 
     public override void Update(GameLoopControler gC)
-    {}
+    { }
 
     bool CheckWin(GameLoopControler gC)
     {

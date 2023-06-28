@@ -18,6 +18,12 @@ public class GLS_PlayerSelectPiece : GameLoopStates
 
     public override void Update(GameLoopControler gC)
     {
+        SelectPiece(gC);
+    }
+
+
+    void SelectPiece(GameLoopControler gC)
+    {
         if (Input.GetMouseButtonDown(0))
         {
             Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -28,7 +34,7 @@ public class GLS_PlayerSelectPiece : GameLoopStates
                 if (raycastHit.collider.tag == "PlayerSign")
                 {
                     PlayerPieceSign p = raycastHit.collider.GetComponent<PlayerPieceSign>();
-                    if (p != null)
+                    if (p != null && p.selectable)
                     {
                         gC.selectedPlayerPiece = p.getPieceSign();
                         change = true;
