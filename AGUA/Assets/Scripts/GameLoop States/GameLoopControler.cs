@@ -27,7 +27,7 @@ public class GameLoopControler : MonoBehaviour
     public bool levelWin;
 
     public bool firstRound;
- 
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +35,7 @@ public class GameLoopControler : MonoBehaviour
 
         if (instance == null) instance = this;
         else Destroy(gameObject);
-         
+
 
         ChangeState(new GLS_InitLevel(this));
 
@@ -46,28 +46,47 @@ public class GameLoopControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentState.Update(this); 
+        currentState.Update(this);
     }
 
     private void LateUpdate()
     {
-        currentState.CheckTransition(this); 
+        currentState.CheckTransition(this);
     }
 
     public void ChangeState(GameLoopStates gls)
     {
         currentState = gls;
     }
-     
+
     public void SpawnSelectedPlayer()
-    { 
+    {
         QAD_MANAGER.SpawnPlayerPiece(selectecQadPos, selectedPlayerPiece);
     }
+
+    public void StartNewRound()
+    {
+        for (int i = 0; i < QAD_MANAGER.activePlayerPieces.Length; i++)
+        {
+            if (!QAD_MANAGER.activePlayerPieces[i].GetComponent<PlayerPieceControler>().alive)
+            {
+                Destroy(QAD_MANAGER.activePlayerPieces[i]);
+                Destroy(QAD_MANAGER.activeSigns[i]);
+            }
+            else
+            {
+                QAD_MANAGER.activePlayerPieces[i].SetActive(false);
+            }
+        }
+
+    }
+
+    
 
     public void LoadNextLevel()
     {
         Debug.Log("Next Level Load!");
     }
-    
+
 
 }

@@ -5,13 +5,12 @@ using UnityEngine;
 public class GLS_PlayerSelectMoves : GameLoopStates
 {
 
-    bool loopAgain, nextState, startTimer;
+    bool loopAgain, nextState;
     public GLS_PlayerSelectMoves(GameLoopControler gC)
     {
 
         loopAgain = false;
         nextState = false;
-        startTimer = false;
 
         timeToChange = 2f;
 

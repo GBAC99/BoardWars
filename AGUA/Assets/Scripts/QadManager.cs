@@ -19,9 +19,12 @@ public class QadManager : MonoBehaviour
 
     List<GameObject> playerPieces = new List<GameObject>();
     public GameObject[] activePlayerPieces;
-    public GameObject[] signPlayerPieces;
     public PlayerControler Player;
     int playerPieceQadPositionInit;
+
+    public GameObject[] signPlayerPieces;
+    public PlayerPieceSign[] activeSigns = new PlayerPieceSign[3];
+    public Transform[] signPositions;
 
     [SerializeField]
     List<Qad> playerAttackedQads = new List<Qad>();
@@ -55,7 +58,7 @@ public class QadManager : MonoBehaviour
 
         //SpawnPlayerPieceTESTING();
         //SpawnEnemies();
-        mainCam = Instantiate(mainCam);
+        //mainCam = Instantiate(mainCam);
 
     }
 
@@ -202,6 +205,11 @@ public class QadManager : MonoBehaviour
 
     }
 
+    public void PlaceSelectedPiece()
+    {
+
+    }
+
     public void SpawnPlayerPieceTESTING()
     {
 
@@ -210,6 +218,8 @@ public class QadManager : MonoBehaviour
                   QadList[8].transform.position.z));
 
     }
+
+
 
     public void SpawnEnemies()
     {
@@ -228,6 +238,19 @@ public class QadManager : MonoBehaviour
         activeEnemyPieces = GameObject.FindGameObjectsWithTag("EnemyPiece");
     }
 
+    //Creates the selected team of pieces to later reselect.
+    public void SpawnSign(PlayerPieceSign pps, int pieceNum)
+    {
+        activeSigns[pieceNum] = pps.Spawn(pps, signPositions[pieceNum]);
+    }
+
+    public void SetSignCurrentHp()
+    {
+        for (int i = 0; i < activeSigns.Length; i++)
+        {
+            activeSigns[i].attachedPpc = activePlayerPieces[i].GetComponent<PlayerPieceControler>();
+        }
+    }
 
     public bool ControlEnemies()
     {
@@ -301,9 +324,9 @@ public class QadManager : MonoBehaviour
     {
         activePlayerPieces = new GameObject[0];
         activeEnemyPieces = new GameObject[0];
-    } 
+    }
 
-  
+
 
     void CheckHover()
     {

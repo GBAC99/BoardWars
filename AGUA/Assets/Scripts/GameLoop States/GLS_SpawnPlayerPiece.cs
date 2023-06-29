@@ -11,8 +11,17 @@ public class GLS_SpawnPlayerPiece : GameLoopStates
     public GLS_SpawnPlayerPiece(GameLoopControler gC)
     {
         Debug.Log("SpawnPlayerPiece");
-        gC.SpawnSelectedPlayer();
+
+        if (gC.firstRound)
+        {
+            gC.SpawnSelectedPlayer();
+        }
+        else
+        {
+
+        }
         activePlayerPieces = gC.QAD_MANAGER.GetActivePlayerPiecesCount();
+
 
         if (activePlayerPieces == 1 || activePlayerPieces == 2)
         {
@@ -31,6 +40,7 @@ public class GLS_SpawnPlayerPiece : GameLoopStates
             if (gC.firstRound)
             {
                 SetSelectableSigns(gC);
+                gC.QAD_MANAGER.SetSignCurrentHp();
             }
             gC.ChangeState(new GLS_EnemiesMove(gC));
         }
@@ -55,8 +65,6 @@ public class GLS_SpawnPlayerPiece : GameLoopStates
 
                     Debug.Log("Still being selectable");
                     gC.QAD_MANAGER.signPlayerPieces[i].GetComponentInChildren<PlayerPieceSign>().selectable = true;
-                    //Debug.Log("Im selectable: " + gC.QAD_MANAGER.signPlayerPieces[i].GetComponentInChildren<HoverControl>().selectable);
-
 
                 }
             }

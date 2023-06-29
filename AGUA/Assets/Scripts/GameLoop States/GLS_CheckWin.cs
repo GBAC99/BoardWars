@@ -5,14 +5,8 @@ using UnityEngine;
 public class GLS_CheckWin : GameLoopStates
 {
 
-    bool loopAgain, nextState;
-
     public GLS_CheckWin(GameLoopControler gC)
     {
-
-        loopAgain = false;
-        nextState = false;
-
         Debug.Log("Check if Enemies alive");
     }
 
@@ -23,6 +17,9 @@ public class GLS_CheckWin : GameLoopStates
         else
         {
             gC.firstRound = false;
+
+            
+
             gC.ChangeState(new GLS_PlayerSelectPiece(gC));
         }
     }

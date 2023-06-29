@@ -13,7 +13,10 @@ public class GLS_PlayerSelectPiece : GameLoopStates
 
     public override void CheckTransition(GameLoopControler gC)
     {
-        if (change) gC.ChangeState(new GLS_PlayerSelectQad(gC));
+        if (change)
+        {
+            gC.ChangeState(new GLS_PlayerSelectQad(gC));
+        }
     }
 
     public override void Update(GameLoopControler gC)
@@ -36,7 +39,17 @@ public class GLS_PlayerSelectPiece : GameLoopStates
                     PlayerPieceSign p = raycastHit.collider.GetComponent<PlayerPieceSign>();
                     if (p != null && p.selectable)
                     {
-                        gC.selectedPlayerPiece = p.getPieceSign();
+
+                        if (gC.firstRound)
+                        {
+                            gC.selectedPlayerPiece = p.getPieceSign();
+                            gC.QAD_MANAGER.SpawnSign(p, gC.QAD_MANAGER.GetActivePlayerPiecesCount());
+                        }
+                        else
+                        {
+
+                        }
+
                         change = true;
                     }
                 }

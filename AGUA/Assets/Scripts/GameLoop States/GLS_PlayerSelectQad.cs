@@ -32,8 +32,7 @@ public class GLS_PlayerSelectQad : GameLoopStates
                         gC.selectecQadPos = q;
                         change = true;
                     } 
-                }
-
+                } 
             }
         }
     }
