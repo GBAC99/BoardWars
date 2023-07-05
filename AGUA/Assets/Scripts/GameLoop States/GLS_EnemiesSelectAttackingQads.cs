@@ -13,7 +13,7 @@ public class GLS_EnemiesSelectAttackingQads : GameLoopStates
 
         gC.QAD_MANAGER.ActivateEnemyAttackQads();
 
-        change = true;
+        timeToChange = 1.5f;
     }
 
     public override void CheckTransition(GameLoopControler gC)
@@ -25,6 +25,13 @@ public class GLS_EnemiesSelectAttackingQads : GameLoopStates
 
     public override void Update(GameLoopControler gC)
     {
-
+        if (timeToChange >= 0)
+        {
+            timeToChange -= Time.deltaTime;
+        }
+        else
+        {
+            change = true;
+        }
     }
 }

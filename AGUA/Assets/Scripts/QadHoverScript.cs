@@ -9,26 +9,30 @@ public class QadHoverScript : MonoBehaviour
     public Material hoveringMat;
     public float scaleHover;
 
-    bool hover;
-
     private Renderer hoverRenderer;
+
+    public  GameObject cloneQad;
 
     // Start is called before the first frame update
     void Start()
-    { 
+    {
         hoverRenderer = CreateOutline(hoveringMat, scaleHover, hoverColor);
     }
     Renderer CreateOutline(Material outlineMat, float scaleFactor, Color color)
     {
 
-        GameObject outlineObject = Instantiate(this.gameObject, transform.position, transform.rotation, transform);
+        GameObject outlineObject = Instantiate(cloneQad, transform.position, transform.rotation, transform);
         Renderer rend = outlineObject.GetComponent<Renderer>();
         rend.material = outlineMat;
         rend.material.SetColor("_OutlineColor", color);
         rend.material.SetFloat("_ScaleFactor", scaleFactor);
         rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
-        outlineObject.GetComponent<QadHoverScript>().enabled = false;
         outlineObject.GetComponent<Collider>().enabled = false;
+        outlineObject.GetComponent<QadHoverScript>().enabled = false;
+        outlineObject.GetComponent<Qad>().enabled = false;
+        outlineObject.GetComponent<Animator>().enabled = false;
+        outlineObject.tag = "Untagged";
+        outlineObject.layer = 0 ;
         rend.enabled = false;
 
         return rend;
@@ -41,18 +45,13 @@ public class QadHoverScript : MonoBehaviour
 
     private void OnMouseOver()
     {
-        hover = true;
+
     }
 
     private void OnMouseExit()
     {
         hoverRenderer.enabled = false;
-        hover = false;
     }
 
-    public bool IsHover()
-    {
-        return hover;
-    }
 
 }

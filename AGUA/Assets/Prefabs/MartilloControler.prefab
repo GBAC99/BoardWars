@@ -59,6 +59,7 @@ MonoBehaviour:
   currentQad: {fileID: 0}
   characterType: 5
   thisPPlayer: {fileID: 0}
+  currentHealthPoints: 0
 --- !u!65 &200323773961316581
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -83,7 +84,6 @@ GameObject:
   - component: {fileID: 4974470513976342713}
   - component: {fileID: 4974470513976342712}
   - component: {fileID: 4974470513976342715}
-  - component: {fileID: 8757665877423072084}
   m_Layer: 0
   m_Name: Martillo
   m_TagString: Untagged
@@ -154,20 +154,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8757665877423072084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4974470513976342717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b544bb76ef63c1242abc5e2f42f466ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverColor: {r: 0, g: 0, b: 0, a: 0}
-  hover: 0
 --- !u!1001 &1407438679420659049
 PrefabInstance:
   m_ObjectHideFlags: 0

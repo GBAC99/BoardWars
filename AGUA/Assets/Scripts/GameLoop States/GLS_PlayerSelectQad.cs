@@ -7,7 +7,10 @@ public class GLS_PlayerSelectQad : GameLoopStates
     public GLS_PlayerSelectQad(GameLoopControler gC)
     {
         gC.selectecQadPos = null;
-        Debug.Log("PPPlaceSelection"); 
+        gC.QAD_MANAGER.QadCheckUp();
+
+        Debug.Log("PPPlaceSelection");
+        
     }
 
     public override void CheckTransition(GameLoopControler gC)

@@ -59,6 +59,7 @@ MonoBehaviour:
   currentQad: {fileID: 0}
   characterType: 6
   thisPPlayer: {fileID: 0}
+  currentHealthPoints: 0
 --- !u!65 &1844627798252242404
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -83,7 +84,6 @@ GameObject:
   - component: {fileID: 6624127536059055880}
   - component: {fileID: 6624127536059055881}
   - component: {fileID: 6624127536059055882}
-  - component: {fileID: 2700732659571483894}
   m_Layer: 0
   m_Name: Barco
   m_TagString: Untagged
@@ -154,20 +154,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2700732659571483894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6624127536059055924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b544bb76ef63c1242abc5e2f42f466ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverColor: {r: 0, g: 0, b: 0, a: 0}
-  hover: 0
 --- !u!1001 &5534645753330862018
 PrefabInstance:
   m_ObjectHideFlags: 0

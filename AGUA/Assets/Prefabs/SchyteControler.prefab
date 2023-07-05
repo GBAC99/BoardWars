@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1581469524852968312}
   - component: {fileID: 1581469524852968315}
   - component: {fileID: 1581469524852968314}
-  - component: {fileID: 1581469524852968313}
   m_Layer: 0
   m_Name: Hoz
   m_TagString: Untagged
@@ -82,20 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1581469524852968313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581469524852968316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b544bb76ef63c1242abc5e2f42f466ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverColor: {r: 0, g: 0, b: 0, a: 0}
-  hover: 0
 --- !u!1 &4726774669285988800
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,6 +140,7 @@ MonoBehaviour:
   currentQad: {fileID: 0}
   characterType: 4
   thisPPlayer: {fileID: 0}
+  currentHealthPoints: 0
 --- !u!65 &1556736071655936410
 BoxCollider:
   m_ObjectHideFlags: 0

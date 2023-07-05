@@ -47,33 +47,67 @@ public class QadMovable : MonoBehaviour
     public void Init()
     {
         qadManager = FindObjectOfType<QadManager>();
-        QadList = qadManager.GetQadList(); 
+        QadList = qadManager.GetQadList();
         alive = true;
     }
 
 
-    private void Update()
+    private void LateUpdate()
     {
-
+        if (!moving && currentQad == null)
+        {
+            GetCurrentQad();
+        }
     }
 
     //Pathfinding Movement
     public void GetCurrentQad()//Gets the quad under the piece
     {
-        
+
         currentQad = GetTargetQad(gameObject);
         currentQad.current = true;
         currentQad.walkable = false;
+        currentQad.currentPiece = gameObject;
+        switch (characterType)
+        {
+            case CharacterT.ENEMY_HORIZONTAL:
+                currentQad.currentPieceType = 1;
+                break;
+            case CharacterT.ENEMY_VERTICAL:
+                currentQad.currentPieceType = 1;
 
+                break;
+            case CharacterT.ENEMY_HORSE:
+                currentQad.currentPieceType = 1;
+
+                break;
+            case CharacterT.PLAYER_ARROW:
+                currentQad.currentPieceType = 0;
+
+                break;
+            case CharacterT.PLAYER_SCHYTE:
+                currentQad.currentPieceType = 0;
+
+                break;
+            case CharacterT.PLAYER_HAMMMER:
+                currentQad.currentPieceType = 0;
+
+                break;
+            case CharacterT.PLAYER_SHIP:
+                currentQad.currentPieceType = 0;
+                break;
+        }
+        gameObject.transform.parent = currentQad.qadRenderTransform;
     }
 
-    public Qad GetTargetQad(GameObject target)
+    public Qad GetTargetQad(GameObject origin)
     {
         RaycastHit hit;
         Qad qad = null;
 
-        if (Physics.Raycast(target.transform.position, -Vector3.up, out hit, 1))
+        if (Physics.Raycast(origin.transform.position, -Vector3.up, out hit, 500f))
         {
+
             if (hit.collider.gameObject.tag == "Qad")
             {
                 qad = hit.collider.GetComponent<Qad>();
@@ -82,12 +116,29 @@ public class QadMovable : MonoBehaviour
         return qad;
     }
 
-    public void ComputeAdjacencyLists(bool checkForMoves) //Computes all adjacent Qads to each Qad
+    public void ComputeAdjacencyLists() //Computes all adjacent Qads to each Qad
     {
         foreach (GameObject qad in QadList)
         {
             Qad q = qad.GetComponent<Qad>();
-            q.FindNeighbors(jumpHeight, checkForMoves, gameObject.GetComponent<PlayerPieceControler>());
+            q.FindNeighbors(jumpHeight);
+            //q.CheckUp();
+        }
+    }
+
+    public void CleanAdjacencyLists()
+    {
+        foreach (GameObject qad in QadList)
+        {
+            Qad q = qad.GetComponent<Qad>();
+            foreach (Qad adjQad in q.adjacencyList)
+            {
+                if (adjQad.current)
+                {
+                    Debug.Log("adjqcurrent");
+                    
+                }
+            }
         }
     }
 
@@ -131,10 +182,13 @@ public class QadMovable : MonoBehaviour
     //Moving IA
     public void FindSelectableQads()
     {
-        Debug.Log("finding selectable qads"); 
-        ComputeAdjacencyLists(true); 
+        Debug.Log("finding selectable qads");
+        ManageTags(true);
+        ComputeAdjacencyLists();
         GetCurrentQad();
-        Queue<Qad> process = new Queue<Qad>(); 
+        CleanAdjacencyLists();
+        Debug.Log(currentQad == null);
+        Queue<Qad> process = new Queue<Qad>();
 
         process.Enqueue(currentQad);
         currentQad.visited = true;
@@ -143,7 +197,7 @@ public class QadMovable : MonoBehaviour
         {
             Qad q = process.Dequeue();
 
-            if (q != null && !q.current)
+            if (q != null && !q.current && q.distance == move)
             {
                 selectableQads.Add(q);
                 q.selectable = true;
@@ -759,7 +813,7 @@ public class QadMovable : MonoBehaviour
                                     //Conditions if the character starts the movement in the inital or final column of the grid.
                                     if (currentQad.col)
                                     {
-                                        if (q.adjacencyList[0] == qad)//Check qads index
+                                        if (q.adjacencyList[1] == qad)//Check qads index
                                         {
                                             qad.qParent = q;
                                             qad.visited = true; //it is processed
@@ -803,18 +857,37 @@ public class QadMovable : MonoBehaviour
             }
         }
 
-        foreach (Qad q in selectableQads)
+        for (int i = 0; i < selectableQads.Count; i++)
+        {
+            Qad q = selectableQads[i];
+
+            RaycastHit _hit;
+
+            if (Physics.Raycast(q.transform.position, Vector3.up, out _hit, 1))
+            {
+                q.selectable = false;
+                selectableQads.Remove(q);
+                break;
+            }
+        }
+
+        /*foreach (Qad q in selectableQads)
         {
             RaycastHit _hit;
 
             if (Physics.Raycast(q.transform.position, Vector3.up, out _hit, 1))
             {
                 q.selectable = false;
+                selectableQads.Remove(q);
+                break;
             }
-        }
+        }*/
 
+        ManageTags(false);
 
     }
+
+    public virtual void ManageTags(bool current) {}
 
     public void ShowSelectableQads()
     {
@@ -887,8 +960,6 @@ public class QadMovable : MonoBehaviour
         }
 
         selectableQads.Clear();
-
-
     }
 
     public void ResetLists()
@@ -929,7 +1000,8 @@ public class QadMovable : MonoBehaviour
 
     public void FindAttackingQads()
     {
-        ComputeAdjacencyLists(false);
+        ManageTags(true);
+        ComputeAdjacencyLists();
         GetCurrentQad();
         Queue<Qad> process = new Queue<Qad>();
 
@@ -943,9 +1015,9 @@ public class QadMovable : MonoBehaviour
         {
             Qad q = process.Dequeue();
 
+            // Filter for diagonal Qad cases and exact selections
             if (!q.current)
             {
-                // Filter for diagonal Qad cases and exact selections
                 switch (characterType)
                 {
                     case CharacterT.ENEMY_VERTICAL:
@@ -1456,9 +1528,17 @@ public class QadMovable : MonoBehaviour
                 }
             }
         }
+        ManageTags(false);
+
     }
 
 
+    public void SetApart()
+    {
+        Debug.Log(gameObject.name);
+        gameObject.SetActive(false);
+        transform.position = new Vector3();
+        currentQad.GetComponent<Animator>().SetBool("KILL", false);
+    }
 
-   
 }

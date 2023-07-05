@@ -10,8 +10,11 @@ public class GLS_PlayerAttack : GameLoopStates
         Debug.Log("player attack");
         for (int i = 0; i < gC.QAD_MANAGER.activePlayerPieces.Length; i++)
         {
-            gC.QAD_MANAGER.activeEnemyPieces[i].GetComponent<EnemyControler>().GetCurrentQad();
-            gC.QAD_MANAGER.activeEnemyPieces[i].GetComponent<EnemyControler>().TakeDamage(); 
+            if (gC.QAD_MANAGER.activeEnemyPieces[i].GetComponent<EnemyControler>().alive)
+            {
+                gC.QAD_MANAGER.activeEnemyPieces[i].GetComponent<EnemyControler>().GetCurrentQad();
+                gC.QAD_MANAGER.activeEnemyPieces[i].GetComponent<EnemyControler>().TakeDamage();
+            }
         }
 
         change = true;
@@ -35,7 +38,7 @@ public class GLS_PlayerAttack : GameLoopStates
                 gC.ChangeState(new GLS_CheckWin(gC));
             }
         }
-            
+
     }
 
     public override void Update(GameLoopControler gC)

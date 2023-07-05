@@ -11,7 +11,9 @@ public class EnemyControler : QadMovable
     {
         Init();
         currentHealthPoints = healthPoints;
-        thisEnemy = gameObject.GetComponent<EnemyControler>(); 
+        thisEnemy = gameObject.GetComponent<EnemyControler>();
+
+        FindSelectableQads();
     }
 
     // Update is called once per frame
@@ -19,13 +21,25 @@ public class EnemyControler : QadMovable
     {
         if (moving) Move();
 
+
+
         if (currentHealthPoints <= 0)
         {
-            gameObject.SetActive(false);
-            alive = false;
+            if (alive)
+            {
+                currentQad.GetComponent<Animator>().SetBool("KILL", true);
+                alive = false;
+
+            }
         }
 
 
+    }
+
+    public override void ManageTags(bool current)
+    {
+        if (current) gameObject.tag = "CurrentEnemyPiece";
+        else gameObject.tag = "EnemyPiece";
     }
 
     public void Spawn(Vector3 spawnPos)
@@ -34,8 +48,7 @@ public class EnemyControler : QadMovable
     }
 
     public void MoveEnemy()
-    { 
-
+    {
         int targetPosition = 0;
 
         switch (characterType)
@@ -44,22 +57,22 @@ public class EnemyControler : QadMovable
 
                 if (currentQad.corner)
                 {
-                    targetPosition = 1;
+                    targetPosition = 0;
 
                 }
                 else if (currentQad.col)
                 {
-                    targetPosition = 2;
+                    targetPosition = 0;
                 }
                 else
                 {
-                    if (selectableQads.Count < 4)
+                    if (selectableQads.Count < 2)
                     {
-                        targetPosition = 1;
+                        targetPosition = 0;
                     }
                     else
                     {
-                        targetPosition = Random.Range(2, 4);
+                        targetPosition = Random.Range(0, 2);
                     }
                 }
                 break;
@@ -68,23 +81,23 @@ public class EnemyControler : QadMovable
 
                 if (currentQad.corner)
                 {
-                    targetPosition = 1;
+                    targetPosition = 0;
 
                 }
                 else if (currentQad.row)
                 {
-                    targetPosition = 1;
+                    targetPosition = 0;
                 }
                 else
                 {
-                    if (selectableQads.Count < 4 && selectableQads.Count > 0)
+                    if (selectableQads.Count < 2)
                     {
-                        targetPosition = 1;
+                        targetPosition = 0;
                     }
-                    
+
                     else
                     {
-                        targetPosition = Random.Range(2, 4);
+                        targetPosition = Random.Range(0, 2);
                     }
                 }
                 break;
@@ -93,23 +106,20 @@ public class EnemyControler : QadMovable
 
                 if (currentQad.corner)
                 {
-                    targetPosition = selectableQads.Count - 1;
-                }
-                else if (currentQad.row || currentQad.col)
-                {
-                    targetPosition = Random.Range(2, 4);
+                    targetPosition = 0;
                 }
                 else
                 {
-                    targetPosition = Random.Range(4, 6);
+                    targetPosition = Random.Range(0, 2);
                 }
                 break;
 
         }
-         
-        MoveToQad(selectableQads[targetPosition]); 
 
+        Debug.Log(gameObject.name + " " + targetPosition);
 
+        MoveToQad(selectableQads[targetPosition]);
+        
     }
 
     public void TakeDamage()

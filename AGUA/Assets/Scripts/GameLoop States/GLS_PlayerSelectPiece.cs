@@ -43,11 +43,12 @@ public class GLS_PlayerSelectPiece : GameLoopStates
                         if (gC.firstRound)
                         {
                             gC.selectedPlayerPiece = p.getPieceSign();
-                            gC.QAD_MANAGER.SpawnSign(p, gC.QAD_MANAGER.GetActivePlayerPiecesCount());
+                            gC.QAD_MANAGER.SpawnSign(p, gC.QAD_MANAGER.GetActivePlayerPiecesCount(true));
                         }
                         else
                         {
-
+                            p.usingPiece = true;
+                            gC.selectedPlayerPieceNum = p.GetPieceNum();
                         }
 
                         change = true;

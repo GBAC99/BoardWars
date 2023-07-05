@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 7790444737080270184}
   - component: {fileID: 8046117136929000266}
   - component: {fileID: 8046117136929000267}
+  - component: {fileID: 566343682465427536}
   m_Layer: 7
   m_Name: HammerSign
   m_TagString: PlayerSign
@@ -127,6 +128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piece: {fileID: 3692172062841502501, guid: 334c6a6e8d5e3c64daacf22d92aa6d96, type: 3}
+  attachedPpc: {fileID: 0}
+  activeNumPiece: 0
   pieceCurrentHealth: 0
   characterType: 2
   usingPiece: 0
@@ -147,3 +150,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &566343682465427536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8046117136929000269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b544bb76ef63c1242abc5e2f42f466ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 1845464956400109779}
+  gC: {fileID: 0}
+  hoverColor: {r: 2.2523499, g: 2.297397, b: 0.75678957, a: 0}
+  initColor: {r: 0, g: 0, b: 0, a: 0}
+  hover: 0
+  characterType: playerHammer
+  selectable: 0

@@ -15,8 +15,10 @@ public class GLS_PlayerPieceCheckQads : GameLoopStates
         }
         else
         {
-            gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].tag = "CurrentPlayerPiece";
-            gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().FindSelectableQads();
+            if (gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().alive)
+            { 
+                gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().FindSelectableQads();
+            }
 
             change = true;
 
@@ -27,10 +29,6 @@ public class GLS_PlayerPieceCheckQads : GameLoopStates
     {
         if (change)
         {
-            if (gC.currentPlayerPiece <= 2)
-            {
-                gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].tag = "PlayerPiece";
-            }
             gC.ChangeState(new GLS_PlayerSelectMoves(gC));
         }
     }

@@ -91,6 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6067523099814531564}
   - component: {fileID: 681303878771702624}
+  - component: {fileID: 7520915858057834661}
   - component: {fileID: 3246351497009196129}
   m_Layer: 0
   m_Name: Enemy_H
@@ -127,7 +128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 80
-  currentHealthPoints: 0
   alive: 0
   damage: 25
   jumpHeight: 1
@@ -139,6 +139,26 @@ MonoBehaviour:
   attackingQads: []
   currentQad: {fileID: 0}
   characterType: 2
+--- !u!114 &7520915858057834661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6067523099814531565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b544bb76ef63c1242abc5e2f42f466ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 6067523099406695617}
+  gC: {fileID: 0}
+  hoverColor: {r: 28.186356, g: 0.22106947, b: 0, a: 0}
+  initColor: {r: 0, g: 0, b: 0, a: 0}
+  hover: 0
+  showInfo: 0
+  characterType: enemyH
+  selectable: 0
 --- !u!65 &3246351497009196129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -150,5 +170,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1.4734749, z: 1}
+  m_Center: {x: 0, y: 0.7632625, z: 0}

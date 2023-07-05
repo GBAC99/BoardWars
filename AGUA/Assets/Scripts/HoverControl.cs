@@ -5,20 +5,37 @@ using UnityEngine;
 public class HoverControl : MonoBehaviour
 {
 
-    private Renderer rend;
-    private PlayerPieceSign thisPpSign;
+    public Renderer rend;
+
+    public GameLoopControler gC;
+
 
     [ColorUsage(true, true)]
     public Color hoverColor;
 
+    public Color initColor;
+
     public bool hover;
+    public bool showInfo;
+    public string characterType;
+    float timeToShowUI = 1.2f;
+    float timeToHideInfo = 0.5f;
 
     public bool selectable;
 
     // Start is called before the first frame update
     void Start()
     {
-        rend = GetComponent<Renderer>(); 
+        gC = FindObjectOfType<GameLoopControler>();
+
+        if (rend == null)
+        {
+            rend = GetComponentInChildren<Renderer>();
+            rend.material.color = Color.white;
+        }
+        initColor = rend.material.color;
+
+
         selectable = true;
     }
 
@@ -28,34 +45,64 @@ public class HoverControl : MonoBehaviour
         {
             rend.material.color = Color.gray;
         }
-        
+
+        if (!showInfo)
+        {
+            if (timeToHideInfo >= 0)
+            {
+                timeToHideInfo -= Time.deltaTime;
+            }
+            else
+            {
+                showInfo = true;
+                HighLight(false);
+            }
+        }
     }
 
     private void OnMouseEnter()
     {
-        if (selectable)
-        {
-            rend.material.color = hoverColor;
-            hover = true;
+        timeToHideInfo = 1.5f;
+        rend.material.color = hoverColor;
+        hover = true;
+        showInfo = true;
+        
+    }
+
+    private void OnMouseOver()
+    {
+        if (timeToShowUI >= 0)
+        { 
+            timeToShowUI -= Time.deltaTime;
         }
         else
         {
-
-            rend.material.color = Color.black;
+            HighLight(true);
         }
     }
+
+    
 
     private void OnMouseExit()
     {
-        if (selectable)
+        timeToShowUI = 1.5f;
+        rend.material.color = initColor;
+        hover = false;
+        showInfo = false;
+    }
+
+    //Enables the panel with the information of the piece
+    void HighLight(bool on)
+    {
+        if (on)
         {
-            rend.material.color = Color.white;
-            hover = true;
+            gC.ShowInfo(characterType);
         }
         else
-        { 
-            rend.material.color = Color.gray;
+        {
+            gC.HideInfo(characterType);
         }
     }
+
 
 }

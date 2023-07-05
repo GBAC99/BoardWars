@@ -16,9 +16,8 @@ public class GLS_CheckWin : GameLoopStates
 
         else
         {
-            gC.firstRound = false;
 
-            
+            gC.StartNewRound();
 
             gC.ChangeState(new GLS_PlayerSelectPiece(gC));
         }

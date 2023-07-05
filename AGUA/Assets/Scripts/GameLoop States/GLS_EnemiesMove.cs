@@ -9,6 +9,7 @@ public class GLS_EnemiesMove : GameLoopStates
         Debug.Log("move enemies");
         timeToChange = 3; //Time is needed to let the pieces move to the desired spot
         change = gC.QAD_MANAGER.ControlEnemies();
+
     }
 
 

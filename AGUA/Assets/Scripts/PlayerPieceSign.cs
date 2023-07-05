@@ -57,28 +57,31 @@ public class PlayerPieceSign : MonoBehaviour
             gameObject.SetActive(false);
         }
 
+        if (usingPiece)
+        {
+            rend.material.color = Color.gray;
+        }
+
         if (attachedPpc != null)
         {
             pieceCurrentHealth = attachedPpc.currentHealthPoints;
+            if (attachedPpc.alive == false)
+            {
+                selectable = false;
+            }
         }
 
-
-        /* if (hover)
-         {
-             MoveUp();
-         }
-         else
-         {
-             if (transform.position != startPosition)
-             {
-                 MoveInit();
-             }
-         }*/
+        
     }
 
     public GameObject getPieceSign()
     {
         return piece;
+    }
+
+    public int GetPieceNum()
+    {
+        return activeNumPiece;
     }
 
     public PlayerPieceSign Spawn(PlayerPieceSign pps,Transform position)
@@ -89,42 +92,5 @@ public class PlayerPieceSign : MonoBehaviour
     public void SetCurrentPieceHp(PlayerPieceControler ppC)
     {
         attachedPpc = ppC;
-    }
-
-    private void OnMouseEnter()
-    {
-        if (selectable)
-        {
-            rend.material.color = hoverColor;
-            hover = true;
-        }
-        else
-        {
-
-            rend.material.color = Color.black;
-        }
-    }
-
-    private void OnMouseExit()
-    {
-        if (selectable)
-        {
-            rend.material.color = Color.white;
-            hover = false;
-        }
-        else
-        {
-            rend.material.color = Color.gray;
-        }
-    }
-
-    void MoveUp()
-    {
-        transform.position = Vector3.MoveTowards(transform.position, upPosition, 2 * Time.deltaTime);
-    }
-
-    void MoveInit()
-    {
-        transform.position = Vector3.MoveTowards(transform.position, startPosition, 1.5f * Time.deltaTime);
     }
 }

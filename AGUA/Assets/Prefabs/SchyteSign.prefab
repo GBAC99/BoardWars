@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9031701072432531056}
   - component: {fileID: 3850946861168985776}
   - component: {fileID: 3850946861168985783}
+  - component: {fileID: -5393228822859523829}
   m_Layer: 7
   m_Name: SchyteSign
   m_TagString: PlayerSign
@@ -46,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piece: {fileID: 4726774669285988800, guid: a035714ca3e35b440a00603dfce9f1bb, type: 3}
+  attachedPpc: {fileID: 0}
+  activeNumPiece: 0
   pieceCurrentHealth: 0
   characterType: 1
   usingPiece: 0
@@ -66,6 +69,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &-5393228822859523829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3850946861168985777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b544bb76ef63c1242abc5e2f42f466ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 6997236368989393931}
+  gC: {fileID: 0}
+  hoverColor: {r: 2.2523499, g: 2.297397, b: 0.75678957, a: 0}
+  initColor: {r: 0, g: 0, b: 0, a: 0}
+  hover: 0
+  characterType: playerSchyte
+  selectable: 0
 --- !u!1 &6997236368989393933
 GameObject:
   m_ObjectHideFlags: 0

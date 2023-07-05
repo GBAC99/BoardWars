@@ -14,6 +14,7 @@ public class PlayerPieceControler : QadMovable
         currentHealthPoints = healthPoints;
         thisPPlayer = gameObject.GetComponent<PlayerPieceControler>();
         alive = true;
+        //FindSelectableQads();
     }
 
     // Update is called once per frame
@@ -23,10 +24,19 @@ public class PlayerPieceControler : QadMovable
 
         if (currentHealthPoints <= 0 )
         {
-            gameObject.SetActive(false);
-            alive = false;
+            if (alive)
+            {
+                alive = false;
+                currentQad.GetComponent<Animator>().SetBool("KILL", true); 
+            }
         }
 
+    }
+
+    public override void ManageTags(bool current)
+    { 
+        if (current) gameObject.tag = "CurrentPlayerPiece";
+        else gameObject.tag = "PlayerPiece"; 
     }
 
     public void Spawn(Vector3 spawnPos)

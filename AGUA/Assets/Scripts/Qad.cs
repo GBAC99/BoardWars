@@ -15,6 +15,11 @@ public class Qad : MonoBehaviour
     public bool diagonalToCurrent = false;
     public bool playerAttack = false;
 
+    public Renderer qadRender;
+    public Transform qadRenderTransform;
+
+    public GameObject currentPiece;
+    public int currentPieceType;
 
     public float qadDamage = 0;
 
@@ -31,6 +36,7 @@ public class Qad : MonoBehaviour
     public Qad qParent = null;
     public int distance = 0;
     public bool corner = false;
+    public bool ocupied = false;
 
     //layer
     public LayerMask layerQad;
@@ -54,12 +60,16 @@ public class Qad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (current) GetComponent<Renderer>().material.color = Color.magenta;
-        else if (target) GetComponent<Renderer>().material.color = Color.green;
-        else if (selectable) GetComponent<Renderer>().material.color = Color.cyan;
-        else if (attacked) GetComponent<Renderer>().material.color = Color.red;
-        else if (playerAttack) GetComponent<Renderer>().material.color = Color.yellow;
-        else GetComponent<Renderer>().material.color = Color.white;
+        if (current)
+        {
+            if (currentPieceType == 0) qadRender.material.color = Color.magenta;
+            else qadRender.material.color = Color.gray;
+        }
+        else if (target) qadRender.material.color = Color.green;
+        else if (selectable) qadRender.material.color = Color.cyan;
+        else if (attacked) qadRender.material.color = Color.red;
+        else if (playerAttack) qadRender.material.color = Color.yellow;
+        else qadRender.material.color = Color.white;
     }
 
     public void SetDamageInQad(float _damage)
@@ -68,10 +78,6 @@ public class Qad : MonoBehaviour
         qadDamage = _damage;
     }
 
-    public bool GetHover()
-    {
-        return hover.IsHover();
-    }
 
     public void Reset()
     {
@@ -85,55 +91,104 @@ public class Qad : MonoBehaviour
         visited = false;
         qParent = null;
         distance = 0;
+        ocupied = false;
 
 
         adjacencyList.Clear();
     }
 
     //Pathfinding 
-    public void FindNeighbors(float jumpHeight, bool checkForMoves, PlayerPieceControler currentPiece)
+    public void FindNeighbors(float jumpHeight)
     {
         Reset();
-
-        CheckQads(Vector3.forward, jumpHeight, checkForMoves, currentPiece);
-        CheckQads(-Vector3.forward, jumpHeight, checkForMoves, currentPiece);
-        CheckQads(Vector3.right, jumpHeight, checkForMoves, currentPiece);
-        CheckQads(-Vector3.right, jumpHeight, checkForMoves, currentPiece);
+        CheckQads(Vector3.forward, jumpHeight);
+        CheckQads(-Vector3.forward, jumpHeight);
+        CheckQads(Vector3.right, jumpHeight);
+        CheckQads(-Vector3.right, jumpHeight);
     }
 
 
-    public void CheckQads(Vector3 direction, float jumpHeight, bool checkForMoves, PlayerPieceControler currentPiece)
+    public void CheckQads(Vector3 direction, float jumpHeight)
     {
+
         Vector3 halfExtents = new Vector3(0.25f, (1 + jumpHeight) / 2.0f, 0.25f);
         Collider[] colliders = Physics.OverlapBox(transform.position + direction, halfExtents, Quaternion.identity, layerQad);
 
         foreach (Collider col in colliders)
         {
             Qad qad = col.GetComponent<Qad>();
+
             if (qad != null)
             {
+                CheckUp(qad.transform);
                 RaycastHit hit;
+
                 if (!Physics.Raycast(qad.transform.position, Vector3.up, out hit, 1))
                 {
                     adjacencyList.Add(qad);
                 }
                 else
                 {
-                    if (hit.collider.gameObject.tag == "EnemyPiece")
+                    if (hit.collider.gameObject != null)
                     {
-                        adjacencyList.Add(qad);
-                        walkable = false;
-                    }
-                    if (hit.collider.gameObject.tag == "PlayerPiece")
-                    {
-                        adjacencyList.Add(qad);
-                        walkable = false;
+                        if (hit.collider.gameObject.tag != "CurrentEnemyPiece" && hit.collider.gameObject.tag != "CurrentPlayerPiece")
+                        {
+                            if (hit.collider.gameObject.activeSelf == true)
+                            {
+                                walkable = false;
+
+                                adjacencyList.Add(qad);
+                            }
+                        }
                     }
                 }
+
             }
         }
+
     }
 
+    public void CheckUp(Transform origin)
+    {
+        RaycastHit _hit;
+        if (Physics.Raycast(origin.position, Vector3.up, out _hit, 1))
+        {
+            if (_hit.collider.gameObject != null)
+            {
+                if ((_hit.collider.gameObject.tag == "EnemyPiece" || _hit.collider.gameObject.tag == "PlayerPiece")
+               && _hit.collider.gameObject.activeSelf == false)
+                {
+                    walkable = true;
+                }
+                else
+                {
+                    if (_hit.collider.gameObject == currentPiece)
+                    {
+                        ocupied = true;
+                    }
+                    walkable = false;
 
+                }
+
+
+
+            }
+
+        }
+        else
+            walkable = true;
+    }
+
+    public void KillCurrentPiece()
+    {
+        if (currentPieceType == 0)//PlayerPiece
+        {
+            currentPiece.GetComponent<PlayerPieceControler>().SetApart();
+        }
+        else//EnemyPiece
+        {
+            currentPiece.GetComponent<EnemyControler>().SetApart();
+        }
+    }
 
 }

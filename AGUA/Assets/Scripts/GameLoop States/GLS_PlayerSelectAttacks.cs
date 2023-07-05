@@ -48,16 +48,19 @@ public class GLS_PlayerSelectAttacks : GameLoopStates
 
     public override void Update(GameLoopControler gC)
     {
-        if (gC.currentPlayerPiece <= 2)
+        if (gC.currentPlayerPiece < 3)
         {
             if (!gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().alive)
             {
                 gC.currentPlayerPiece += 1;
                 loopAgain = true;
             }
+            else
+            {
+                CheckQadPos(gC, gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece]);
 
-            CheckQadPos(gC, gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece]);
-            
+            }
+
         }
         else
         {

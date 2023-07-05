@@ -7,7 +7,7 @@ public class GLS_InitLevel : GameLoopStates
     //Show level and some relevant things 
     public GLS_InitLevel(GameLoopControler gC)
     { 
-        timeToChange = 3f; 
+        timeToChange = 1f; 
         Debug.Log("InitLevel");
     }
 

@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 7285699635968316401}
   - component: {fileID: 5876040831325108028}
   - component: {fileID: 260971745523281183}
+  - component: {fileID: 60537436847234878}
   m_Layer: 0
   m_Name: Enemy_HZ
   m_TagString: EnemyPiece
@@ -127,7 +128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 70
-  currentHealthPoints: 0
   alive: 0
   damage: 35
   jumpHeight: 1
@@ -151,4 +151,24 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0.64, z: 0}
+--- !u!114 &60537436847234878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7285699635968316400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b544bb76ef63c1242abc5e2f42f466ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 7285699635118142878}
+  gC: {fileID: 0}
+  hoverColor: {r: 28.186356, g: 0.22106947, b: 0, a: 0}
+  initColor: {r: 0, g: 0, b: 0, a: 0}
+  hover: 0
+  showInfo: 0
+  characterType: enemyHZ
+  selectable: 0

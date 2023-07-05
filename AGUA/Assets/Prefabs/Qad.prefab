@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1042566668970303187}
   - component: {fileID: 5186474513243748367}
   - component: {fileID: 4550362188520315746}
+  - component: {fileID: 7384062005518502393}
   m_Layer: 3
   m_Name: Cube
   m_TagString: Qad
@@ -50,7 +51,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478930360044167634}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -91,7 +92,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478930360044167634}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c12cf800df295c4aa7bb5d51d7e46e1, type: 3}
   m_Name: 
@@ -102,6 +103,11 @@ MonoBehaviour:
   selectable: 0
   attacked: 0
   diagonalToCurrent: 0
+  playerAttack: 0
+  qadRender: {fileID: 1478930360044167633}
+  qadRenderTransform: {fileID: 1478930360044167635}
+  currentPiece: {fileID: 0}
+  currentPieceType: 0
   qadDamage: 0
   adjacencyList: []
   visited: 0
@@ -120,7 +126,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478930360044167634}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83afa9a6aef4cc54986b8250960d2e69, type: 3}
   m_Name: 
@@ -128,6 +134,7 @@ MonoBehaviour:
   hoverColor: {r: 0, g: 1, b: 0.8323953, a: 0.8666667}
   hoveringMat: {fileID: 2100000, guid: 9746484babfdb17489cbe4f1553ecb88, type: 2}
   scaleHover: 1.03
+  cloneQad: {fileID: 1478930360044167634}
 --- !u!65 &4550362188520315746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -141,6 +148,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &7384062005518502393
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478930360044167634}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b32574ff28d11bc4faa3764d77a7cbab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1478930360234991927
 GameObject:
   m_ObjectHideFlags: 0

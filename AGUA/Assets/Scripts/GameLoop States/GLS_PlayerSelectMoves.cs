@@ -31,7 +31,7 @@ public class GLS_PlayerSelectMoves : GameLoopStates
             {
                 gC.ChangeState(new GLS_EnemiesSelectAttackingQads(gC));
             }
-            
+
         }
         if (loopAgain)
         {
@@ -43,7 +43,7 @@ public class GLS_PlayerSelectMoves : GameLoopStates
             {
                 gC.ChangeState(new GLS_PlayerPieceCheckQads(gC));
             }
-          
+
         }
 
     }
@@ -52,7 +52,16 @@ public class GLS_PlayerSelectMoves : GameLoopStates
     {
         if (gC.currentPlayerPiece <= 2)
         {
-            CheckQadPos(gC, gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece]); 
+            if (gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().alive)
+            {
+                CheckQadPos(gC, gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece]);
+
+            }
+            else
+            {
+                gC.currentPlayerPiece += 1;
+                loopAgain = true;
+            }
         }
         else
         {
@@ -85,7 +94,7 @@ public class GLS_PlayerSelectMoves : GameLoopStates
                         ppC.GetComponent<PlayerPieceControler>().MoveToQad(q);
                         if (gC.currentPlayerPiece < 3)
                         {
-                           // gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().ResetLists();
+                            gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().ResetLists();
                             gC.currentPlayerPiece += 1;
                             loopAgain = true;
                         }
