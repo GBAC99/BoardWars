@@ -40,7 +40,10 @@ public class QadHoverScript : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        hoverRenderer.enabled = true;
+        if (gameObject.activeSelf)
+        {
+            hoverRenderer.enabled = true;
+        }
     }
 
     private void OnMouseOver()
@@ -50,7 +53,11 @@ public class QadHoverScript : MonoBehaviour
 
     private void OnMouseExit()
     {
-        hoverRenderer.enabled = false;
+        if (gameObject.activeSelf)
+        {
+            hoverRenderer.enabled = false;
+        }
+       
     }
 
 

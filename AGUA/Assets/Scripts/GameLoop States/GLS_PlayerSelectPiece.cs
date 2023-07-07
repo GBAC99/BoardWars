@@ -4,24 +4,59 @@ using UnityEngine;
 
 public class GLS_PlayerSelectPiece : GameLoopStates
 {
-    public GLS_PlayerSelectPiece(GameLoopControler gC)
-    {
-        gC.selectedPlayerPiece = null;
+    bool loopAgain, nextState;
 
+    public GLS_PlayerSelectPiece(GameLoopControler gC, bool enemiesAttack)
+    {
+        loopAgain = false;
+        nextState = false;
+
+        timeToChange = 2f;
+
+        if (enemiesAttack)
+        {
+            nextState = true;
+        }
+
+        gC.selectedPlayerPiece = null;
+        gC.QAD_MANAGER.GetEnemySelectableQads();
+        gC.QAD_MANAGER.ActivateEnemySelectableQads();
+        gC.QAD_MANAGER.ActivatePlayerSelectableQads();
         Debug.Log("PPSelection");
     }
 
     public override void CheckTransition(GameLoopControler gC)
     {
-        if (change)
+        if (loopAgain)
         {
+            gC.QAD_MANAGER.ClearSelectableQads(false);
             gC.ChangeState(new GLS_PlayerSelectQad(gC));
         }
+        if (change)
+        {
+
+            gC.QAD_MANAGER.ClearSelectableQads(true);
+            gC.ChangeState(new GLS_EnemiesMove(gC));
+        }
+
     }
 
     public override void Update(GameLoopControler gC)
     {
         SelectPiece(gC);
+
+        if (nextState)
+        {
+            if (timeToChange >= 0)
+            {
+                timeToChange -= Time.deltaTime;
+            }
+            else
+            {
+                change = true;
+            }
+        }
+
     }
 
 
@@ -51,7 +86,7 @@ public class GLS_PlayerSelectPiece : GameLoopStates
                             gC.selectedPlayerPieceNum = p.GetPieceNum();
                         }
 
-                        change = true;
+                        loopAgain = true;
                     }
                 }
             }

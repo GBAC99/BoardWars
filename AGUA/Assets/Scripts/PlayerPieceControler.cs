@@ -14,7 +14,7 @@ public class PlayerPieceControler : QadMovable
         currentHealthPoints = healthPoints;
         thisPPlayer = gameObject.GetComponent<PlayerPieceControler>();
         alive = true;
-        //FindSelectableQads();
+        FindSelectableQads();
     }
 
     // Update is called once per frame

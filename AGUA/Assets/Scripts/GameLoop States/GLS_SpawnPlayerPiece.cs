@@ -12,7 +12,7 @@ public class GLS_SpawnPlayerPiece : GameLoopStates
     {
         Debug.Log("SpawnPlayerPiece");
 
-
+        timeToChange = 2f;
         if (gC.firstRound)
         {
             gC.SpawnSelectedPlayer();
@@ -81,14 +81,13 @@ public class GLS_SpawnPlayerPiece : GameLoopStates
                 gC.QAD_MANAGER.SetSignCurrentHp();
                 gC.anchorControl.SetBool("ShowP", true);
             }
-            gC.ChangeState(new GLS_EnemiesMove(gC));
+            gC.ChangeState(new GLS_PlayerSelectPiece(gC,true));
         }
-        if (loopAgain) gC.ChangeState(new GLS_PlayerSelectPiece(gC));
+        if (loopAgain) gC.ChangeState(new GLS_PlayerSelectPiece(gC,false));
     }
 
     public override void Update(GameLoopControler gC)
     {
-
     }
 
     void SetSelectableSigns(GameLoopControler gC)

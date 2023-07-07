@@ -66,9 +66,13 @@ public class Qad : MonoBehaviour
             else qadRender.material.color = Color.gray;
         }
         else if (target) qadRender.material.color = Color.green;
-        else if (selectable) qadRender.material.color = Color.cyan;
-        else if (attacked) qadRender.material.color = Color.red;
-        else if (playerAttack) qadRender.material.color = Color.yellow;
+        else if (selectable)
+        {
+            if (currentPieceType == 0) qadRender.material.color = Color.cyan;
+            else qadRender.material.color = Color.yellow;
+
+        }
+        else if (attacked) qadRender.material.color = Color.red; 
         else qadRender.material.color = Color.white;
     }
 

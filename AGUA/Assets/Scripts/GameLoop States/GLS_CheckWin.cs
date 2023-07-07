@@ -18,8 +18,8 @@ public class GLS_CheckWin : GameLoopStates
         {
 
             gC.StartNewRound();
-
-            gC.ChangeState(new GLS_PlayerSelectPiece(gC));
+            gC.QAD_MANAGER.ClearSelectableQads(true);
+            gC.ChangeState(new GLS_PlayerSelectPiece(gC,false));
         }
     }
 

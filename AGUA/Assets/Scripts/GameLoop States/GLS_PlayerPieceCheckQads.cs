@@ -8,6 +8,7 @@ public class GLS_PlayerPieceCheckQads : GameLoopStates
     {
         Debug.Log("Checking Qads");
         Debug.Log(gC.currentPlayerPiece);
+        gC.QAD_MANAGER.ClearSelectableQads(true); 
 
         if (gC.currentPlayerPiece > 2)
         {

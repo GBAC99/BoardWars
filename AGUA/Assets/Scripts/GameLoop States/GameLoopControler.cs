@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameLoopControler : MonoBehaviour
 {
+    int sceneNum = 0;
+
     //Controls game states and UI needs.
     private GameLoopControler instance;
-
 
     public QadManager QAD_MANAGER;
     public Qad selectedQad;
@@ -184,7 +186,8 @@ public class GameLoopControler : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        Debug.Log("Next Level Load!");
+        ++sceneNum;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 

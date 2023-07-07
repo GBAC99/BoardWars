@@ -12,8 +12,6 @@ public class EnemyControler : QadMovable
         Init();
         currentHealthPoints = healthPoints;
         thisEnemy = gameObject.GetComponent<EnemyControler>();
-
-        FindSelectableQads();
     }
 
     // Update is called once per frame
@@ -21,15 +19,12 @@ public class EnemyControler : QadMovable
     {
         if (moving) Move();
 
-
-
         if (currentHealthPoints <= 0)
         {
             if (alive)
             {
                 currentQad.GetComponent<Animator>().SetBool("KILL", true);
                 alive = false;
-
             }
         }
 

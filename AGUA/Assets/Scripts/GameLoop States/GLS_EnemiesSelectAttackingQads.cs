@@ -9,6 +9,8 @@ public class GLS_EnemiesSelectAttackingQads : GameLoopStates
     {
         Debug.Log("Enemies check qads to attack");
 
+        gC.QAD_MANAGER.ClearEnemyAttackQads();
+
         gC.QAD_MANAGER.GetAttackingEnemyQads();
 
         gC.QAD_MANAGER.ActivateEnemyAttackQads();

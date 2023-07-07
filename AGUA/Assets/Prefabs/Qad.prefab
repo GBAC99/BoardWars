@@ -114,6 +114,7 @@ MonoBehaviour:
   qParent: {fileID: 0}
   distance: 0
   corner: 0
+  ocupied: 0
   layerQad:
     serializedVersion: 2
     m_Bits: 8

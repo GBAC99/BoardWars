@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 80
-  alive: 0
+  alive: 1
   damage: 25
   jumpHeight: 1
   moveSpeed: 4
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rend: {fileID: 6067523099406695617}
   gC: {fileID: 0}
-  hoverColor: {r: 28.186356, g: 0.22106947, b: 0, a: 0}
+  hoverColor: {r: 7.046589, g: 0.07378627, b: 0, a: 0}
   initColor: {r: 0, g: 0, b: 0, a: 0}
   hover: 0
   showInfo: 0

@@ -126,22 +126,6 @@ public class QadMovable : MonoBehaviour
         }
     }
 
-    public void CleanAdjacencyLists()
-    {
-        foreach (GameObject qad in QadList)
-        {
-            Qad q = qad.GetComponent<Qad>();
-            foreach (Qad adjQad in q.adjacencyList)
-            {
-                if (adjQad.current)
-                {
-                    Debug.Log("adjqcurrent");
-                    
-                }
-            }
-        }
-    }
-
     public int GetCurrentQadIndex()
     {
         for (int i = 0; i < QadList.Length; i++)
@@ -186,8 +170,6 @@ public class QadMovable : MonoBehaviour
         ManageTags(true);
         ComputeAdjacencyLists();
         GetCurrentQad();
-        CleanAdjacencyLists();
-        Debug.Log(currentQad == null);
         Queue<Qad> process = new Queue<Qad>();
 
         process.Enqueue(currentQad);
@@ -201,7 +183,38 @@ public class QadMovable : MonoBehaviour
             {
                 selectableQads.Add(q);
                 q.selectable = true;
+                switch (characterType)
+                {
+                    case CharacterT.ENEMY_HORIZONTAL:
+                        qadManager.enemySelectableQads.Add(q);
+                        break;
+                    case CharacterT.ENEMY_VERTICAL:
+                        qadManager.enemySelectableQads.Add(q);
+
+                        break;
+                    case CharacterT.ENEMY_HORSE:
+                        qadManager.enemySelectableQads.Add(q);
+
+                        break;
+                    case CharacterT.PLAYER_ARROW:
+                        qadManager.playerSelectableQads.Add(q);
+
+                        break;
+                    case CharacterT.PLAYER_SCHYTE:
+                        qadManager.playerSelectableQads.Add(q);
+
+                        break;
+                    case CharacterT.PLAYER_HAMMMER:
+                        qadManager.playerSelectableQads.Add(q);
+
+                        break;
+                    case CharacterT.PLAYER_SHIP:
+                        qadManager.playerSelectableQads.Add(q);
+
+                        break;
+                }
             }
+
 
             if (q.distance < move)
             {
@@ -887,7 +900,7 @@ public class QadMovable : MonoBehaviour
 
     }
 
-    public virtual void ManageTags(bool current) {}
+    public virtual void ManageTags(bool current) { }
 
     public void ShowSelectableQads()
     {
@@ -914,6 +927,8 @@ public class QadMovable : MonoBehaviour
 
     public void Move() //Moves objects to desired qad
     {
+        transform.parent = null;
+
         if (path.Count > 0)
         {
             Qad q = path.Peek();
@@ -940,7 +955,6 @@ public class QadMovable : MonoBehaviour
         {
             Debug.Log("Stop moving");
             ResetTiles();
-
             moving = false;
         }
     }
