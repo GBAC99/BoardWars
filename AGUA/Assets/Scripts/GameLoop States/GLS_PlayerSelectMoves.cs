@@ -14,7 +14,25 @@ public class GLS_PlayerSelectMoves : GameLoopStates
 
         timeToChange = 2f;
 
-        Debug.Log("select qad for pieces move");
+        if (gC.currentPlayerPiece <= 2)
+        {
+            if (gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().GetNumOfSelectableQads() <= 0)
+            {
+                if (gC.currentPlayerPiece <= 2)
+                {
+                    gC.currentPlayerPiece += 1;
+                    loopAgain = true;
+                }
+                else
+                {
+                    nextState = true;
+                }
+            }
+        }
+        
+
+        gC.SetRoundInfo(gC.roundInfoDictionary.selectMovingQad);
+
     }
 
     public override void CheckTransition(GameLoopControler gC)
@@ -54,7 +72,7 @@ public class GLS_PlayerSelectMoves : GameLoopStates
         {
             if (gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().alive)
             {
-                if (gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().selectableQads.Count>0)
+                if (gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().selectableQads.Count > 0)
                 {
                     CheckQadPos(gC, gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece]);
                 }

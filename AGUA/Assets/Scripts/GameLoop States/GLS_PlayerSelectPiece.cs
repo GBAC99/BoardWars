@@ -8,10 +8,13 @@ public class GLS_PlayerSelectPiece : GameLoopStates
 
     public GLS_PlayerSelectPiece(GameLoopControler gC, bool enemiesAttack)
     {
+        gC.SetRoundInfo(gC.roundInfoDictionary.selectPieces);
         loopAgain = false;
         nextState = false;
 
         timeToChange = 2f;
+
+
 
         if (enemiesAttack)
         {
@@ -22,7 +25,7 @@ public class GLS_PlayerSelectPiece : GameLoopStates
         gC.QAD_MANAGER.GetEnemySelectableQads();
         gC.QAD_MANAGER.ActivateEnemySelectableQads();
         gC.QAD_MANAGER.ActivatePlayerSelectableQads();
-        Debug.Log("PPSelection");
+         
     }
 
     public override void CheckTransition(GameLoopControler gC)
@@ -36,6 +39,7 @@ public class GLS_PlayerSelectPiece : GameLoopStates
         {
 
             gC.QAD_MANAGER.ClearSelectableQads(true);
+            gC.QAD_MANAGER.ResetSigns();
             gC.ChangeState(new GLS_EnemiesMove(gC));
         }
 

@@ -9,8 +9,7 @@ public class GLS_SpawnEnemies : GameLoopStates
 
     public GLS_SpawnEnemies(GameLoopControler gC)
     {
-        gC.QAD_MANAGER.ClearLists();
-        Debug.Log("Spawn Enemies!");
+        gC.QAD_MANAGER.ClearLists(); 
         timeToChange = 1f;
         gC.QAD_MANAGER.SpawnEnemies();
         for (int i = 0; i < gC.QAD_MANAGER.signPlayerPieces.Length; ++i)

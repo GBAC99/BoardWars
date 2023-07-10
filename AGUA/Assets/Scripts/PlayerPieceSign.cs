@@ -22,9 +22,7 @@ public class PlayerPieceSign : MonoBehaviour
     public CharacterT characterType;
 
     public bool usingPiece;
-
-    Vector3 startPosition;
-    Vector3 upPosition;
+     
 
     public Renderer rend;
     private PlayerPieceSign thisPpSign;
@@ -42,12 +40,7 @@ public class PlayerPieceSign : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        selectable = true;
-
-        startPosition = transform.position;
-
-        upPosition = new Vector3(startPosition.x, startPosition.y + 0.13f, startPosition.z);
-
+        selectable = true; 
     }
 
     private void Update()

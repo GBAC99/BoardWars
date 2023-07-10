@@ -7,8 +7,8 @@ public class GLS_InitLevel : GameLoopStates
     //Show level and some relevant things 
     public GLS_InitLevel(GameLoopControler gC)
     { 
-        timeToChange = 1f; 
-        Debug.Log("InitLevel");
+        timeToChange = 1f;
+        gC.SetRoundInfo(gC.roundInfoDictionary.initializingRound); 
     }
 
     public override void CheckTransition(GameLoopControler gC)

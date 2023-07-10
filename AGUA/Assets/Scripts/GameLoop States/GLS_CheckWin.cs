@@ -6,8 +6,7 @@ public class GLS_CheckWin : GameLoopStates
 {
 
     public GLS_CheckWin(GameLoopControler gC)
-    {
-        Debug.Log("Check if Enemies alive");
+    { 
     }
 
     public override void CheckTransition(GameLoopControler gC)
@@ -16,10 +15,8 @@ public class GLS_CheckWin : GameLoopStates
 
         else
         {
-
-            gC.StartNewRound();
-            gC.QAD_MANAGER.ClearSelectableQads(true);
-            gC.ChangeState(new GLS_PlayerSelectPiece(gC,false));
+            gC.StartNewRound(); 
+            gC.ChangeState(new GLS_PlayerSelectPiece(gC, false));
         }
     }
 

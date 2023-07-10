@@ -366,7 +366,6 @@ public class QadManager : MonoBehaviour
         {
             if (ppC.GetComponent<PlayerPieceControler>().alive && ppC != null)
             {
-                Debug.Log("player keeps playing");
                 return true;
             }
         }
@@ -460,6 +459,7 @@ public class QadManager : MonoBehaviour
             qS.selectable = true;
         }
     }
+
     public void ActivatePlayerSelectableQads()
     {
         foreach (Qad qS in playerSelectableQads)
@@ -480,11 +480,20 @@ public class QadManager : MonoBehaviour
 
     public void ClearEnemyAttackQads()
     {
+        foreach (Qad q in enemyAttackedQads)
+        {
+            q.ResetDamage();
+        }
+
         enemyAttackedQads.Clear();
     }
 
     public void ClearPlayerAttackQads()
     {
+        foreach (Qad q in playerAttackedQads)
+        {
+            q.ResetDamage();
+        }
         playerAttackedQads.Clear();
     }
 
@@ -494,16 +503,28 @@ public class QadManager : MonoBehaviour
         activeEnemyPieces = new GameObject[0];
     }
 
-
-
-    public void CheckHover()
+    public void ResetSigns()
     {
-        foreach (GameObject piece in playerPieces)
+        foreach (PlayerPieceSign sign in activeSigns)
         {
-            if (piece.GetComponent<HoverControl>().hover)
+            sign.usingPiece = false;
+            sign.rend.material.color = Color.white;
+        }
+    }
+
+    public void SaveAlivePieces()
+    {
+        foreach (GameObject p in activePlayerPieces)
+        {
+            PlayerPieceControler aP = p.GetComponent<PlayerPieceControler>();
+
+            if (aP.alive)
             {
-                //piece.GetComponent<HoverControl>().hover;
+                aP.GetCurrentQad();
+                aP.currentQad.currentPieceType = 0;
+                aP.currentQad.GetComponent<Animator>().SetBool("RESET", true); 
             }
+
         }
     }
 

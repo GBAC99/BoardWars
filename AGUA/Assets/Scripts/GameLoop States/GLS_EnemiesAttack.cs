@@ -7,7 +7,8 @@ public class GLS_EnemiesAttack : GameLoopStates
 
     public GLS_EnemiesAttack(GameLoopControler gC)
     {
-        Debug.Log("enemies attack");
+        gC.SetRoundInfo(gC.roundInfoDictionary.enemiesAttack);
+
         timeToChange = 2f;
         for (int i = 0; i < gC.QAD_MANAGER.activePlayerPieces.Length; i++)
         {
@@ -40,6 +41,7 @@ public class GLS_EnemiesAttack : GameLoopStates
                 }
 
                 gC.LoseGame();
+                gC.QAD_MANAGER.ClearEnemyAttackQads();
                 gC.ChangeState(new GLS_PlayerCheckAttackingQads(gC));
             }
 

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameLoopControler : MonoBehaviour
-{
-    int sceneNum = 0;
-
+{ 
     //Controls game states and UI needs.
+
+
     private GameLoopControler instance;
 
     public QadManager QAD_MANAGER;
@@ -39,6 +40,11 @@ public class GameLoopControler : MonoBehaviour
 
     public GameObject losePanel;
 
+    public TextMeshProUGUI roundInfo;
+    public TextMeshProUGUI roundInfo2;
+    public RoundInfo roundInfoDictionary;
+
+
     //Variables for checking states and transitioning.
 
     private GameLoopStates currentState;
@@ -59,6 +65,7 @@ public class GameLoopControler : MonoBehaviour
         if (instance == null) instance = this;
         else Destroy(gameObject);
 
+        SetRoundInfo(" ");
 
         ChangeState(new GLS_InitLevel(this));
 
@@ -104,17 +111,14 @@ public class GameLoopControler : MonoBehaviour
             {
                 Destroy(QAD_MANAGER.activeSigns[i]);
             }
-            else
-            {
-                QAD_MANAGER.activePlayerPieces[i].GetComponent<PlayerPieceControler>().SetApart();
-                QAD_MANAGER.activeSigns[i].usingPiece = false;
-
-            }
         }
 
+        QAD_MANAGER.SaveAlivePieces();
+        QAD_MANAGER.ResetSigns();
         QAD_MANAGER.ResetTiles();
         QAD_MANAGER.ClearEnemyAttackQads();
         QAD_MANAGER.ClearPlayerAttackQads();
+        QAD_MANAGER.ClearSelectableQads(true);
         currentPlayerPiece = 0;
     }
 
@@ -193,10 +197,14 @@ public class GameLoopControler : MonoBehaviour
         }
     }
 
+    public void SetRoundInfo(string _roundInfo)
+    {
+        roundInfo.text = _roundInfo;
+        roundInfo2.text = _roundInfo;
+    }
 
     public void LoadNextLevel()
     {
-        ++sceneNum;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

@@ -77,11 +77,14 @@ public class Qad : MonoBehaviour
     }
 
     public void SetDamageInQad(float _damage)
-    {
-        qadDamage = 0;
-        qadDamage = _damage;
+    { 
+        qadDamage += _damage;
     }
 
+    public void ResetDamage()
+    {
+        qadDamage = 0;
+    }
 
     public void Reset()
     {
@@ -97,6 +100,7 @@ public class Qad : MonoBehaviour
         distance = 0;
         ocupied = false;
 
+        currentPieceType = 0;
 
         adjacencyList.Clear();
     }
@@ -183,16 +187,22 @@ public class Qad : MonoBehaviour
             walkable = true;
     }
 
-    public void KillCurrentPiece()
+    public void SetApartPiece()
     {
         if (currentPieceType == 0)//PlayerPiece
         {
             currentPiece.GetComponent<PlayerPieceControler>().SetApart();
+            if (gameObject.GetComponent<Animator>().GetBool("RESET"))
+            {
+                gameObject.GetComponent<Animator>().SetBool("RESET", false);
+            }
         }
         else//EnemyPiece
         {
             currentPiece.GetComponent<EnemyControler>().SetApart();
         }
     }
+
+
 
 }

@@ -6,8 +6,8 @@ public class GLS_PlayerAttack : GameLoopStates
 {
     public GLS_PlayerAttack(GameLoopControler gC)
     {
+        gC.SetRoundInfo(gC.roundInfoDictionary.playerAttack);
 
-        Debug.Log("player attack");
         for (int i = 0; i < gC.QAD_MANAGER.activePlayerPieces.Length; i++)
         {
             if (gC.QAD_MANAGER.activeEnemyPieces[i].GetComponent<EnemyControler>().alive)

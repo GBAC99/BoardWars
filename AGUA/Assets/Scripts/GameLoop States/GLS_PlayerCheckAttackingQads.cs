@@ -5,9 +5,7 @@ using UnityEngine;
 public class GLS_PlayerCheckAttackingQads : GameLoopStates
 {
     public GLS_PlayerCheckAttackingQads(GameLoopControler gC)
-    {
-        Debug.Log("Player selects attack");
-        Debug.Log("The current piece attacking is: " + gC.currentPlayerPiece);
+    { 
 
         if (gC.currentPlayerPiece > 2 || !gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().alive)
         {

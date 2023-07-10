@@ -165,8 +165,7 @@ public class QadMovable : MonoBehaviour
 
     //Moving IA
     public void FindSelectableQads()
-    {
-        Debug.Log("finding selectable qads");
+    { 
         ManageTags(true);
         ComputeAdjacencyLists();
         GetCurrentQad();
@@ -952,8 +951,7 @@ public class QadMovable : MonoBehaviour
 
         }
         else
-        {
-            Debug.Log("Stop moving");
+        { 
             ResetTiles();
             moving = false;
         }
@@ -1553,6 +1551,22 @@ public class QadMovable : MonoBehaviour
         gameObject.SetActive(false);
         transform.position = new Vector3();
         currentQad.GetComponent<Animator>().SetBool("KILL", false);
+    }
+
+    public int GetNumOfSelectableQads()
+    {
+        int num = 0;
+
+        foreach (Qad qS in selectableQads)
+        {
+            if (qS.selectable)
+            {
+                ++num;
+            }
+        }
+
+        return num;
+
     }
 
 }

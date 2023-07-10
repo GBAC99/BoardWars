@@ -9,8 +9,7 @@ public class GLS_SpawnPlayerPiece : GameLoopStates
     int activePlayerPieces;
 
     public GLS_SpawnPlayerPiece(GameLoopControler gC)
-    {
-        Debug.Log("SpawnPlayerPiece");
+    { 
 
         timeToChange = 2f;
         if (gC.firstRound)

@@ -5,9 +5,7 @@ using UnityEngine;
 public class GLS_PlayerPieceCheckQads : GameLoopStates
 {
     public GLS_PlayerPieceCheckQads(GameLoopControler gC)
-    {
-        Debug.Log("Checking Qads");
-        Debug.Log(gC.currentPlayerPiece);
+    { 
         gC.QAD_MANAGER.ClearSelectableQads(true); 
 
         if (gC.currentPlayerPiece > 2)

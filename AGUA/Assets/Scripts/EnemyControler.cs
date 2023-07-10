@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyControler : QadMovable
 {
     EnemyControler thisEnemy;
-    float currentHealthPoints;
+    public float currentHealthPoints;
     // Start is called before the first frame update
     void Start()
     {
@@ -110,8 +110,7 @@ public class EnemyControler : QadMovable
                 break;
 
         }
-
-        Debug.Log(gameObject.name + " " + targetPosition);
+         
 
         MoveToQad(selectableQads[targetPosition]);
         

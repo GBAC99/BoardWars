@@ -5,10 +5,11 @@ using UnityEngine;
 public class GLS_EnemiesMove : GameLoopStates
 {
     public GLS_EnemiesMove(GameLoopControler gC)
-    {
-        Debug.Log("move enemies");
-        timeToChange = 3; //Time is needed to let the pieces move to the desired spot
-       // gC.piecesActive = true;
+    { 
+        gC.SetRoundInfo(gC.roundInfoDictionary.enemiesMove);
+
+        timeToChange = 3;
+
         change = gC.QAD_MANAGER.ControlEnemies();
 
     }

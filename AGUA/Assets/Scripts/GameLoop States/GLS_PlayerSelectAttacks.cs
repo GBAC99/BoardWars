@@ -12,8 +12,8 @@ public class GLS_PlayerSelectAttacks : GameLoopStates
         nextState = false;
 
         timeToChange = 2f;
+        gC.SetRoundInfo(gC.roundInfoDictionary.selectAttackingQad);
 
-        Debug.Log("select qad for piece's attack");
     }
 
     public override void CheckTransition(GameLoopControler gC)

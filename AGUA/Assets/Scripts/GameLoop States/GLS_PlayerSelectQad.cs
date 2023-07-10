@@ -9,7 +9,8 @@ public class GLS_PlayerSelectQad : GameLoopStates
         gC.selectecQadPos = null;
         gC.QAD_MANAGER.QadCheckUp();
 
-        Debug.Log("PPPlaceSelection");
+        gC.SetRoundInfo(gC.roundInfoDictionary.selectQad);
+         
         
     }
 
