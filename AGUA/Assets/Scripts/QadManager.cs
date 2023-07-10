@@ -79,10 +79,13 @@ public class QadManager : MonoBehaviour
 
     private void Update()
     {
-      /*  if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ControlEnemies();
-        }*/
+        /*  if (Input.GetKeyDown(KeyCode.Space))
+          {
+              ControlEnemies();
+          }*/
+
+
+
     }
 
     //Create Map 
@@ -353,6 +356,23 @@ public class QadManager : MonoBehaviour
         {
             activeSigns[i].attachedPpc = activePlayerPieces[i].GetComponent<PlayerPieceControler>();
         }
+    }
+
+    public bool CheckPlayerAlive()
+    {
+        bool alive = false;
+
+        foreach (GameObject ppC in activePlayerPieces)
+        {
+            if (ppC.GetComponent<PlayerPieceControler>().alive && ppC != null)
+            {
+                Debug.Log("player keeps playing");
+                return true;
+            }
+        }
+
+        return alive;
+
     }
 
     public bool ControlEnemies()

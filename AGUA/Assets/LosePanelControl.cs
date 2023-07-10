@@ -6,7 +6,8 @@ using TMPro;
 public class LosePanelControl : MonoBehaviour
 {
      
-    public TextMeshProUGUI tmp;
+    public TextMeshProUGUI YOULOSE;
+     public TextMeshProUGUI RESTARTWAR;
 
     public float capDilate;
 
@@ -35,7 +36,8 @@ public class LosePanelControl : MonoBehaviour
             actualDilate = capDilate;
         }
 
-        tmp.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, actualDilate);
+        YOULOSE.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, actualDilate);
+        RESTARTWAR.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, actualDilate);
     }
 
 }

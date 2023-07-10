@@ -123,6 +123,44 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &100265885 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 969038309846612972, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+  m_PrefabInstance: {fileID: 1319784689}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &390378530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3359899130353930050, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+  m_PrefabInstance: {fileID: 1319784689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &744558695 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2053689785909908467, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+  m_PrefabInstance: {fileID: 1319784689}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &847999741 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6900561901411717324, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+  m_PrefabInstance: {fileID: 1319784689}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3d9b9ae054a774db5d9524d6de26b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1319784689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130,6 +168,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 78377011756086644, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+      propertyPath: losePanel
+      value: 
+      objectReference: {fileID: 390378530}
+    - target: {fileID: 78377011756086644, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+      propertyPath: anchorControlObj
+      value: 
+      objectReference: {fileID: 1884275552}
     - target: {fileID: 764724738015457566, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
       propertyPath: enemy1type
       value: 1
@@ -154,6 +200,30 @@ PrefabInstance:
       propertyPath: enemy3Position
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 969038309846612972, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+      propertyPath: m_text
+      value: YOU LOST
+      objectReference: {fileID: 0}
+    - target: {fileID: 2604229532217305481, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022000302824053051, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -71.099976
+      objectReference: {fileID: 0}
+    - target: {fileID: 3359899130353930050, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754129050204683728, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+      propertyPath: YOULOSE
+      value: 
+      objectReference: {fileID: 100265885}
+    - target: {fileID: 3754129050204683728, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+      propertyPath: RESTARTWAR
+      value: 
+      objectReference: {fileID: 744558695}
     - target: {fileID: 5494741109079840350, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
       propertyPath: m_Name
       value: Scene
@@ -202,5 +272,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6731035641637936215, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731035641637936215, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731035641637936215, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 847999741}
+    - target: {fileID: 6731035641637936215, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731035641637936215, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731035641637936215, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TitleScreenControl, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731035641637936215, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+--- !u!1 &1884275552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2604229532217305481, guid: 0d77bfa8b3f650443a07b7dbb03a9409, type: 3}
+  m_PrefabInstance: {fileID: 1319784689}
+  m_PrefabAsset: {fileID: 0}

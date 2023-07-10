@@ -22,6 +22,9 @@ public class GameLoopControler : MonoBehaviour
 
     public int currentEnemyPiece = 0;
 
+
+    [Header("UI Objects")]
+    public GameObject anchorControlObj;
     public Animator anchorControl;
     public GameObject anchorInfoObj;
     public Animator anchorInfoControl;
@@ -34,15 +37,20 @@ public class GameLoopControler : MonoBehaviour
     public GameObject playerHammer_infoPanel;
     public GameObject playerShip_infoPanel;
 
+    public GameObject losePanel;
 
     //Variables for checking states and transitioning.
 
     private GameLoopStates currentState;
 
+    [HideInInspector]
     public bool levelWin;
 
+    [HideInInspector]
     public bool firstRound;
 
+    [HideInInspector]
+    public bool piecesActive;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +62,8 @@ public class GameLoopControler : MonoBehaviour
 
         ChangeState(new GLS_InitLevel(this));
 
+        levelWin = false;
+        piecesActive = false;
         firstRound = true;
 
     }
@@ -190,5 +200,14 @@ public class GameLoopControler : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void LoseGame()
+    {
+        if (!QAD_MANAGER.CheckPlayerAlive())
+        {
+            anchorControlObj.SetActive(false);
+            anchorInfoObj.SetActive(false);
+            losePanel.SetActive(true);
+        }
+    }
 
 }
