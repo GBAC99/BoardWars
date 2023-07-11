@@ -7,9 +7,9 @@ using TMPro;
 
 public class GameLoopControler : MonoBehaviour
 { 
-    //Controls game states and UI needs.
-
-
+    //Controls game states and UI needs. 
+    
+    [Header("--Game Control Variables--")]
     private GameLoopControler instance;
 
     public QadManager QAD_MANAGER;
@@ -17,14 +17,13 @@ public class GameLoopControler : MonoBehaviour
 
     public GameObject selectedPlayerPiece;
     public int selectedPlayerPieceNum;
-    public Qad selectecQadPos;
-    [HideInInspector]
-    public int currentPlayerPiece = 0;
+    public Qad selectedQadPos;
 
-    public int currentEnemyPiece = 0;
+    [HideInInspector] public int currentPlayerPiece = 0;
+    [HideInInspector] public int currentEnemyPiece = 0;
 
 
-    [Header("UI Objects")]
+    [Header("--UI Objects--")]
     public GameObject anchorControlObj;
     public Animator anchorControl;
     public GameObject anchorInfoObj;
@@ -39,6 +38,7 @@ public class GameLoopControler : MonoBehaviour
     public GameObject playerShip_infoPanel;
 
     public GameObject losePanel;
+    public GameObject winPanel;
 
     public TextMeshProUGUI roundInfo;
     public TextMeshProUGUI roundInfo2;
@@ -93,12 +93,12 @@ public class GameLoopControler : MonoBehaviour
 
     public void SpawnSelectedPlayer()
     {
-        QAD_MANAGER.SpawnPlayerPiece(selectecQadPos, selectedPlayerPiece);
+        QAD_MANAGER.SpawnPlayerPiece(selectedQadPos, selectedPlayerPiece);
     }
 
     public void PlaceSelectedPiece()
     {
-        QAD_MANAGER.PlaceSelectedPiece(selectecQadPos, selectedPlayerPieceNum);
+        QAD_MANAGER.PlaceSelectedPiece(selectedQadPos, selectedPlayerPieceNum);
     }
 
     public void StartNewRound()
@@ -216,6 +216,13 @@ public class GameLoopControler : MonoBehaviour
             anchorInfoObj.SetActive(false);
             losePanel.SetActive(true);
         }
+    }
+
+    public void WinLevel()
+    { 
+        anchorControlObj.SetActive(false);
+        anchorInfoObj.SetActive(false);
+        winPanel.SetActive(true);
     }
 
 }
