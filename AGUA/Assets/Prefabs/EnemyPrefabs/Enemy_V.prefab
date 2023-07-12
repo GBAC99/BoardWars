@@ -86,8 +86,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 7788522647972533727}
+  outlineMaterial: {fileID: 2100000, guid: d9e00d264ac891c40ae064a6bc03a363, type: 2}
+  scaleOutline: 1.2
+  hoverColor: {r: 9.407749, g: 0, b: 8.763874, a: 0}
   gC: {fileID: 0}
-  hoverColor: {r: 7.046589, g: 0.07378627, b: 0, a: 0}
   initColor: {r: 0, g: 0, b: 0, a: 0}
   hover: 0
   showInfo: 0

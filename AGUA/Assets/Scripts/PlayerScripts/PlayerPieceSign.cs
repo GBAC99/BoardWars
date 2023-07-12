@@ -22,7 +22,8 @@ public class PlayerPieceSign : MonoBehaviour
     public CharacterT characterType;
 
     public bool usingPiece;
-     
+
+    public GameObject signInstance;
 
     public Renderer rend;
     private PlayerPieceSign thisPpSign;
@@ -32,7 +33,7 @@ public class PlayerPieceSign : MonoBehaviour
 
     public bool hover;
 
-
+    public bool signPlaced;
 
     public bool selectable;
 
@@ -40,7 +41,7 @@ public class PlayerPieceSign : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        selectable = true; 
+        selectable = true;
     }
 
     private void Update()
@@ -78,8 +79,9 @@ public class PlayerPieceSign : MonoBehaviour
     }
 
     public PlayerPieceSign Spawn(PlayerPieceSign pps,Transform position)
-    { 
-        return Instantiate(pps, position);
+    {
+        Debug.Log("sign");
+        return Instantiate(signInstance.GetComponentInChildren<PlayerPieceSign>(), position);
     }
 
     public void SetCurrentPieceHp(PlayerPieceControler ppC)

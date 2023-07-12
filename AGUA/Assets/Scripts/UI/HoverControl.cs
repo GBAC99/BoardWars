@@ -6,12 +6,15 @@ public class HoverControl : MonoBehaviour
 {
 
     public Renderer rend;
+    Renderer outlineRend;
+    public Material outlineMaterial;
+    public float scaleOutline;
+    [ColorUsage(true, true)]
+    public Color hoverColor;
+
 
     public GameLoopControler gC;
 
-
-    [ColorUsage(true, true)]
-    public Color hoverColor;
 
     public Color initColor;
 
@@ -35,6 +38,8 @@ public class HoverControl : MonoBehaviour
         }
         initColor = rend.material.color;
 
+        outlineRend = CreateOutline(outlineMaterial, scaleOutline, hoverColor);
+        outlineRend.enabled = false;
 
         selectable = true;
     }
@@ -58,21 +63,51 @@ public class HoverControl : MonoBehaviour
                 HighLight(false);
             }
         }
+
+
+
     }
 
+    Renderer CreateOutline(Material outlineMat, float scaleFactor, Color color)
+    {
+        GameObject outlineObject = Instantiate(gameObject, transform.position, transform.rotation, transform);
+        outlineObject.transform.localScale = new Vector3(1 * scaleFactor, 1 * scaleFactor, 1 * scaleFactor);
+        Renderer rend = outlineObject.GetComponent<HoverControl>().rend;
+        rend.material = outlineMat;
+        rend.material.SetColor("_OutlineColor", color);
+        rend.material.SetFloat("_ScaleFactor", scaleFactor);
+        rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        outlineObject.GetComponent<Collider>().enabled = false;
+        outlineObject.GetComponent<HoverControl>().enabled = false;
+
+        if (characterType[0] == 'p') outlineObject.GetComponent<PlayerPieceSign>().enabled = false;
+        else
+        {
+            outlineObject.GetComponent<EnemyControler>().enabled = false;
+            outlineObject.GetComponentInChildren<Canvas>().enabled = false;
+        }
+
+
+        outlineObject.tag = "Untagged";
+        outlineObject.layer = 0;
+        rend.enabled = false;
+
+        return rend;
+    }
     private void OnMouseEnter()
     {
         timeToHideInfo = 1.5f;
-        rend.material.color = hoverColor;
+        outlineRend.enabled = true;
+        //rend.material.color = hoverColor;
         hover = true;
         showInfo = true;
-        
+
     }
 
     private void OnMouseOver()
     {
         if (timeToShowUI >= 0)
-        { 
+        {
             timeToShowUI -= Time.deltaTime;
         }
         else
@@ -81,12 +116,11 @@ public class HoverControl : MonoBehaviour
         }
     }
 
-    
-
     private void OnMouseExit()
     {
         timeToShowUI = 1.5f;
-        rend.material.color = initColor;
+        outlineRend.enabled = false;
+        //rend.material.color = initColor;
         hover = false;
         showInfo = false;
     }

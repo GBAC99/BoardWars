@@ -76,7 +76,7 @@ public class GLS_PlayerSelectPiece : GameLoopStates
                 if (raycastHit.collider.tag == "PlayerSign")
                 {
                     PlayerPieceSign p = raycastHit.collider.GetComponent<PlayerPieceSign>();
-                    if (p != null && p.selectable)
+                    if (p != null && p.selectable && p.gameObject.tag == "PlayerSign")
                     {
 
                         if (gC.firstRound)

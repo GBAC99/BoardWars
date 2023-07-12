@@ -37,13 +37,17 @@ public class QadManager : MonoBehaviour
     List<GameObject> playerPieces = new List<GameObject>();
     [HideInInspector] public List<Qad> playerSelectableQads = new List<Qad>();
 
-    [HideInInspector] public GameObject[] activePlayerPieces; 
+    [HideInInspector] public GameObject[] activePlayerPieces;
     int playerPieceQadPositionInit;
 
     public GameObject[] signPlayerPieces;
     [HideInInspector] public PlayerPieceSign[] activeSigns = new PlayerPieceSign[3];
     public Transform[] signPositions;
-     
+    public GameObject[] arrowExtraSigns;
+    public GameObject[] schyteExtraSigns;
+    public GameObject[] hammerExtraSigns;
+    public GameObject[] shipExtraSigns;
+
     List<Qad> playerAttackedQads = new List<Qad>();
 
     [HideInInspector] public GameObject[] testingPlayerPieces;
@@ -82,7 +86,7 @@ public class QadManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {  
+    {
         switch (enemyPiece1)
         {
             case EnemyPieces.VERTICAL:
@@ -132,9 +136,9 @@ public class QadManager : MonoBehaviour
         }
 
         glc.SetActive(false);
-        CreateMap();  
+        CreateMap();
     }
-     
+
     // MAP CREATION //
     /*
      * 6x6 example
@@ -237,7 +241,7 @@ public class QadManager : MonoBehaviour
         }
     }
 
-    public int SearchQadList(Qad qadToCheck) 
+    public int SearchQadList(Qad qadToCheck)
     {
         for (int i = 0; i < QadList.Length; i++)
         {
@@ -389,8 +393,77 @@ public class QadManager : MonoBehaviour
     //Creates the selected set of pieces to later reselect.
     public void SpawnSign(PlayerPieceSign pps, int pieceNum)
     {
+
+        //tengo tres sign mas de cada una
+        //cada vez que eligo un sign he de coger la primera que no este puesta ya / variable de control?
+
+        switch (pps.characterType)
+        {
+            case PlayerPieceSign.CharacterT.PLAYER_ARROW:
+
+                for (int i = 0; i < arrowExtraSigns.Length; i++)
+                {
+
+                    if (!arrowExtraSigns[i].GetComponentInChildren<PlayerPieceSign>().signPlaced)
+                    {
+                        arrowExtraSigns[i].SetActive(true);
+                        arrowExtraSigns[i].transform.SetParent(signPositions[pieceNum],false);
+                        arrowExtraSigns[i].GetComponentInChildren<PlayerPieceSign>().signPlaced = true;
+                        activeSigns[pieceNum] = arrowExtraSigns[i].GetComponentInChildren<PlayerPieceSign>();
+                        activeSigns[pieceNum].activeNumPiece = pieceNum;
+                        break;
+                    }
+
+                }
+
+                break;
+            case PlayerPieceSign.CharacterT.PLAYER_SCHYTE:
+                for (int i = 0; i < schyteExtraSigns.Length; i++)
+                {
+                    if (!schyteExtraSigns[i].GetComponentInChildren<PlayerPieceSign>().signPlaced)
+                    {
+                        schyteExtraSigns[i].SetActive(true);
+                        schyteExtraSigns[i].transform.SetParent(signPositions[pieceNum], false);
+                        schyteExtraSigns[i].GetComponentInChildren<PlayerPieceSign>().signPlaced = true;
+                        activeSigns[pieceNum] = schyteExtraSigns[i].GetComponentInChildren<PlayerPieceSign>();
+                        activeSigns[pieceNum].activeNumPiece = pieceNum;
+                        break;
+                    }
+                }
+                break;
+            case PlayerPieceSign.CharacterT.PLAYER_HAMMMER:
+                for (int i = 0; i < hammerExtraSigns.Length; i++)
+                {
+                    if (!hammerExtraSigns[i].GetComponentInChildren<PlayerPieceSign>().signPlaced)
+                    {
+                        hammerExtraSigns[i].SetActive(true);
+                        hammerExtraSigns[i].transform.SetParent(signPositions[pieceNum], false);
+                        hammerExtraSigns[i].GetComponentInChildren<PlayerPieceSign>().signPlaced = true;
+                        activeSigns[pieceNum] = hammerExtraSigns[i].GetComponentInChildren<PlayerPieceSign>();
+                        activeSigns[pieceNum].activeNumPiece = pieceNum;
+                        break;
+                    }
+                }
+                break;
+            case PlayerPieceSign.CharacterT.PLAYER_SHIP:
+                for (int i = 0; i < shipExtraSigns.Length; i++)
+                {
+                    if (!shipExtraSigns[i].GetComponentInChildren<PlayerPieceSign>().signPlaced)
+                    {
+                        shipExtraSigns[i].SetActive(true);
+                        shipExtraSigns[i].transform.SetParent(signPositions[pieceNum],false);
+                        shipExtraSigns[i].GetComponentInChildren<PlayerPieceSign>().signPlaced = true;
+                        activeSigns[pieceNum] = shipExtraSigns[i].GetComponentInChildren<PlayerPieceSign>();
+                        activeSigns[pieceNum].activeNumPiece = pieceNum;
+                        break;
+                    }
+                }
+                break;
+        }
+
+        /*
         activeSigns[pieceNum] = pps.Spawn(pps, signPositions[pieceNum]);
-        activeSigns[pieceNum].activeNumPiece = pieceNum;
+        activeSigns[pieceNum].activeNumPiece = pieceNum;*/
     }
 
     public void SetSignCurrentHp()
