@@ -50,8 +50,11 @@ public class Qad : MonoBehaviour
     QadHoverScript hover;
 
     //Rigidbody
-
     Rigidbody qadRbd;
+
+    //VFX
+    public Transform lightingPos;
+    public GameObject lightingStrike;
 
     // Start is called before the first frame update
     void Start()
@@ -219,6 +222,11 @@ public class Qad : MonoBehaviour
         {
             currentPiece.GetComponent<EnemyControler>().SetApart();
         }
+    }
+
+    public void LightingStrike()
+    {
+        Instantiate(lightingStrike,lightingPos);
     }
 
     public void AddRigidBody()

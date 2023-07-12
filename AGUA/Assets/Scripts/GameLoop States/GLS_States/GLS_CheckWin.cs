@@ -52,11 +52,14 @@ public class GLS_CheckWin : GameLoopStates
     {
         for (int i = 0; i < gC.QAD_MANAGER.activeEnemyPieces.Length; i++)
         {
-            if (gC.QAD_MANAGER.activeEnemyPieces[i].GetComponent<EnemyControler>().alive 
-                && gC.QAD_MANAGER.activeEnemyPieces[i] != null)
+            if (gC.QAD_MANAGER.activeEnemyPieces[i] != null)
             {
-                return false;
+                if (gC.QAD_MANAGER.activeEnemyPieces[i].GetComponent<EnemyControler>().alive)
+                {
+                    return false;
+                }
             }
+            
         }
 
         return true;
