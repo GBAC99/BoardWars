@@ -15,6 +15,8 @@ public class Qad : MonoBehaviour
     public bool diagonalToCurrent = false;
     public bool playerAttack = false;
 
+    public Material qadMat;
+
     public Renderer qadRender;
     public Transform qadRenderTransform;
 
@@ -54,13 +56,17 @@ public class Qad : MonoBehaviour
 
     //VFX
     public Transform lightingPos;
+    public bool lightingExists;
+    public GameObject lightingStrikePrefab;
     public GameObject lightingStrike;
+    public GameObject mainCamera;
+
 
     // Start is called before the first frame update
     void Start()
     {
         hover = GetComponent<QadHoverScript>();
-
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         qadDamage = 0;
     }
 
@@ -208,8 +214,6 @@ public class Qad : MonoBehaviour
 
     public void SetApartPiece()
     {
-        
-
         if (currentPieceType == 0)//PlayerPiece
         {
             currentPiece.GetComponent<PlayerPieceControler>().SetApart();
@@ -226,7 +230,14 @@ public class Qad : MonoBehaviour
 
     public void LightingStrike()
     {
-        Instantiate(lightingStrike,lightingPos);
+
+        if (!lightingExists)
+        {
+            lightingStrike = Instantiate(lightingStrikePrefab, lightingPos);
+            lightingExists = true;
+        }  
+
+        mainCamera.GetComponent<CameraControl>().Shake();
     }
 
     public void AddRigidBody()
@@ -241,5 +252,7 @@ public class Qad : MonoBehaviour
             qadRbd.AddForce(gameObject.transform.forward * 20f, ForceMode.Impulse);
         }
     }
+
+ 
 
 }

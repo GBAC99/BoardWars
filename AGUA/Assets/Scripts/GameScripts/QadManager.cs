@@ -179,10 +179,11 @@ public class QadManager : MonoBehaviour
         for (int i = 0; i < QadList.Length; i++)
         {
             QadList[i].GetComponent<Qad>().enabled = true;
+            QadList[i].GetComponent<Qad>().qadMat = QadList[i].GetComponent<Qad>().qadRender.material;
             QadList[i].GetComponent<Renderer>().enabled = true;
             QadList[i].GetComponent<QadHoverScript>().enabled = true;
             QadList[i].GetComponent<Animator>().enabled = true;
-
+            QadList[i].GetComponent<Qad>().qadMat.SetFloat("_SpeedMultiplier", Random.Range(0.5f, 0.8f));
             yield return new WaitForSeconds(Random.Range(0.02f, 0.3f));
         }
 

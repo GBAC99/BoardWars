@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034875422379834322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 18, z: 0}
+  m_LocalPosition: {x: -0.6, y: 11.6, z: -0.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1478930360234991925}
@@ -134,6 +134,7 @@ MonoBehaviour:
   attacked: 0
   diagonalToCurrent: 0
   playerAttack: 0
+  qadMat: {fileID: 0}
   qadRender: {fileID: 1478930360044167633}
   qadRenderTransform: {fileID: 1478930360044167635}
   currentPiece: {fileID: 0}
@@ -151,7 +152,10 @@ MonoBehaviour:
   row: 0
   col: 0
   lightingPos: {fileID: 174081610857489483}
-  lightingStrike: {fileID: 924492664555805772, guid: eeb5b0722358fb84bb94025dbbda8670, type: 3}
+  lightingExists: 0
+  lightingStrikePrefab: {fileID: 924492664555805772, guid: eeb5b0722358fb84bb94025dbbda8670, type: 3}
+  lightingStrike: {fileID: 0}
+  mainCamera: {fileID: 0}
 --- !u!114 &5186474513243748367
 MonoBehaviour:
   m_ObjectHideFlags: 0

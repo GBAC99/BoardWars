@@ -97,8 +97,7 @@ public class HoverControl : MonoBehaviour
     private void OnMouseEnter()
     {
         timeToHideInfo = 1.5f;
-        outlineRend.enabled = true;
-        //rend.material.color = hoverColor;
+        outlineRend.enabled = true; 
         hover = true;
         showInfo = true;
 
@@ -119,8 +118,7 @@ public class HoverControl : MonoBehaviour
     private void OnMouseExit()
     {
         timeToShowUI = 1.5f;
-        outlineRend.enabled = false;
-        //rend.material.color = initColor;
+        outlineRend.enabled = false; 
         hover = false;
         showInfo = false;
     }
