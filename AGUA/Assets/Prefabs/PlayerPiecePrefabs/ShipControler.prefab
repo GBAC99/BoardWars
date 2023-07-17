@@ -84,6 +84,7 @@ GameObject:
   - component: {fileID: 6624127536059055880}
   - component: {fileID: 6624127536059055881}
   - component: {fileID: 6624127536059055882}
+  - component: {fileID: 4351955483952958321}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -154,6 +155,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &4351955483952958321
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6624127536059055924}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 782bcf46ee9a13a4087506d0d0d7e9b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &5534645753330862018
 PrefabInstance:
   m_ObjectHideFlags: 0

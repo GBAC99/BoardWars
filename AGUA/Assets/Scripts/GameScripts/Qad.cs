@@ -55,18 +55,18 @@ public class Qad : MonoBehaviour
     Rigidbody qadRbd;
 
     //VFX
+    [Header("VFX")]
     public Transform lightingPos;
     public bool lightingExists;
     public GameObject lightingStrikePrefab;
     public GameObject lightingStrike;
-    public GameObject mainCamera;
-
+    public GameObject mainCamera; 
 
     // Start is called before the first frame update
     void Start()
     {
         hover = GetComponent<QadHoverScript>();
-        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera"); 
         qadDamage = 0;
     }
 
@@ -85,7 +85,7 @@ public class Qad : MonoBehaviour
             else qadRender.material.color = Color.yellow;
 
         }
-        else if (attacked) qadRender.material.color = Color.red; 
+        else if (attacked) qadRender.material.color = Color.red;
         else qadRender.material.color = Color.white;
 
         if (currentPiece != null)
@@ -102,7 +102,7 @@ public class Qad : MonoBehaviour
     }
 
     public void SetDamageInQad(float _damage)
-    { 
+    {
         qadDamage += _damage;
     }
 
@@ -126,6 +126,7 @@ public class Qad : MonoBehaviour
         ocupied = false;
 
         currentPieceType = 0;
+         
 
         adjacencyList.Clear();
     }
@@ -235,13 +236,14 @@ public class Qad : MonoBehaviour
         {
             lightingStrike = Instantiate(lightingStrikePrefab, lightingPos);
             lightingExists = true;
-        }  
+        }
 
         mainCamera.GetComponent<CameraControl>().Shake();
     }
+    
 
     public void AddRigidBody()
-    { 
+    {
 
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, Random.Range(0, 360), transform.eulerAngles.z);
         if (qadRbd == null)
@@ -253,6 +255,6 @@ public class Qad : MonoBehaviour
         }
     }
 
- 
+
 
 }

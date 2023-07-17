@@ -13,8 +13,10 @@ public class QadManager : MonoBehaviour
         HORIZONTAL = 1,
         HORSE = 2
     }
-
     [Header("--Enemy Pieces that will spawn--")]
+
+    [Header("LEVEL DESIGN TOOL")]
+
     public EnemyPieces enemyPiece1;
     public EnemyPieces enemyPiece2;
     public EnemyPieces enemyPiece3;
@@ -40,6 +42,8 @@ public class QadManager : MonoBehaviour
     [HideInInspector] public GameObject[] activePlayerPieces;
     int playerPieceQadPositionInit;
 
+    [Header("UI")]
+
     public GameObject[] signPlayerPieces;
     [HideInInspector] public PlayerPieceSign[] activeSigns = new PlayerPieceSign[3];
     public Transform[] signPositions;
@@ -61,6 +65,8 @@ public class QadManager : MonoBehaviour
     public int y;
 
     public static int dimensions = 0;
+
+    [Header("Qad Managing")]
 
     public GameObject[] QadList;
     [SerializeField]
@@ -360,9 +366,9 @@ public class QadManager : MonoBehaviour
     public void SpawnPlayerPieceTESTING()
     {
 
-        testingPlayerPieces[0].GetComponent<PlayerPieceControler>().Spawn(new Vector3(QadList[15].transform.position.x,
+        testingPlayerPieces[2].GetComponent<PlayerPieceControler>().Spawn(new Vector3(QadList[35].transform.position.x,
                   gameObject.transform.position.y + QadList[0].GetComponent<Collider>().bounds.extents.y + offset,
-                  QadList[15].transform.position.z));
+                  QadList[35].transform.position.z));
 
     }
 
@@ -546,7 +552,7 @@ public class QadManager : MonoBehaviour
     {
         foreach (Qad qA in enemyAttackedQads)
         {
-            qA.attacked = true;
+            qA.attacked = true; 
         }
     }
 

@@ -92,7 +92,7 @@ public class GLS_PlayerSelectAttacks : GameLoopStates
                     {
                         ppC.GetComponent<PlayerPieceControler>().SetAttackQad(q);
                         gC.QAD_MANAGER.activePlayerPieces[gC.currentPlayerPiece].GetComponent<PlayerPieceControler>().ResetLists();
-                        q.attacked = true;
+                        q.attacked = true; 
                         if (gC.currentPlayerPiece < 3)
                         {
                             gC.currentPlayerPiece += 1;
