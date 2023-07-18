@@ -1,0 +1,3001 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.18f1 (a7d1c678663c) revision 10998214'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19045.3208; Version 2009; 64bit' Language: 'es' Physical Memory: 16211 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+E:\Unity\2020.3.18f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+E:/00TAPortfolio/BoardWars/BoardWars/BoardWars
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+55826
+Successfully changed project path to: E:/00TAPortfolio/BoardWars/BoardWars/BoardWars
+E:/00TAPortfolio/BoardWars/BoardWars/BoardWars
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 90.06 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.18f1 (a7d1c678663c)
+[Subsystems] Discovering subsystems at path E:/Unity/2020.3.18f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/00TAPortfolio/BoardWars/BoardWars/BoardWars/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
+    Vendor:   
+    VRAM:     4055 MB
+    Driver:   31.0.15.1748
+Initialize mono
+Mono path[0] = 'E:/Unity/2020.3.18f1/Editor/Data/Managed'
+Mono path[1] = 'E:/Unity/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'E:/Unity/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56540
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/Unity/2020.3.18f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: E:/Unity/2020.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006396 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 116.95 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.374 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3374ms)
+		BeginReloadAssembly (135ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (969ms)
+			LoadAssemblies (136ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (353ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (404ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (117ms)
+				BeforeProcessingInitializeOnLoad (35ms)
+				ProcessInitializeOnLoadAttributes (168ms)
+				ProcessInitializeOnLoadMethodAttributes (76ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.013001 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 123.15 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.645 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2647ms)
+		BeginReloadAssembly (374ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (14ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (2145ms)
+			LoadAssemblies (297ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (797ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (168ms)
+			SetupLoadedEditorAssemblies (699ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (123ms)
+				BeforeProcessingInitializeOnLoad (206ms)
+				ProcessInitializeOnLoadAttributes (344ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 1.17 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3282 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 153.6 MB.
+System memory in use after: 153.8 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3739.
+Total: 5.779000 ms (FindLiveObjects: 0.623500 ms CreateObjectMapping: 0.358300 ms MarkObjects: 4.756700 ms  DeleteObjects: 0.038600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/ShadersTesting.unity
+  artifactKey: Guid(7d6ae2cfd56f308458bf109b2ddd8c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/ShadersTesting.unity using Guid(7d6ae2cfd56f308458bf109b2ddd8c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68f8928977f0b52e59a49725efdfd92b') in 0.267399 seconds 
+  Import took 0.314686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 53.689385 seconds.
+  path: Assets/Shaders/SlashShader.shadergraph
+  artifactKey: Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/SlashShader.shadergraph using Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33e25e119a6f8a5d757231ced4713b91') in 0.060433 seconds 
+  Import took 0.128973 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 342.925876 seconds.
+  path: Assets/Shaders/SlashShader.shadergraph
+  artifactKey: Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/SlashShader.shadergraph using Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23c9a7725aa678b1bb08a6589e46f497') in 0.012613 seconds 
+  Import took 0.039677 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 200.795385 seconds.
+  path: Assets/Shaders/SlashShader.shadergraph
+  artifactKey: Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/SlashShader.shadergraph using Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adb507cf268a7c1e8cf9de15d67c6564') in 0.014093 seconds 
+  Import took 0.063472 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 55.951959 seconds.
+  path: Assets/Shaders/SlashShader.shadergraph
+  artifactKey: Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/SlashShader.shadergraph using Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce33554ab929bafe7fc1c6f181ec573c') in 0.006428 seconds 
+  Import took 0.044337 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 72.656607 seconds.
+  path: Assets/Shaders/SlashShader.shadergraph
+  artifactKey: Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/SlashShader.shadergraph using Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c9f6a5ed645882d17d0fe0254ec18e4') in 0.023593 seconds 
+  Import took 0.052544 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 83.293245 seconds.
+  path: Assets/Shaders/SlashShader.shadergraph
+  artifactKey: Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/SlashShader.shadergraph using Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a580d9afcba3b37e8345c8732303047f') in 0.085806 seconds 
+  Import took 0.144610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.011537 seconds.
+  path: Assets/Shaders/SlashShader.shadergraph
+  artifactKey: Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/SlashShader.shadergraph using Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5aef6f01babafd1016d23fe1bf5195f') in 0.007930 seconds 
+  Import took 0.045689 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.564308 seconds.
+  path: Assets/Shaders/SlashShader.shadergraph
+  artifactKey: Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/SlashShader.shadergraph using Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce1d8c464a6bc94d4b538b851b95e639') in 0.011094 seconds 
+  Import took 0.135660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.850578 seconds.
+  path: Assets/Shaders/SlashShader.shadergraph
+  artifactKey: Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/SlashShader.shadergraph using Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d8b061034387f61e2989f096239194e') in 0.048630 seconds 
+  Import took 0.118221 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 175.939135 seconds.
+  path: Assets/Shaders/SlashShader.shadergraph
+  artifactKey: Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/SlashShader.shadergraph using Guid(7d4937e64fdaf7f45863c4bad01ca6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3653f55e104b98e85eb86573047f78aa') in 0.006464 seconds 
+  Import took 0.056321 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 427.102904 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '284182b90911a0b151284056d0b23f29') in 0.010631 seconds 
+  Import took 0.064579 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.453751 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a1db9cf94fc459e918c68fd391873a2') in 0.007783 seconds 
+  Import took 0.500100 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.519969 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2062ddc432379e68ea2d9966df4ba8bc') in 0.017785 seconds 
+  Import took 0.555773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.045347 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '026a0d65d546d039a835eb0e6552a114') in 0.022903 seconds 
+  Import took 0.091155 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.040352 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e7211c5f8737cbbef813a29c8f28fbb') in 0.006460 seconds 
+  Import took 0.182998 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.901998 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec124dc6ae0c13979d4815e6b28e272f') in 0.005181 seconds 
+  Import took 0.115803 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000786 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec124dc6ae0c13979d4815e6b28e272f') in 0.008356 seconds 
+  Import took 0.016584 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.120988 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b2cd9b6d44663f5323276ecd53deac5') in 0.005091 seconds 
+  Import took 0.052402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.010278 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b2cd9b6d44663f5323276ecd53deac5') in 0.005149 seconds 
+  Import took 0.012455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.674061 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48150d88d4aa39a4eb40fe6a3b484bfa') in 0.006508 seconds 
+  Import took 0.039202 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.044163 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e2209603a0fddd4f630fd6043680457') in 0.004840 seconds 
+  Import took 0.030479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.176223 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8372f35c2d2a8e9906e9d802c1b2591d') in 0.007706 seconds 
+  Import took 0.068021 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.895199 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81533e4a99f66085c9aefa6b9cd0171a') in 0.025710 seconds 
+  Import took 0.378303 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 164.921049 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7025c2f4f3227bebe6a426bc25bad96c') in 0.011656 seconds 
+  Import took 0.552824 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.122785 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cb6d2eb42454922c21f949dbfcd5bde') in 0.007122 seconds 
+  Import took 0.131635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.091542 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4af60dac6bd5fe7615fd369b51ee042e') in 0.012125 seconds 
+  Import took 0.620528 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.668960 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84a158b0bcc6c77e5e33f4aa29aa39d5') in 0.010516 seconds 
+  Import took 0.079237 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.327760 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57026518e1cdfcc7ed359a74cec846bd') in 0.019767 seconds 
+  Import took 0.321950 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.255871 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e365679ff4242cf5248428a9339b9c56') in 0.005713 seconds 
+  Import took 0.109268 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.462958 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2099c68f31de7e76c733fd8818d30e91') in 0.005600 seconds 
+  Import took 0.125031 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.292450 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3714ab026e45587b40968912dabd83bb') in 0.018050 seconds 
+  Import took 0.123600 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.020686 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3714ab026e45587b40968912dabd83bb') in 0.021365 seconds 
+  Import took 0.043157 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.611309 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0e644c6a0c2b0c937aec5a408ef1682') in 0.005810 seconds 
+  Import took 0.091207 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.980058 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecf09be2f36ec31232fef6f5a22a9123') in 0.005755 seconds 
+  Import took 0.018313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.549784 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a13b9102236289e4aa2ce2f9cccbafa0') in 0.006635 seconds 
+  Import took 0.112910 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.941058 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fbcaea8987ea21ec3403cab08d15f32') in 0.077450 seconds 
+  Import took 0.679206 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.572062 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07d7fb94b543d85af73367c2e4e61dc6') in 0.007823 seconds 
+  Import took 0.095595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.530903 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7016f6d96e18defc800086ab520b6cc') in 0.024695 seconds 
+  Import took 0.155997 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.027539 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7016f6d96e18defc800086ab520b6cc') in 0.021797 seconds 
+  Import took 0.050351 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.804342 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6412a3834a7f11a72d9d94553101be8') in 0.007589 seconds 
+  Import took 0.033356 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.027353 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6412a3834a7f11a72d9d94553101be8') in 0.004526 seconds 
+  Import took 0.012326 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.396922 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0443c30198b235e1c99f3ee293f9b658') in 0.005228 seconds 
+  Import took 0.021187 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018932 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0443c30198b235e1c99f3ee293f9b658') in 0.004472 seconds 
+  Import took 0.011173 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.095322 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b2a692b2c9920f9a53d5452b53eb75d') in 0.004861 seconds 
+  Import took 0.012404 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011377 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b2a692b2c9920f9a53d5452b53eb75d') in 0.004830 seconds 
+  Import took 0.012222 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.827598 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '242219a5aabb7cdac4b36682fd813b2a') in 0.004851 seconds 
+  Import took 0.011803 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.030995 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '242219a5aabb7cdac4b36682fd813b2a') in 0.004262 seconds 
+  Import took 0.012913 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.428733 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51f75882eea952fc04ff5f9fe1caeb96') in 0.004813 seconds 
+  Import took 0.089624 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.950370 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '707e82d939330c5c68da5f4e529a78a7') in 0.019415 seconds 
+  Import took 0.412593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.888391 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c26f0931bd6730f3da10ba0394e1c308') in 0.017225 seconds 
+  Import took 0.178410 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.536864 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29f298f55bd07015457dfa72c4a07180') in 0.018903 seconds 
+  Import took 0.092286 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.751570 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '180e4a8acfaf9aead4ef480aec0e0717') in 0.005599 seconds 
+  Import took 0.154548 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.091923 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7f88e76363b7dce508e15d4e0b5e35a') in 0.005249 seconds 
+  Import took 0.165064 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 74.972947 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea81fbd196aaf85adef46ce97f12b2f1') in 0.025180 seconds 
+  Import took 0.190469 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.598677 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '536694860b38a572f18ed76b31c71739') in 0.019488 seconds 
+  Import took 0.042689 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.695780 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ba13735cfa7dc302bd2b034539413cb') in 0.005800 seconds 
+  Import took 0.069637 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 45.167411 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59aa788de4ef53780ded3feef8781111') in 0.009360 seconds 
+  Import took 0.147835 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.653047 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0875a19635055e80cdaf1769d1db5bcb') in 0.016883 seconds 
+  Import took 0.065854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 190.849961 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd108babbf1d81b8fe727fb8dec576bf6') in 0.005546 seconds 
+  Import took 0.392985 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.269974 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd80c542dd21589bf1c1a684684a2edaf') in 0.004680 seconds 
+  Import took 0.041054 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 78.563598 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '353032e1cc11279ce536c560e7cb27af') in 0.016565 seconds 
+  Import took 0.092106 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.983925 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0622d7239de25b5913cc7f047207bfe') in 0.008489 seconds 
+  Import took 0.072996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.417563 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a46baac725f2ab21a1a5ec1d2f5c72c') in 0.078139 seconds 
+  Import took 0.111458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.335695 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77e1ce3242d10b6c32879b6394d1b0a8') in 0.005375 seconds 
+  Import took 0.024929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 104.054043 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eb63a303f473cebc910a2a59dc78087') in 0.006019 seconds 
+  Import took 0.085922 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005821 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eb63a303f473cebc910a2a59dc78087') in 0.005120 seconds 
+  Import took 0.013617 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.736224 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33fd332d9e18d96356ab6b0b7e0c89ca') in 0.006371 seconds 
+  Import took 0.014521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.442829 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '473516a89981b94903c8c556e84ebfa1') in 0.006989 seconds 
+  Import took 0.026438 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.230066 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95a71f30c084b716b3d6fb69f4c8d6b8') in 0.006895 seconds 
+  Import took 0.014054 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.874338 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11d3c143ff1987da9c3c575d0266cac7') in 0.007481 seconds 
+  Import took 0.195873 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.947193 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a44925a31a48ea019ba88c732c60e37') in 0.006461 seconds 
+  Import took 0.016115 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.429462 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8638b86a14e9be7f5556d598efac61df') in 0.010018 seconds 
+  Import took 0.044599 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 86.307568 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f5a9eef7780cfc64f0bd982e4f0241e') in 0.012225 seconds 
+  Import took 0.022711 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.075960 seconds.
+  path: Assets/Scenes/Level1.unity
+  artifactKey: Guid(3ae47467b010d5940bc23e4c5848a971) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level1.unity using Guid(3ae47467b010d5940bc23e4c5848a971) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0526995b7bc6e1b6619f257cafe1f0f6') in 0.102543 seconds 
+  Import took 0.168872 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.376068 seconds.
+  path: Assets/Scenes/ShadersTesting.unity
+  artifactKey: Guid(7d6ae2cfd56f308458bf109b2ddd8c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/ShadersTesting.unity using Guid(7d6ae2cfd56f308458bf109b2ddd8c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f243967bf9267b4ed00b847cea7b0880') in 0.002983 seconds 
+  Import took 0.041443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.547352 seconds.
+  path: Assets/Prefabs/VFX/ScytheSlash.prefab
+  artifactKey: Guid(e7edb0afac2869d49b67b27ec1c8dbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/ScytheSlash.prefab using Guid(e7edb0afac2869d49b67b27ec1c8dbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76f6cb05f26db43ad193804da6e7d3a9') in 1.117142 seconds 
+  Import took 1.183014 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.028951 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.136 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2137ms)
+		BeginReloadAssembly (297ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (102ms)
+		EndReloadAssembly (1738ms)
+			LoadAssemblies (218ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (596ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (119ms)
+			SetupLoadedEditorAssemblies (527ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (147ms)
+				ProcessInitializeOnLoadAttributes (354ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (33ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.9 MB.
+System memory in use after: 149.1 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 3788.
+Total: 4.657900 ms (FindLiveObjects: 0.399100 ms CreateObjectMapping: 0.223000 ms MarkObjects: 4.007500 ms  DeleteObjects: 0.026600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 265.733200 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '726cd709c6f2793353dd37ae8d16d617') in 0.406652 seconds 
+  Import took 0.434512 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.481130 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6b26b19d4bf83ac54ac1014f60efcac') in 0.005425 seconds 
+  Import took 0.075356 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002747 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6b26b19d4bf83ac54ac1014f60efcac') in 0.007638 seconds 
+  Import took 0.016195 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006278 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.111 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2111ms)
+		BeginReloadAssembly (227ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (61ms)
+		EndReloadAssembly (1767ms)
+			LoadAssemblies (228ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (600ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (110ms)
+			SetupLoadedEditorAssemblies (613ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (162ms)
+				ProcessInitializeOnLoadAttributes (420ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (29ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.95 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.9 MB.
+System memory in use after: 149.2 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 3790.
+Total: 4.530100 ms (FindLiveObjects: 0.376600 ms CreateObjectMapping: 0.223000 ms MarkObjects: 3.905600 ms  DeleteObjects: 0.023400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008266 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.91 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.256 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2257ms)
+		BeginReloadAssembly (190ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (1942ms)
+			LoadAssemblies (203ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (721ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (141ms)
+			SetupLoadedEditorAssemblies (598ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (168ms)
+				ProcessInitializeOnLoadAttributes (402ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (28ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.0 MB.
+System memory in use after: 149.2 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 3792.
+Total: 5.372700 ms (FindLiveObjects: 0.380500 ms CreateObjectMapping: 0.210900 ms MarkObjects: 4.753300 ms  DeleteObjects: 0.026900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 918.137302 seconds.
+  path: Assets/Prefabs/PlayerPiecePrefabs/SchyteControler.prefab
+  artifactKey: Guid(a035714ca3e35b440a00603dfce9f1bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerPiecePrefabs/SchyteControler.prefab using Guid(a035714ca3e35b440a00603dfce9f1bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3e83ae6f5b68455611e56130263b4c3') in 1.779492 seconds 
+  Import took 1.817000 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009603 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.282 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2283ms)
+		BeginReloadAssembly (255ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (77ms)
+		EndReloadAssembly (1914ms)
+			LoadAssemblies (255ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (706ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (150ms)
+			SetupLoadedEditorAssemblies (551ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (166ms)
+				ProcessInitializeOnLoadAttributes (355ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (34ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.02 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.2 MB.
+System memory in use after: 149.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 3831.
+Total: 9.847400 ms (FindLiveObjects: 0.632600 ms CreateObjectMapping: 0.843300 ms MarkObjects: 8.345100 ms  DeleteObjects: 0.024600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 212.612589 seconds.
+  path: Assets/Prefabs/PlayerPiecePrefabs/SchyteControler.prefab
+  artifactKey: Guid(a035714ca3e35b440a00603dfce9f1bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerPiecePrefabs/SchyteControler.prefab using Guid(a035714ca3e35b440a00603dfce9f1bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ab4306e3856bd9d1cbcfa2961b3e719') in 0.391820 seconds 
+  Import took 0.470761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 95.148010 seconds.
+  path: Assets/Prefabs/QadPrefabs/Qad.prefab
+  artifactKey: Guid(e2300e58cc03d6544abab64312829d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/QadPrefabs/Qad.prefab using Guid(e2300e58cc03d6544abab64312829d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72c6b85d7dcec0529537c74b3ec4dc9d') in 0.365096 seconds 
+  Import took 0.378238 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007111 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.437 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3438ms)
+		BeginReloadAssembly (272ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (14ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (75ms)
+		EndReloadAssembly (3054ms)
+			LoadAssemblies (270ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (2114ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (94ms)
+			SetupLoadedEditorAssemblies (430ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (121ms)
+				ProcessInitializeOnLoadAttributes (282ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (27ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.4 MB.
+System memory in use after: 149.6 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3869.
+Total: 4.840800 ms (FindLiveObjects: 0.391900 ms CreateObjectMapping: 0.205400 ms MarkObjects: 4.117000 ms  DeleteObjects: 0.124200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011022 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.275 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3276ms)
+		BeginReloadAssembly (283ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (69ms)
+		EndReloadAssembly (2866ms)
+			LoadAssemblies (287ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (1744ms)
+			ReleaseScriptCaches (5ms)
+			RebuildScriptCaches (250ms)
+			SetupLoadedEditorAssemblies (422ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (127ms)
+				ProcessInitializeOnLoadAttributes (274ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (22ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.4 MB.
+System memory in use after: 149.6 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 3871.
+Total: 6.077500 ms (FindLiveObjects: 0.609300 ms CreateObjectMapping: 0.283500 ms MarkObjects: 5.157300 ms  DeleteObjects: 0.025200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 101.684481 seconds.
+  path: Assets/Prefabs/VFX/ScytheSlash.prefab
+  artifactKey: Guid(e7edb0afac2869d49b67b27ec1c8dbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/ScytheSlash.prefab using Guid(e7edb0afac2869d49b67b27ec1c8dbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8af008d5576987d8471099d36a0ee52') in 0.263943 seconds 
+  Import took 0.272448 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.784551 seconds.
+  path: Assets/Prefabs/VFX/ScytheSlash.prefab
+  artifactKey: Guid(e7edb0afac2869d49b67b27ec1c8dbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/ScytheSlash.prefab using Guid(e7edb0afac2869d49b67b27ec1c8dbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8af008d5576987d8471099d36a0ee52') in 0.022090 seconds 
+  Import took 0.031162 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.024207 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.28 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.734 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3736ms)
+		BeginReloadAssembly (320ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (19ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (83ms)
+		EndReloadAssembly (3276ms)
+			LoadAssemblies (311ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (827ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (206ms)
+			SetupLoadedEditorAssemblies (1304ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (207ms)
+				ProcessInitializeOnLoadAttributes (963ms)
+				ProcessInitializeOnLoadMethodAttributes (49ms)
+				AfterProcessingInitializeOnLoad (69ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (294ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.14 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.5 MB.
+System memory in use after: 149.7 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 3909.
+Total: 10.537600 ms (FindLiveObjects: 0.715600 ms CreateObjectMapping: 0.365600 ms MarkObjects: 9.426200 ms  DeleteObjects: 0.027900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008204 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.955 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1957ms)
+		BeginReloadAssembly (447ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (28ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (210ms)
+		EndReloadAssembly (1400ms)
+			LoadAssemblies (211ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (507ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (93ms)
+			SetupLoadedEditorAssemblies (446ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (140ms)
+				ProcessInitializeOnLoadAttributes (285ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (28ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.5 MB.
+System memory in use after: 149.7 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 3911.
+Total: 22.487100 ms (FindLiveObjects: 0.984600 ms CreateObjectMapping: 1.078100 ms MarkObjects: 20.307800 ms  DeleteObjects: 0.111500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007962 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 3.16 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.118 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4119ms)
+		BeginReloadAssembly (274ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (67ms)
+		EndReloadAssembly (3728ms)
+			LoadAssemblies (268ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (745ms)
+			ReleaseScriptCaches (7ms)
+			RebuildScriptCaches (435ms)
+			SetupLoadedEditorAssemblies (1338ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (32ms)
+				SetLoadedEditorAssemblies (3ms)
+				RefreshPlugins (4ms)
+				BeforeProcessingInitializeOnLoad (672ms)
+				ProcessInitializeOnLoadAttributes (600ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (50ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.31 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.5 MB.
+System memory in use after: 149.7 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 3913.
+Total: 17.884700 ms (FindLiveObjects: 0.842800 ms CreateObjectMapping: 0.534400 ms MarkObjects: 16.474900 ms  DeleteObjects: 0.031000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 332.374960 seconds.
+  path: Assets/Prefabs/VFX/ScytheSlash.prefab
+  artifactKey: Guid(e7edb0afac2869d49b67b27ec1c8dbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/ScytheSlash.prefab using Guid(e7edb0afac2869d49b67b27ec1c8dbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '337f2a71c2955586ee751caa6ac8cbcc') in 0.475675 seconds 
+  Import took 0.557198 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.811913 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21a4491588206afc9b237b5b77452d14') in 0.019841 seconds 
+  Import took 0.145411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.811652 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fcd5387e30dbceffc87ee22423ef097') in 0.009548 seconds 
+  Import took 0.018942 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.194731 seconds.
+  path: Assets/Shaders/VFX/ScytheSlash.vfx
+  artifactKey: Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ScytheSlash.vfx using Guid(281d6434216be364e8a2e8dafa7e806e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e17fbfc5b98483d373c296992258bd85') in 0.008709 seconds 
+  Import took 0.040137 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.030367 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.425 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3425ms)
+		BeginReloadAssembly (249ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (16ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (64ms)
+		EndReloadAssembly (3063ms)
+			LoadAssemblies (251ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (645ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (132ms)
+			SetupLoadedEditorAssemblies (1635ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (232ms)
+				ProcessInitializeOnLoadAttributes (1334ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
+				AfterProcessingInitializeOnLoad (28ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (115ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.92 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.6 MB.
+System memory in use after: 149.9 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 3951.
+Total: 5.365300 ms (FindLiveObjects: 0.413000 ms CreateObjectMapping: 0.213300 ms MarkObjects: 4.692000 ms  DeleteObjects: 0.045100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 200.829813 seconds.
+  path: Assets/Prefabs/VFX/ScytheSlash.prefab
+  artifactKey: Guid(e7edb0afac2869d49b67b27ec1c8dbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/ScytheSlash.prefab using Guid(e7edb0afac2869d49b67b27ec1c8dbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50a3662f096326a0bcb31a37b6f5eacd') in 0.629446 seconds 
+  Import took 0.660345 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000814 seconds.
+  path: Assets/Prefabs/VFX/ScytheSlash.prefab
+  artifactKey: Guid(e7edb0afac2869d49b67b27ec1c8dbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/ScytheSlash.prefab using Guid(e7edb0afac2869d49b67b27ec1c8dbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50a3662f096326a0bcb31a37b6f5eacd') in 0.030457 seconds 
+  Import took 0.044120 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006142 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.936 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2937ms)
+		BeginReloadAssembly (236ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (14ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (64ms)
+		EndReloadAssembly (2607ms)
+			LoadAssemblies (228ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (581ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (235ms)
+			SetupLoadedEditorAssemblies (986ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (20ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (270ms)
+				ProcessInitializeOnLoadAttributes (664ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (60ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.8 MB.
+System memory in use after: 150.0 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 3989.
+Total: 10.133100 ms (FindLiveObjects: 0.665900 ms CreateObjectMapping: 0.331900 ms MarkObjects: 9.086100 ms  DeleteObjects: 0.042900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008406 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.862 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3863ms)
+		BeginReloadAssembly (270ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (68ms)
+		EndReloadAssembly (3482ms)
+			LoadAssemblies (263ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (637ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (113ms)
+			SetupLoadedEditorAssemblies (2241ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (152ms)
+				ProcessInitializeOnLoadAttributes (2051ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (61ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.8 MB.
+System memory in use after: 150.0 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 3991.
+Total: 7.775000 ms (FindLiveObjects: 0.425900 ms CreateObjectMapping: 0.259400 ms MarkObjects: 7.058000 ms  DeleteObjects: 0.029400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 669.128151 seconds.
+  path: Assets/Scenes/ShadersTesting.unity
+  artifactKey: Guid(7d6ae2cfd56f308458bf109b2ddd8c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/ShadersTesting.unity using Guid(7d6ae2cfd56f308458bf109b2ddd8c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b307077f883c88172f8a9afa586433e6') in 0.045805 seconds 
+  Import took 0.182186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 44.032535 seconds.
+  path: Assets/Shaders/ArrowAttackShader.shadergraph
+  artifactKey: Guid(ba40e9f7189b236418520bb9595ef365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/ArrowAttackShader.shadergraph using Guid(ba40e9f7189b236418520bb9595ef365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e51e2954403ea19e5ae163bc8d306479') in 0.013254 seconds 
+  Import took 0.054365 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.495869 seconds.
+  path: Assets/Shaders/ArrowAttackShader.shadergraph
+  artifactKey: Guid(ba40e9f7189b236418520bb9595ef365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/ArrowAttackShader.shadergraph using Guid(ba40e9f7189b236418520bb9595ef365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e51e2954403ea19e5ae163bc8d306479') in 0.011446 seconds 
+  Import took 0.022818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 312.177680 seconds.
+  path: Assets/Shaders/ArrowAttackShader.shadergraph
+  artifactKey: Guid(ba40e9f7189b236418520bb9595ef365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/ArrowAttackShader.shadergraph using Guid(ba40e9f7189b236418520bb9595ef365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2908259a51035f8c42a11060c7c02f0') in 0.023291 seconds 
+  Import took 0.397245 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.259924 seconds.
+  path: Assets/Shaders/ArrowAttackShader.shadergraph
+  artifactKey: Guid(ba40e9f7189b236418520bb9595ef365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/ArrowAttackShader.shadergraph using Guid(ba40e9f7189b236418520bb9595ef365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2628daa2e755073010e35559635c60a') in 0.005463 seconds 
+  Import took 0.014073 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.445414 seconds.
+  path: Assets/Shaders/VFX/ArrowAttacck.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttacck.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '720e78aac564db54fda5f849dbf8bed1') in 0.039064 seconds 
+  Import took 0.176844 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.381076 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6b15c363f9d3482829f78f5617a9390') in 0.006464 seconds 
+  Import took 0.013624 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.753466 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61e3fe961393ac5e82b1c07f2e037faa') in 0.023762 seconds 
+  Import took 0.107414 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.903944 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed6cc61406c5d0363ea65f2b098f02b6') in 0.024090 seconds 
+  Import took 0.161976 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.730659 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8a538c8b463ca6008833232a96c047b') in 0.005898 seconds 
+  Import took 0.017047 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002611 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8a538c8b463ca6008833232a96c047b') in 0.010046 seconds 
+  Import took 0.021362 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.924981 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '658fa3d2dbedec9df5d03012ba3dd53e') in 0.005730 seconds 
+  Import took 0.012248 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.991562 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7878bbbbb2ab01aeac317563c52aecbe') in 0.024448 seconds 
+  Import took 0.061450 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.480550 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09ba94a7c99b7ffded877e13bfe69ea2') in 0.021917 seconds 
+  Import took 0.082139 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008562 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09ba94a7c99b7ffded877e13bfe69ea2') in 0.022283 seconds 
+  Import took 0.045495 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.281030 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d33ea4a695caf5810e6babee69cab16') in 0.039634 seconds 
+  Import took 0.070200 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.673736 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b38559d0e192a40f6da8a3c5d216ee2c') in 0.028406 seconds 
+  Import took 0.080012 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.573516 seconds.
+  path: Assets/Shaders/VFX/LightingStrike_VFX.vfx
+  artifactKey: Guid(9af472e43e631ce4689e2a1bdc0a0cc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/LightingStrike_VFX.vfx using Guid(9af472e43e631ce4689e2a1bdc0a0cc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '496ae2173a927a40684d789cc61d4818') in 0.026789 seconds 
+  Import took 0.033368 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.509126 seconds.
+  path: Assets/Shaders/VFX/LightingStrike_VFX.vfx
+  artifactKey: Guid(9af472e43e631ce4689e2a1bdc0a0cc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/LightingStrike_VFX.vfx using Guid(9af472e43e631ce4689e2a1bdc0a0cc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '534bb226d3677be299c25becde17a57e') in 0.011184 seconds 
+  Import took 0.020075 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.708997 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f818f890af67d075723ffeee5321aa50') in 0.122986 seconds 
+  Import took 0.204944 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.444072 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68dd98a6b2ff40aef45aa7e9766eb11c') in 0.007988 seconds 
+  Import took 0.016674 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.711819 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f73ec03ecebfe0ee46ed6ccf9cf2b26d') in 0.009520 seconds 
+  Import took 0.017311 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.343626 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0070ea6bdcc2e6d6fd6941f5f2e4f8e6') in 0.010367 seconds 
+  Import took 0.020254 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 53.071558 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca404c2ca0b7f1e2bc2f2ebb8592e3c8') in 0.010760 seconds 
+  Import took 0.021009 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.048334 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd862566b4ea74711783db067abb9c6e') in 0.008607 seconds 
+  Import took 0.053246 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.711657 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db6fdc4a1221341ce5c8c5fc678948b0') in 0.018372 seconds 
+  Import took 0.041761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.804311 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6303a645d9de5a13a79a06dacf3d9f5') in 0.011985 seconds 
+  Import took 0.129385 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.282974 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c301e5af29313544ec9f8cd978c4918') in 0.009989 seconds 
+  Import took 0.072606 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004782 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c301e5af29313544ec9f8cd978c4918') in 0.028088 seconds 
+  Import took 0.047978 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.568351 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8445d941e56b7bdb70c298682c798acd') in 0.015443 seconds 
+  Import took 0.145536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 93.465128 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40613f619b9b0c2063a7b31ed7f832e5') in 0.009159 seconds 
+  Import took 0.019821 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.364900 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f54534b29d2d42a2052f0097ac5ac3d0') in 0.014263 seconds 
+  Import took 0.034287 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.040319 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e687a97c82a79a729dd0a157c325d278') in 0.049593 seconds 
+  Import took 0.129922 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.430387 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee529face83b8f257365823138f06487') in 0.012717 seconds 
+  Import took 0.056706 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.797593 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b89c88f187318e4a17360f7498be8f2') in 0.040082 seconds 
+  Import took 0.072335 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 56.589499 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f1a8afaeb7d619f28fd45386d915ff1') in 0.008548 seconds 
+  Import took 0.095756 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.450200 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8014113f651c1f4ea65adef37340dd9e') in 0.013325 seconds 
+  Import took 0.022365 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.737276 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b9829967acccd13439139936cd74eb4') in 0.006625 seconds 
+  Import took 0.044441 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004450 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b9829967acccd13439139936cd74eb4') in 0.006438 seconds 
+  Import took 0.016986 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.282250 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a725ed682c4dd5ac3f9088788edaf368') in 0.026247 seconds 
+  Import took 0.079645 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.408432 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8594b4c004fc5cf41af8e47d6d726ef') in 0.008389 seconds 
+  Import took 0.041210 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.232530 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc93c17cc6b22d85e5f41f7ce10af837') in 0.008918 seconds 
+  Import took 0.084282 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 217.873967 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '359f5b3350a87ed8557f7d5074160e74') in 0.011286 seconds 
+  Import took 0.023831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.240837 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fb410840c66a17e829dd7284fbdc27b') in 0.032297 seconds 
+  Import took 0.086042 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.134751 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4722337ebd8cee40582f78496ed423dc') in 0.027718 seconds 
+  Import took 0.049171 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.033887 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be79243a99ca3f278e37018dd445cbfd') in 0.007039 seconds 
+  Import took 0.052644 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.513346 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8cc4bf539608964b41f8e01c24f7d9e') in 0.009404 seconds 
+  Import took 0.057340 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.356720 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24808df5e86f13b44f0b680a960cf727') in 0.007969 seconds 
+  Import took 0.119614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.121018 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49db21f3f6194620dd3c40b6e9739260') in 0.014764 seconds 
+  Import took 0.054961 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004662 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49db21f3f6194620dd3c40b6e9739260') in 0.019620 seconds 
+  Import took 0.037025 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.231242 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2c910966e5b93900d96a541df293ff7') in 0.053548 seconds 
+  Import took 0.101934 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.195179 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7de7db9a45c9f7aa6828b40222eefc18') in 0.011222 seconds 
+  Import took 0.063074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.339332 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8d3dde839d28f8d5b5f1617ff022da5') in 0.012513 seconds 
+  Import took 0.064892 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008745 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8d3dde839d28f8d5b5f1617ff022da5') in 0.010361 seconds 
+  Import took 0.020390 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 71.656407 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f167fff0de6ea27bde50a97e66d17740') in 0.027945 seconds 
+  Import took 0.124336 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003566 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f167fff0de6ea27bde50a97e66d17740') in 0.008024 seconds 
+  Import took 0.018297 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 135.288412 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26c93c737f86b6099a52b96d34ae0ab2') in 0.044198 seconds 
+  Import took 0.083308 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3639.830483 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b157f7b306230aada0dc7c340c921dff') in 0.008180 seconds 
+  Import took 0.050660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.893198 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a844cb6e805172a0ce2445472d79b964') in 0.009834 seconds 
+  Import took 0.046442 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.169370 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6aa998b0fb214fa6f955be39d3c903b') in 0.010570 seconds 
+  Import took 0.054128 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.655624 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e39d22afcc8153c5acce4e4a72bcbb92') in 0.007773 seconds 
+  Import took 0.046484 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.427105 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9931d52fdce36a969f030ac8b11a70e2') in 0.018557 seconds 
+  Import took 0.091783 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.284437 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '928d6218359177e26e63339b72d7c24d') in 0.008128 seconds 
+  Import took 0.079367 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.858254 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ca4a3b1dd5fb7c48ed2005fb17607e1') in 0.029318 seconds 
+  Import took 0.050440 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.929771 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd319bc51807933cab830af9c5403fbb3') in 0.864778 seconds 
+  Import took 0.896237 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.638112 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f09180c1dd449c133842eb6a1d558ef1') in 0.009543 seconds 
+  Import took 0.324468 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.326127 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5837a6711b61f86df70a12147b7d008') in 0.008847 seconds 
+  Import took 0.031353 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 57.695725 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf4b78c34ed73f42a42761990f6b58df') in 0.007074 seconds 
+  Import took 0.044059 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.669391 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2943e4c1ec22e52e2b95411b575d1c16') in 0.007826 seconds 
+  Import took 0.076183 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.812476 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c8e2c8c3e32382de3945f1df0792192') in 0.007467 seconds 
+  Import took 0.078367 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002575 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c8e2c8c3e32382de3945f1df0792192') in 0.007625 seconds 
+  Import took 0.017192 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.635348 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '032d8395d9b4797eb710da29dc847237') in 0.010225 seconds 
+  Import took 0.079782 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.010364 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '032d8395d9b4797eb710da29dc847237') in 0.009448 seconds 
+  Import took 0.018769 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.731317 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d10531a606342c2ff658aeec676a602') in 0.009826 seconds 
+  Import took 0.259406 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.459798 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5c8fb135925fd2cce85f2cb660ead4e') in 0.010291 seconds 
+  Import took 0.021801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 97.928640 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8279ee3ff6fc93a0f8a80682181ff8f2') in 0.009682 seconds 
+  Import took 0.077427 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.959424 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d053eb6c324a717e66f648b115a39a9') in 0.031050 seconds 
+  Import took 0.052443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.998043 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c567ca504d5c85d823aed20dd775936') in 0.069162 seconds 
+  Import took 0.130323 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.803682 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '951e794ad77c687068c481aed414d6c2') in 0.036452 seconds 
+  Import took 0.417430 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.920549 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf33d333349a9a34aa45fcc62019e6aa') in 0.012449 seconds 
+  Import took 0.020619 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.707482 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e22e9a63256acf878756d3a779e1e26b') in 0.009528 seconds 
+  Import took 0.094351 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.575900 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f251b42a21ada8a37bfc1f531a9eb5c8') in 0.007902 seconds 
+  Import took 0.020549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.519421 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16f59d95dd992f9a550fc4573f00131a') in 0.007993 seconds 
+  Import took 0.160904 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 200.770439 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76653de11aada638aa0c26ce78047a18') in 0.007982 seconds 
+  Import took 0.145612 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.797538 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6202d026c18a03c57bd42be5c41799b') in 0.008286 seconds 
+  Import took 0.044264 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.727247 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29262a99aa85d2f3ec842d525ad475ae') in 0.043208 seconds 
+  Import took 0.152751 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.572087 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d1e1af91d4dbdf9c88c54b85908be4') in 0.007967 seconds 
+  Import took 0.039309 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 117.076525 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '584f81eac20facc7fc5e0c2d797ac48e') in 0.023003 seconds 
+  Import took 0.056387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 59.996581 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c241b06a21e193725e52cdd4a1db0078') in 0.019659 seconds 
+  Import took 0.064127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 68.498837 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d3063c2583803c6c50ffdc93087ede7') in 0.008667 seconds 
+  Import took 0.015957 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.820601 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f21bfecc283ec2988b05cd8b235120f6') in 0.006494 seconds 
+  Import took 0.190118 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 55.665183 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c827612b6593b6a88f93efb46b3042f') in 0.014262 seconds 
+  Import took 0.021209 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.950721 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6884890d027aa7ce848e30471c7f1e3') in 0.013137 seconds 
+  Import took 0.032111 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.362674 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c13ee30ab0252778aeb54c9a0f60c992') in 0.011758 seconds 
+  Import took 0.027185 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 45.565564 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '365d0ad29729ff8ccfba2639eae5e6ef') in 0.022496 seconds 
+  Import took 0.033053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 69.932568 seconds.
+  path: Assets/Shaders/VFX/ArrowAttack.vfx
+  artifactKey: Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/ArrowAttack.vfx using Guid(eeb45fdcd177de243bbfc3b3c9351cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ee5d4b71ed14ed43391c39eed991d8f') in 0.020101 seconds 
+  Import took 0.030943 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 271.164547 seconds.
+  path: Assets/Prefabs/VFX/ArrowAttack.prefab
+  artifactKey: Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/ArrowAttack.prefab using Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4055da93aaec7c9f95961677e75e93ea') in 1.413105 seconds 
+  Import took 1.445377 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.743708 seconds.
+  path: Assets/Scenes/Level1.unity
+  artifactKey: Guid(3ae47467b010d5940bc23e4c5848a971) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level1.unity using Guid(3ae47467b010d5940bc23e4c5848a971) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f462694c0c291442742e068394db817') in 0.007115 seconds 
+  Import took 0.146239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.847215 seconds.
+  path: Assets/Prefabs/VFX/ScytheSlash.prefab
+  artifactKey: Guid(e7edb0afac2869d49b67b27ec1c8dbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/ScytheSlash.prefab using Guid(e7edb0afac2869d49b67b27ec1c8dbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c204cd2977685d7edff423f091703642') in 0.020962 seconds 
+  Import took 0.258245 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.112342 seconds.
+  path: Assets/Prefabs/VFX/ArrowAttack.prefab
+  artifactKey: Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/ArrowAttack.prefab using Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e950c8f3b5a377a63b87be60f3bc4d3') in 0.090711 seconds 
+  Import took 0.121065 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.151158 seconds.
+  path: Assets/Prefabs/VFX/ArrowAttack.prefab
+  artifactKey: Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/ArrowAttack.prefab using Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51c824b62024996e054705cce08e0dce') in 0.100630 seconds 
+  Import took 0.137504 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.722881 seconds.
+  path: Assets/Prefabs/VFX/ArrowAttack.prefab
+  artifactKey: Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/ArrowAttack.prefab using Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5622c3eb4e9699ab0c29204d40327c1') in 0.025647 seconds 
+  Import took 0.035858 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.933933 seconds.
+  path: Assets/Prefabs/VFX/ArrowAttack.prefab
+  artifactKey: Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/ArrowAttack.prefab using Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47cf09ac837c28549d1222e46c23873e') in 0.086500 seconds 
+  Import took 0.224751 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.389147 seconds.
+  path: Assets/Prefabs/PlayerPiecePrefabs/ArrowControler.prefab
+  artifactKey: Guid(55bed4a01bba1f54793b6d5a5bca3dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerPiecePrefabs/ArrowControler.prefab using Guid(55bed4a01bba1f54793b6d5a5bca3dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbd3c77cc598c31fd0a8d491f37f53e1') in 0.062773 seconds 
+  Import took 0.071656 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011000 seconds.
+  path: Assets/Prefabs/PlayerPiecePrefabs/ArrowControler.prefab
+  artifactKey: Guid(55bed4a01bba1f54793b6d5a5bca3dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerPiecePrefabs/ArrowControler.prefab using Guid(55bed4a01bba1f54793b6d5a5bca3dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbd3c77cc598c31fd0a8d491f37f53e1') in 0.022838 seconds 
+  Import took 0.039148 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.710886 seconds.
+  path: Assets/Prefabs/PlayerPiecePrefabs/ArrowControler.prefab
+  artifactKey: Guid(55bed4a01bba1f54793b6d5a5bca3dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerPiecePrefabs/ArrowControler.prefab using Guid(55bed4a01bba1f54793b6d5a5bca3dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d7cca5c5e1ca16bdfb86e91828fab17') in 0.163055 seconds 
+  Import took 0.205046 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006297 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.868 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4869ms)
+		BeginReloadAssembly (376ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (17ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (169ms)
+		EndReloadAssembly (4394ms)
+			LoadAssemblies (254ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (729ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (204ms)
+			SetupLoadedEditorAssemblies (2314ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (41ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (242ms)
+				ProcessInitializeOnLoadAttributes (1886ms)
+				ProcessInitializeOnLoadMethodAttributes (66ms)
+				AfterProcessingInitializeOnLoad (77ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (388ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.03 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 150.1 MB.
+System memory in use after: 150.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4030.
+Total: 6.259300 ms (FindLiveObjects: 0.458800 ms CreateObjectMapping: 0.452300 ms MarkObjects: 5.306300 ms  DeleteObjects: 0.040300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 277.405035 seconds.
+  path: Assets/Scenes/Levels
+  artifactKey: Guid(65b6934670975de43b788d1510524e09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Levels using Guid(65b6934670975de43b788d1510524e09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0e59b41ee130a53a8171e18d866965d') in 0.020988 seconds 
+  Import took 0.053008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.157153 seconds.
+  path: Assets/Scenes/Level2
+  artifactKey: Guid(367b81c3c0075c149983bff1556822a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level2 using Guid(367b81c3c0075c149983bff1556822a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b56cdd84ec705eeeee10589adfe67e62') in 0.004774 seconds 
+  Import took 0.141598 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.590569 seconds.
+  path: Assets/Scenes/Level1
+  artifactKey: Guid(a3e3a00500790aa4d870fd788c62cb11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level1 using Guid(a3e3a00500790aa4d870fd788c62cb11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '619b18dbb981aebe8cda7a4d56683b7a') in 0.084899 seconds 
+  Import took 0.162341 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.913216 seconds.
+  path: Assets/Prefabs/VFX/ArrowAttack.prefab
+  artifactKey: Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/ArrowAttack.prefab using Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c30a89af2886bdc584ee8e6279161cb3') in 0.273550 seconds 
+  Import took 0.327812 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.241074 seconds.
+  path: Assets/Prefabs/VFX/POSTPROCCES GLOBAL VOLUME.prefab
+  artifactKey: Guid(4cedd0e71d13dae4d90e47950bdde5a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/POSTPROCCES GLOBAL VOLUME.prefab using Guid(4cedd0e71d13dae4d90e47950bdde5a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c5af424902668342066f05811e9b9ce') in 0.009831 seconds 
+  Import took 0.112264 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.018714 seconds.
+  path: Assets/Prefabs/VFX/ScytheSlash.prefab
+  artifactKey: Guid(e7edb0afac2869d49b67b27ec1c8dbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/ScytheSlash.prefab using Guid(e7edb0afac2869d49b67b27ec1c8dbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1db976d7121559dd3b9a59ec94df53b') in 0.060072 seconds 
+  Import took 0.156974 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006320 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.36 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.050 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2051ms)
+		BeginReloadAssembly (242ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (61ms)
+		EndReloadAssembly (1708ms)
+			LoadAssemblies (224ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (628ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (130ms)
+			SetupLoadedEditorAssemblies (527ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (152ms)
+				ProcessInitializeOnLoadAttributes (349ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (31ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 150.3 MB.
+System memory in use after: 150.5 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4068.
+Total: 10.984500 ms (FindLiveObjects: 0.878800 ms CreateObjectMapping: 0.530800 ms MarkObjects: 9.538100 ms  DeleteObjects: 0.034500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007137 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 2.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.037 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3040ms)
+		BeginReloadAssembly (604ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (85ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (4ms)
+			CreateAndSetChildDomain (127ms)
+		EndReloadAssembly (2288ms)
+			LoadAssemblies (296ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (838ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (191ms)
+			SetupLoadedEditorAssemblies (635ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (218ms)
+				ProcessInitializeOnLoadAttributes (388ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (29ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.09 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 150.3 MB.
+System memory in use after: 150.5 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4070.
+Total: 7.552000 ms (FindLiveObjects: 0.965200 ms CreateObjectMapping: 0.389900 ms MarkObjects: 6.165600 ms  DeleteObjects: 0.029300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 297.189061 seconds.
+  path: Assets/Prefabs/VFX/ArrowAttack.prefab
+  artifactKey: Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/ArrowAttack.prefab using Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea41a65627e98c3461860c7c164fe342') in 0.309356 seconds 
+  Import took 0.319916 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.513906 seconds.
+  path: Assets/Prefabs/VFX/ArrowAttack.prefab
+  artifactKey: Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/ArrowAttack.prefab using Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a225f56d82d0c16f68c1cd9e64695b8') in 0.040072 seconds 
+  Import took 0.050061 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.278113 seconds.
+  path: Assets/Prefabs/VFX/ArrowAttack.prefab
+  artifactKey: Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/VFX/ArrowAttack.prefab using Guid(245ba5e507a534041bc461a7071b5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '910cb92464b663794f2aba40eccebeda') in 0.027518 seconds 
+  Import took 0.038532 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.025245 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.098 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2099ms)
+		BeginReloadAssembly (232ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (60ms)
+		EndReloadAssembly (1755ms)
+			LoadAssemblies (228ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (632ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (124ms)
+			SetupLoadedEditorAssemblies (539ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (159ms)
+				ProcessInitializeOnLoadAttributes (355ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (39ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.97 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 150.4 MB.
+System memory in use after: 150.6 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4108.
+Total: 5.625800 ms (FindLiveObjects: 0.639700 ms CreateObjectMapping: 0.291800 ms MarkObjects: 4.661700 ms  DeleteObjects: 0.030800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 600.133238 seconds.
+  path: Assets/Shaders/HammerAttacShader.shadergraph
+  artifactKey: Guid(ca29503f3c821b04c9c38f1021f60884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/HammerAttacShader.shadergraph using Guid(ca29503f3c821b04c9c38f1021f60884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '253a5bdce3ccd71016a88975202dd58f') in 0.051435 seconds 
+  Import took 0.060067 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.539269 seconds.
+  path: Assets/Shaders/HammerAttacShader.shadergraph
+  artifactKey: Guid(ca29503f3c821b04c9c38f1021f60884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/HammerAttacShader.shadergraph using Guid(ca29503f3c821b04c9c38f1021f60884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '253a5bdce3ccd71016a88975202dd58f') in 0.005668 seconds 
+  Import took 0.013898 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.281003 seconds.
+  path: Assets/Shaders/HammerAttackShader.shadergraph
+  artifactKey: Guid(ca29503f3c821b04c9c38f1021f60884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/HammerAttackShader.shadergraph using Guid(ca29503f3c821b04c9c38f1021f60884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91287e5adbf8ab50106dd8ce01cee4be') in 0.007276 seconds 
+  Import took 0.013832 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 621.539975 seconds.
+  path: Assets/Shaders/HammerAttackShader.shadergraph
+  artifactKey: Guid(ca29503f3c821b04c9c38f1021f60884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/HammerAttackShader.shadergraph using Guid(ca29503f3c821b04c9c38f1021f60884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4084c345ca6c10e141e0ea618d2fc965') in 0.007911 seconds 
+  Import took 0.016787 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 219.564041 seconds.
+  path: Assets/Scenes/ShadersTesting.unity
+  artifactKey: Guid(7d6ae2cfd56f308458bf109b2ddd8c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/ShadersTesting.unity using Guid(7d6ae2cfd56f308458bf109b2ddd8c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84a825bcee5f158d9b1dc08a0ccd2e3b') in 0.006653 seconds 
+  Import took 0.017837 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.204674 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df8347e5a1848417b7699b4d3b6f4a0f') in 0.006484 seconds 
+  Import took 0.030820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001203 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df8347e5a1848417b7699b4d3b6f4a0f') in 0.006282 seconds 
+  Import took 0.014540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.245692 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dea280c116be6749d26136e00fa5763') in 0.015025 seconds 
+  Import took 0.034401 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018439 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dea280c116be6749d26136e00fa5763') in 0.019438 seconds 
+  Import took 0.043397 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.653242 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cc0e2328c0d9ddbfa35171272bbe95a') in 0.008404 seconds 
+  Import took 0.020810 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.039726 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '750840f06040d73075ce2650853ddf0e') in 0.029153 seconds 
+  Import took 0.264157 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001587 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '750840f06040d73075ce2650853ddf0e') in 0.025362 seconds 
+  Import took 0.049931 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.161093 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '231c01e28fa74e72af6722c8b0ad5667') in 0.007136 seconds 
+  Import took 0.088460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001054 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '231c01e28fa74e72af6722c8b0ad5667') in 0.008342 seconds 
+  Import took 0.017203 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.816541 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3474e8d423f81a03080391d3d6f93e00') in 0.008045 seconds 
+  Import took 0.020054 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.174463 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '197bb4288149ba1a3c764a70750c8fbc') in 0.030246 seconds 
+  Import took 0.057737 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 51.116652 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ea75d7642336a6f29754a9f4f9cbb3c') in 0.025698 seconds 
+  Import took 0.084443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.715709 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cf88c10115e1546c1f6d3690f6d8342') in 0.008013 seconds 
+  Import took 0.062193 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016494 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cf88c10115e1546c1f6d3690f6d8342') in 0.009286 seconds 
+  Import took 0.019810 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 44.288210 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75183c8d802e202c1294867607fb09cb') in 0.056877 seconds 
+  Import took 0.111301 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.574912 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58a6c9a8d1b727ce68c2ad1d2115f3db') in 0.025439 seconds 
+  Import took 0.103666 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.840739 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ce3857f8bcc0153d6b27ffb1b435341') in 0.030570 seconds 
+  Import took 0.067849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 113.892105 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '381715a8bfb30c6348e8b6a46df23954') in 0.021950 seconds 
+  Import took 0.043171 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.864802 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5acb3c22dcecc46a33111769b19f0751') in 0.027076 seconds 
+  Import took 0.059284 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 196.798848 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfe14ba4df748c6f50a384d264fdeb2f') in 0.010533 seconds 
+  Import took 0.130873 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.325499 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ffa3625a99fc1dc657856d7c66fc35a') in 0.008356 seconds 
+  Import took 0.050068 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001160 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ffa3625a99fc1dc657856d7c66fc35a') in 0.010223 seconds 
+  Import took 0.020124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 120.736342 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f55bda0b02aa69f8a6ec4beb578ebcda') in 0.010450 seconds 
+  Import took 0.020455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 525.911123 seconds.
+  path: Assets/Shaders/VFX/HammerAttack.vfx
+  artifactKey: Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/VFX/HammerAttack.vfx using Guid(84116b25158dd96448fccdf98d52594c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2215366ae1b6758b4d63d4412afe1667') in 0.014057 seconds 
+  Import took 0.103904 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.533293 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.646 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2653ms)
+		BeginReloadAssembly (511ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (31ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (251ms)
+		EndReloadAssembly (1994ms)
+			LoadAssemblies (309ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (717ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (109ms)
+			SetupLoadedEditorAssemblies (641ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (150ms)
+				ProcessInitializeOnLoadAttributes (465ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (43ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 150.4 MB.
+System memory in use after: 150.7 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4110.
+Total: 4.929600 ms (FindLiveObjects: 0.598400 ms CreateObjectMapping: 0.291100 ms MarkObjects: 3.997800 ms  DeleteObjects: 0.038200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
