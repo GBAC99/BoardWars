@@ -58,6 +58,7 @@ MonoBehaviour:
   selectableQads: []
   attackingQads: []
   currentQad: {fileID: 0}
+  attackEffect: {fileID: 0}
   characterType: 1
   currentHealthPoints: 0
 --- !u!65 &6168420631776029615

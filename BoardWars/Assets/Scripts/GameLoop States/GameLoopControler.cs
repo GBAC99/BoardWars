@@ -39,6 +39,8 @@ public class GameLoopControler : MonoBehaviour
 
     public GameObject losePanel;
     public GameObject winPanel;
+    public GameObject quitPanel;
+    public GameObject quitButtonX;
 
     public TextMeshProUGUI roundInfo;
     public TextMeshProUGUI roundInfo2;
@@ -56,7 +58,7 @@ public class GameLoopControler : MonoBehaviour
     public bool firstRound;
 
     [HideInInspector]
-    public bool piecesActive;
+    public bool showActivePiece;
 
     // Start is called before the first frame update
     void Start()
@@ -70,7 +72,7 @@ public class GameLoopControler : MonoBehaviour
         ChangeState(new GLS_InitLevel(this));
 
         levelWin = false;
-        piecesActive = false;
+        showActivePiece = false;
         firstRound = true;
 
     }
@@ -223,6 +225,32 @@ public class GameLoopControler : MonoBehaviour
         anchorControlObj.SetActive(false);
         anchorInfoObj.SetActive(false);
         winPanel.SetActive(true);
+    }
+
+    public void QuitGameMenu()
+    {
+        quitButtonX.SetActive(false);
+        quitPanel.SetActive(true);
+        anchorControlObj.SetActive(false);
+        anchorInfoObj.SetActive(false);
+    }
+
+    public void QuitApp()
+    {
+        Application.Quit();
+    }
+
+    public void KeepPlaying()
+    {
+        quitPanel.SetActive(false);
+        quitButtonX.SetActive(true);
+        anchorControlObj.SetActive(true);
+        if (showActivePiece)
+        {
+            anchorControl.SetBool("ShowP", true);
+        }
+
+        anchorInfoObj.SetActive(true);
     }
 
 }

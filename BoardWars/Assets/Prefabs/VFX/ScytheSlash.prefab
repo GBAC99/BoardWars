@@ -58,7 +58,7 @@ VisualEffect:
       m_Array: []
     m_Vector4f:
       m_Array:
-      - m_Value: {x: 0, y: 11.984314, z: 11.6705885, w: 0}
+      - m_Value: {x: 2.9960785, y: 0, z: 2.8078432, w: 0}
         m_Name: SlashColor
         m_Overridden: 1
     m_Uint:

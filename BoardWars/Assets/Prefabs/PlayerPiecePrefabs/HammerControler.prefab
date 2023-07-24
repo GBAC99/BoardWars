@@ -57,6 +57,7 @@ MonoBehaviour:
   selectableQads: []
   attackingQads: []
   currentQad: {fileID: 0}
+  attackEffect: {fileID: 129873069686317421, guid: 7e7e0ffcc3840634db6c39f4bb509e21, type: 3}
   characterType: 5
   thisPPlayer: {fileID: 0}
   currentHealthPoints: 0

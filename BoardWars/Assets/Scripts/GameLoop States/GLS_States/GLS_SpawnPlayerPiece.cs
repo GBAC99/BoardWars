@@ -79,6 +79,7 @@ public class GLS_SpawnPlayerPiece : GameLoopStates
                 SetSelectableSigns(gC);
                 gC.QAD_MANAGER.SetSignCurrentHp();
                 gC.anchorControl.SetBool("ShowP", true);
+                gC.showActivePiece = true;
             }
             gC.ChangeState(new GLS_PlayerSelectPiece(gC,true));
         }
