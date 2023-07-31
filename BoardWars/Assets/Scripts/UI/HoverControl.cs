@@ -30,14 +30,7 @@ public class HoverControl : MonoBehaviour
     void Start()
     {
         gC = FindObjectOfType<GameLoopControler>();
-
-       /* if (rend == null)
-        {
-            rend = GetComponentInChildren<Renderer>();
-            rend.material.color = Color.white;
-        }
-        initColor = rend.material.color;
-        */
+        
         outlineRend = CreateOutline(outlineMaterial, scaleOutline, hoverColor);
         foreach (Transform child in outlineRend.transform)
         {
