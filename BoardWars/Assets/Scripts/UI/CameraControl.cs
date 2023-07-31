@@ -14,16 +14,16 @@ public class CameraControl : MonoBehaviour
 
     public void Shake()
     {
-        if (!camAnim.GetBool("Shake"))
+        if (!camAnim.GetBool("Strike"))
         {
-            camAnim.SetBool("Shake", true);
+            camAnim.SetBool("Strike", true);
             dirLightAnim.SetBool("Strike",true);
         }
     }
 
     public void ShakeOut()
     {
-        camAnim.SetBool("Shake", false);
+        camAnim.SetBool("Strike", false);
         dirLightAnim.SetBool("Strike", false);
     }
 
