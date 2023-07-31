@@ -133,9 +133,11 @@ MonoBehaviour:
   pieceCurrentHealth: 0
   characterType: 3
   usingPiece: 0
+  signInstance: {fileID: 0}
   rend: {fileID: 2431798623666011632}
   hoverColor: {r: 0.98065364, g: 1, b: 0.3254717, a: 0}
   hover: 0
+  signPlaced: 0
   selectable: 1
 --- !u!65 &4707233469567826937
 BoxCollider:
@@ -162,9 +164,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b544bb76ef63c1242abc5e2f42f466ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 2431798623666011632}
-  gC: {fileID: 0}
+  rend: {fileID: 2431798623666011598}
+  outlineMaterial: {fileID: 0}
+  scaleOutline: 0
   hoverColor: {r: 2.2523499, g: 2.297397, b: 0.75678957, a: 0}
+  gC: {fileID: 0}
   initColor: {r: 0, g: 0, b: 0, a: 0}
   hover: 0
   showInfo: 0

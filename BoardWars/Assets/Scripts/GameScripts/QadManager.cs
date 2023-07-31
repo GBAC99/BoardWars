@@ -83,6 +83,7 @@ public class QadManager : MonoBehaviour
 
     public GameObject glc;
 
+
     private void OnGUI()
     {
         enemyPiece1 = (EnemyPieces)EditorGUILayout.EnumPopup("Select an enemy to place", enemyPiece1);

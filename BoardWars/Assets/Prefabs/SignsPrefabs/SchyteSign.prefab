@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b544bb76ef63c1242abc5e2f42f466ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 6997236368989393931}
+  rend: {fileID: 6997236368989393933}
   outlineMaterial: {fileID: 0}
   scaleOutline: 0
   hoverColor: {r: 2.2523499, g: 2.297397, b: 0.75678957, a: 0}

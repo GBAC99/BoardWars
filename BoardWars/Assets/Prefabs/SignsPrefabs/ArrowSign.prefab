@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b544bb76ef63c1242abc5e2f42f466ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 3263528313274080442}
+  rend: {fileID: 3263528313274080440}
   outlineMaterial: {fileID: 0}
   scaleOutline: 0
   hoverColor: {r: 2.5872703, g: 2.6390157, b: 0.86932284, a: 0}

@@ -243,6 +243,7 @@ public class Qad : MonoBehaviour
         }
 
         mainCamera.GetComponent<CameraControl>().Shake();
+        mainCamera.GetComponent<CameraControl>();
     }
 
     public void SetAttackingParticleEffect(GameObject pE)

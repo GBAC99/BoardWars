@@ -5,7 +5,7 @@ using UnityEngine;
 public class HoverControl : MonoBehaviour
 {
 
-    public Renderer rend;
+    public GameObject rend;
     Renderer outlineRend;
     public Material outlineMaterial;
     public float scaleOutline;
@@ -31,14 +31,18 @@ public class HoverControl : MonoBehaviour
     {
         gC = FindObjectOfType<GameLoopControler>();
 
-        if (rend == null)
+       /* if (rend == null)
         {
             rend = GetComponentInChildren<Renderer>();
             rend.material.color = Color.white;
         }
         initColor = rend.material.color;
-
+        */
         outlineRend = CreateOutline(outlineMaterial, scaleOutline, hoverColor);
+        foreach (Transform child in outlineRend.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
         outlineRend.enabled = false;
 
         selectable = true;
@@ -48,7 +52,7 @@ public class HoverControl : MonoBehaviour
     {
         if (!selectable)
         {
-            rend.material.color = Color.gray;
+            rend.gameObject.GetComponent<Renderer>().material.color = Color.gray;
         }
 
         if (!showInfo)
@@ -72,13 +76,15 @@ public class HoverControl : MonoBehaviour
     {
         GameObject outlineObject = Instantiate(gameObject, transform.position, transform.rotation, transform);
         outlineObject.transform.localScale = new Vector3(1 * scaleFactor, 1 * scaleFactor, 1 * scaleFactor);
-        Renderer rend = outlineObject.GetComponent<HoverControl>().rend;
-        rend.material = outlineMat;
-        rend.material.SetColor("_OutlineColor", color);
-        rend.material.SetFloat("_ScaleFactor", scaleFactor);
-        rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        GameObject rend = outlineObject.GetComponent<HoverControl>().rend;
+        rend.gameObject.GetComponent<Renderer>().material = outlineMat;
+        rend.gameObject.GetComponent<Renderer>().material.SetColor("_OutlineColor", color);
+        rend.gameObject.GetComponent<Renderer>().material.SetFloat("_ScaleFactor", scaleFactor);
+        rend.gameObject.GetComponent<Renderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
         outlineObject.GetComponent<Collider>().enabled = false;
         outlineObject.GetComponent<HoverControl>().enabled = false;
+
+     
 
         if (characterType[0] == 'p') outlineObject.GetComponent<PlayerPieceSign>().enabled = false;
         else
@@ -90,14 +96,14 @@ public class HoverControl : MonoBehaviour
 
         outlineObject.tag = "Untagged";
         outlineObject.layer = 0;
-        rend.enabled = false;
+        rend.gameObject.GetComponent<Renderer>().enabled = false;
 
-        return rend;
+        return rend.gameObject.GetComponent<Renderer>();
     }
     private void OnMouseEnter()
     {
         timeToHideInfo = 1.5f;
-        outlineRend.enabled = true; 
+        outlineRend.enabled = true;
         hover = true;
         showInfo = true;
 
@@ -118,7 +124,7 @@ public class HoverControl : MonoBehaviour
     private void OnMouseExit()
     {
         timeToShowUI = 1.5f;
-        outlineRend.enabled = false; 
+        outlineRend.enabled = false;
         hover = false;
         showInfo = false;
     }
