@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!95 &7525493254779361467
+--- !u!95 &8553003817410524689
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -10,7 +10,7 @@ Animator:
   m_GameObject: {fileID: 2445259303162634164}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 782bcf46ee9a13a4087506d0d0d7e9b4, type: 2}
+  m_Controller: {fileID: 9100000, guid: f2c855534711c0a46bc514afd5080ab9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
