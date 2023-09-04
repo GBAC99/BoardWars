@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
+
 
 public class QadManager : MonoBehaviour
 {
@@ -82,14 +83,6 @@ public class QadManager : MonoBehaviour
     public Vector3 mousePosition;
 
     public GameObject glc;
-
-
-    private void OnGUI()
-    {
-        enemyPiece1 = (EnemyPieces)EditorGUILayout.EnumPopup("Select an enemy to place", enemyPiece1);
-        enemyPiece2 = (EnemyPieces)EditorGUILayout.EnumPopup("Select an enemy to place", enemyPiece2);
-        enemyPiece3 = (EnemyPieces)EditorGUILayout.EnumPopup("Select an enemy to place", enemyPiece3);
-    }
 
     // Start is called before the first frame update
     void Start()
