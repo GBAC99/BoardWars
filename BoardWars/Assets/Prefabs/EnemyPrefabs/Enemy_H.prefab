@@ -155,7 +155,7 @@ MonoBehaviour:
   jumpHeight: 1
   moveSpeed: 3
   move: 2
-  attackRange: 2
+  attackRange: 1
   moving: 0
   selectableQads: []
   attackingQads: []
